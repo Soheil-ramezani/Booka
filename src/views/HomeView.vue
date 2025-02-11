@@ -1,6 +1,7 @@
 <script setup>
 import HeaderView from '@/components/Header/HeaderView.vue';
 </script>
+
 <template>
 <HeaderView/>
 </template>
