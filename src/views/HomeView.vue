@@ -1,11 +1,13 @@
+<script setup>
+import HeaderView from '@/components/Header/HeaderView.vue';
+</script>
 <template>
-  <h1>HEllo World!</h1>
-  <div id="imgs">
-
-  </div>
+<HeaderView/>
 </template>
 
-<script>
+
+
+<!-- <script>
 export default {
   data() {
     return {
@@ -27,4 +29,4 @@ export default {
       });
   }
 }
-</script>
+</script> -->
