@@ -1,7 +1,7 @@
 <template>
-  <Header class="Container ">
+  <Header class="container flex justify-around items-center">
     <div class="header-Logo">
-        <h1 class="header-Logo__h1">BOOKA</h1>
+        <h1 class="header-Logo__h1 pacifico-regular ">BOOKA</h1>
     </div>
   </Header>
 </template>
