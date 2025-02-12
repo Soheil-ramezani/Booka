@@ -1,5 +1,5 @@
 <script setup>
-import HeaderView from '@/components/Header/HeaderView.vue';
+import HeaderView from '@/components/HeaderParts/Header/HeaderView.vue'
 </script>
 
 <template>

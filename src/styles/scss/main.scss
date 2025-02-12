@@ -9,6 +9,10 @@ html{
 }
 body{
     font-size: 1.6rem;
+    margin:0 auto ;
 }
 @import "fonts";
-@import "./../../components/Header/Header";
+// Header Parts
+@import "./../../components/HeaderParts/Header/Header";
+@import "./../../components/HeaderParts/Navbar/Navbar";
+
