@@ -1,25 +1,25 @@
 <template>
-  <nav class="pt-5 pb-5 flex flex-row justify-around">
+  <nav class="container pt-5 pb-5 flex flex-row justify-around">
     <!-- RightSide -->
-    <div class="Right-side w-5/12 flex flex-row justify-around items-center">
+    <div class="Left-side w-5/12 flex flex-row justify-around items-center">
       <div class="Nav-Logo">
         <h1 class="Nav-Logo__h1 pacifico-regular">BOOKA</h1>
       </div>
       <div class="Nav-menu">
         <ul class="Nav-menu__ul flex flex-row">
-          <li class="Nav-menu__li mx-5">
+          <li class="Nav-menu__li text-nowrap mx-5">
             <RouterLink class="menu__RouterLink">Books</RouterLink>
           </li>
-          <li class="Nav-menu__li mx-5">
+          <li class="Nav-menu__li text-nowrap mx-5">
             <RouterLink class="menu__RouterLink">Categories</RouterLink>
           </li>
-          <li class="Nav-menu__li mx-5">
+          <li class="Nav-menu__li text-nowrap mx-5">
             <RouterLink class="menu__RouterLink">Wishlist</RouterLink>
           </li>
-          <li class="Nav-menu__li mx-5">
+          <li class="Nav-menu__li text-nowrap mx-5">
             <RouterLink class="menu__RouterLink">Blogs</RouterLink>
           </li>
-          <li class="Nav-menu__li mx-5">
+          <li class="Nav-menu__li text-nowrap mx-5">
             <RouterLink class="menu__RouterLink">About Us</RouterLink>
           </li>
         </ul>
@@ -27,11 +27,10 @@
     </div>
 
     <!-- Left side -->
-    <div class="Left-side w-5/12 flex flex-row justify-center items-center">
+    <div class="Right-side w-5/12 flex flex-row justify-center items-center">
       <div class="Nav-searchbar mr-10">
-        <!-- <input class="Nav-searchbar__input" id="Nav-search" type="search" placeholder="Search Books...">
-        -->
-        <form onsubmit="event.preventDefault();" role="search">
+      
+        <form onsubmit="event.preventDefault();" role="search" v-show="this.MediaWidth>=1100" >
           <label for="search">Search Books...</label>
           <input
             id="search"
@@ -65,9 +64,22 @@
 
 <script>
 export default {
-  name: "NavBar",
+  name:"NavBar",
+  data() {
+    return {
+      MediaWidth: window.innerWidth,
+    };
+  },
+  mounted() {
+    window.addEventListener('resize', this.updateMediaWidth);
+  },
+  beforeUnmount() {
+    window.removeEventListener('resize', this.updateMediaWidth);
+  },
+  methods: {
+    updateMediaWidth() {
+      this.MediaWidth = window.innerWidth;
+    },
+  },
 };
 </script>
-
-<style>
-</style>

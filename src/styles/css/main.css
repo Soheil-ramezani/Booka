@@ -25,32 +25,32 @@ Header {
   background-color: var(--light-cream);
 }
 
-nav .Right-side .Nav-Logo .Nav-Logo__h1 {
+nav .Left-side .Nav-Logo .Nav-Logo__h1 {
   font-size: 2.5rem;
   font-weight: 900;
 }
-nav .Right-side .Nav-menu .Nav-menu__ul .Nav-menu__li {
+nav .Left-side .Nav-menu .Nav-menu__ul .Nav-menu__li {
   transition: 1s ease-in;
 }
-nav .Right-side .Nav-menu .Nav-menu__ul .Nav-menu__li:hover {
+nav .Left-side .Nav-menu .Nav-menu__ul .Nav-menu__li:hover {
   color: var(--dark-blue);
   border-bottom: 1px solid var(--dark-blue);
 }
-nav .Left-side .Nav-searchbar form {
+nav .Right-side .Nav-searchbar form {
   position: relative;
   width: 30rem;
   background: var(--color-brand);
   border-radius: 0.7rem;
 }
-nav .Left-side .Nav-searchbar input,
-nav .Left-side .Nav-searchbar button {
+nav .Right-side .Nav-searchbar input,
+nav .Right-side .Nav-searchbar button {
   height: 3rem;
   font-family: "Pacifico", serif;
   border: 0;
   color: var(--dark-blue);
   font-size: 1.8rem;
 }
-nav .Left-side .Nav-searchbar input[type=search] {
+nav .Right-side .Nav-searchbar input[type=search] {
   outline: 0;
   width: 100%;
   background: var(--light-cream);
@@ -64,7 +64,7 @@ nav .Left-side .Nav-searchbar input[type=search] {
   z-index: 1;
   position: relative;
 }
-nav .Left-side .Nav-searchbar button {
+nav .Right-side .Nav-searchbar button {
   display: none;
   position: absolute;
   top: 0;
@@ -74,21 +74,21 @@ nav .Left-side .Nav-searchbar button {
   background: var(--color-brand);
   border-radius: 0 0.7rem 0.7rem 0;
 }
-nav .Left-side .Nav-searchbar input:not(:-moz-placeholder-shown) {
+nav .Right-side .Nav-searchbar input:not(:-moz-placeholder-shown) {
   border-radius: 0.7rem 0 0 0.7rem;
   width: calc(100% - var(--btn-width));
 }
-nav .Left-side .Nav-searchbar input:not(:placeholder-shown) {
+nav .Right-side .Nav-searchbar input:not(:placeholder-shown) {
   border-radius: 0.7rem 0 0 0.7rem;
   width: calc(100% - var(--btn-width));
 }
-nav .Left-side .Nav-searchbar input:not(:-moz-placeholder-shown) + button {
+nav .Right-side .Nav-searchbar input:not(:-moz-placeholder-shown) + button {
   display: block;
 }
-nav .Left-side .Nav-searchbar input:not(:placeholder-shown) + button {
+nav .Right-side .Nav-searchbar input:not(:placeholder-shown) + button {
   display: block;
 }
-nav .Left-side .Nav-searchbar label {
+nav .Right-side .Nav-searchbar label {
   position: absolute;
   clip: rect(1px, 1px, 1px, 1px);
   padding: 0;
@@ -97,6 +97,6 @@ nav .Left-side .Nav-searchbar label {
   width: 1px;
   overflow: hidden;
 }
-nav .Left-side .Nav-Left__btns a {
+nav .Right-side .Nav-Left__btns a {
   border-left: 1px solid var(--dark-blue);
 }

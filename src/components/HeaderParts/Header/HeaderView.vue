@@ -2,7 +2,7 @@
 import Navbar from '../Navbar/Navbar.vue';
 </script>
 <template>
-  <Header class="container">
+  <Header class="flex flex-col justify-center items-center">
     <Navbar/>
   </Header>
 </template>

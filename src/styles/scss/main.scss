@@ -12,8 +12,14 @@ body{
     font-size: 1.6rem;
     margin:0 auto ;
 }
+// Fonts
 @import "fonts";
 // Header Parts
 @import "./../../components/HeaderParts/Header/Header";
 @import "./../../components/HeaderParts/Navbar/Navbar";
 
+// 320px — 480px: Mobile devices
+// 481px — 768px: iPads, Tablets
+// 769px — 1024px: Small screens, laptops
+// 1025px — 1200px: Desktops, large screens
+// 1201px and more —  Extra large screens, TV
