@@ -1,8 +1,85 @@
-nav{
-    .Nav-Logo{
-        .Nav-Logo__h1{
-            font-size: 2.5rem;
-            font-weight:900;
+nav {
+    .Right-side {
+        .Nav-Logo {
+            .Nav-Logo__h1 {
+                font-size: 2.5rem;
+                font-weight: 900;
+            }
         }
     }
+
+    .Left-side {
+        .Nav-searchbar {
+
+            // Main styles
+            form {
+                position: relative;
+                width: 30rem;
+                background: var(--color-brand);
+                border-radius: .7rem;
+            }
+
+            input,
+            button {
+                height: 3rem;
+                font-family: "Pacifico", serif;
+                border: 0;
+                color: var(--dark-blue);
+                font-size: 1.8rem;
+            }
+
+            input[type="search"] {
+                outline: 0; // <-- shold probably remove this for better accessibility, adding for demo aesthetics for now.
+                width: 100%;
+                background: var(--light-cream);
+                padding: 0 1.6rem;
+                border-bottom: 1px solid var(--dark-blue);
+                appearance: none; //for iOS input[type="search"] roundedness issue. border-radius alone doesn't work
+                transition: all .3s cubic-bezier(0, 0, 0.43, 1.49);
+                transition-property: width;
+                z-index: 1;
+                position: relative;
+            }
+
+            button {
+                display: none; // prevent being able to tab to it
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 6rem;
+                font-weight: bold;
+                background: var(--color-brand);
+                border-radius: 0 .7rem .7rem 0;
+            }
+
+            input:not(:placeholder-shown) {
+                border-radius: 0.7rem 0 0 .7rem;
+                width: calc(100% - var(--btn-width));
+
+                +button {
+                    display: block;
+                }
+            }
+
+            label {
+                position: absolute;
+                clip: rect(1px, 1px, 1px, 1px);
+                padding: 0;
+                border: 0;
+                height: 1px;
+                width: 1px;
+                overflow: hidden;
+            }
+        }
+        .Nav-Left__btns{
+            a{
+                border-left: 1px solid var(--dark-blue);
+            }
+        }
+    }
+
+
+
+
+
 }
