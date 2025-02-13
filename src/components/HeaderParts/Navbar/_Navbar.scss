@@ -6,6 +6,18 @@ nav {
                 font-weight: 900;
             }
         }
+        .Nav-menu{
+            .Nav-menu__ul{
+                .Nav-menu__li{
+                    transition: 1s ease-in;
+                    &:hover{
+                    color: var(--dark-blue);
+                    border-bottom: 1px solid var(--dark-blue);
+                    
+                }}
+            }
+        }
+
     }
 
     .Left-side {
