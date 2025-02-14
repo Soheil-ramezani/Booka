@@ -13,6 +13,7 @@ html {
 body {
   font-size: 1.6rem;
   margin: 0 auto;
+  font-family: serif;
 }
 
 .pacifico-regular {
@@ -21,8 +22,28 @@ body {
   font-style: normal;
 }
 
+.charm-regular {
+  font-family: "Charm", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.charm-bold {
+  font-family: "Charm", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
 Header {
   background-color: var(--light-cream);
+}
+Header .header-middle .header-Left .header-title__h1 {
+  font-size: 10rem;
+}
+Header .header-middle .header-Left .header-left__btn {
+  background-color: var(--dark-blue);
+  color: var(--primary-white);
+  font-size: 1.5rem;
 }
 
 nav .Left-side .Nav-Logo .Nav-Logo__h1 {

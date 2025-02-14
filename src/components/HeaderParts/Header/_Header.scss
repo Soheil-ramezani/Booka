@@ -1,3 +1,16 @@
 Header{
     background-color:var(--light-cream) ;
+    .header-middle{
+        .header-Left{
+            .header-title__h1{
+                font-size: 10rem;
+            }
+            .header-left__btn{
+                background-color: var(--dark-blue);
+                color: var(--primary-white);
+                font-size: 1.5rem;
+            }
+        }
+        
+    }
 }
