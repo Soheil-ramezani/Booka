@@ -1,17 +1,20 @@
-:root{
-    --primary-white:#FFFFFF;
-    --secondary-white:#FAFAFA;
-    --light-cream:#FAF8F6;
-    --dark-blue:#0B1220;
+:root {
+    --primary-white: #FFFFFF;
+    --secondary-white: #FAFAFA;
+    --dark-blue: #0B1220;
+    --light-cream: #FAF8F6;
     --color-brand: #57bd84;
 }
-html{
+
+html {
     font-size: 62.5%;
 }
-body{
+
+body {
     font-size: 1.6rem;
-    margin:0 auto ;
+    margin: 0 auto;
 }
+
 // Fonts
 @import "fonts";
 // Header Parts

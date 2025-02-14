@@ -1,11 +1,11 @@
 <template>
   <nav class="container pt-5 pb-5 flex flex-row justify-around">
-    <!-- RightSide -->
+    <!-- LeftSide -->
     <div class="Left-side w-5/12 flex flex-row justify-around items-center">
-      <div class="Nav-Logo">
+      <div class="Nav-Logo mr-10">
         <h1 class="Nav-Logo__h1 pacifico-regular">BOOKA</h1>
       </div>
-      <div class="Nav-menu">
+      <div class="Nav-menu" v-show="this.MediaWidth >= 600">
         <ul class="Nav-menu__ul flex flex-row">
           <li class="Nav-menu__li text-nowrap mx-5">
             <RouterLink class="menu__RouterLink">Books</RouterLink>
@@ -13,10 +13,16 @@
           <li class="Nav-menu__li text-nowrap mx-5">
             <RouterLink class="menu__RouterLink">Categories</RouterLink>
           </li>
-          <li class="Nav-menu__li text-nowrap mx-5">
+          <li
+            class="Nav-menu__li text-nowrap mx-5"
+            v-show="this.MediaWidth >= 1024"
+          >
             <RouterLink class="menu__RouterLink">Wishlist</RouterLink>
           </li>
-          <li class="Nav-menu__li text-nowrap mx-5">
+          <li
+            class="Nav-menu__li text-nowrap mx-5"
+            v-show="this.MediaWidth >= 1024"
+          >
             <RouterLink class="menu__RouterLink">Blogs</RouterLink>
           </li>
           <li class="Nav-menu__li text-nowrap mx-5">
@@ -26,11 +32,15 @@
       </div>
     </div>
 
-    <!-- Left side -->
+    <!-- Right side -->
     <div class="Right-side w-5/12 flex flex-row justify-center items-center">
       <div class="Nav-searchbar mr-10">
-      
-        <form onsubmit="event.preventDefault();" role="search" v-show="this.MediaWidth>=1100" >
+        <!-- SearchBar -->
+        <form
+          onsubmit="event.preventDefault();"
+          role="search"
+          v-show="this.MediaWidth >= 1280"
+        >
           <label for="search">Search Books...</label>
           <input
             id="search"
@@ -42,7 +52,11 @@
           <button type="submit">Go</button>
         </form>
       </div>
-      <div class="Nav-Left__btns flex flex-row">
+      <!-- Login -->
+      <div
+        class="Nav-Right__btns flex flex-row"
+        v-show="this.MediaWidth >= 600"
+      >
         <button class="pr-5 flex justify-center items-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -58,27 +72,65 @@
         </button>
         <RouterLink class="RouterLink pl-5">Sign in</RouterLink>
       </div>
+      <!-- Hamburger-menu -->
+      <div class="Nav-hamburger" v-show="this.MediaWidth < 600">
+        <button @click="this.openNav()">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="32"
+            height="32"
+            fill="rgba(11,18,32,1)"
+          >
+            <path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z"></path>
+          </svg>
+        </button>
+      </div>
+      <!-- The overlay -->
+      <div id="myNav" class="overlay">
+        <!-- Button to close the overlay navigation -->
+        <a href="javascript:void(0)" class="closebtn" @click="this.closeNav()"
+          >&times;</a
+        >
+
+        <!-- Overlay content -->
+        <div class="overlay-content">
+          <a href="#">Books</a>
+          <a href="#">Categories</a>
+          <a href="#">Wishlist</a>
+          <a href="#">Blogs</a>
+          <a href="#">About Us</a>
+        </div>
+      </div>
     </div>
   </nav>
 </template>
 
 <script>
 export default {
-  name:"NavBar",
+  name: "NavBar",
   data() {
     return {
       MediaWidth: window.innerWidth,
     };
   },
   mounted() {
-    window.addEventListener('resize', this.updateMediaWidth);
+    window.addEventListener("resize", this.updateMediaWidth);
   },
   beforeUnmount() {
-    window.removeEventListener('resize', this.updateMediaWidth);
+    window.removeEventListener("resize", this.updateMediaWidth);
   },
   methods: {
     updateMediaWidth() {
       this.MediaWidth = window.innerWidth;
+    },
+    /* Open when someone clicks on the span element */
+    openNav() {
+       document.getElementById("myNav").style.width = "100%";
+    },
+    /* Close when someone clicks on the "x" symbol inside the overlay */
+    closeNav() {
+      document.getElementById("myNav").style.width = "0%";
     },
   },
 };
