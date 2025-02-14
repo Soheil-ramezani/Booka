@@ -2,7 +2,7 @@
 import Navbar from '../Navbar/Navbar.vue';
 </script>
 <template>
-  <Header class="header flex flex-col justify-center items-center">
+  <Header class="header flex flex-col justify-center items-center pb-20">
     <Navbar/>
     <div class="header-middle flex flex-row justify-around items-center w-full">
       <div class="header-Left w-2/5">
@@ -14,7 +14,13 @@ import Navbar from '../Navbar/Navbar.vue';
           Explore Now
         </button>
       </div>
-      
+      <div class="header-right flex items-center">
+        <div class="header-book h-full flex flex-col pt-20  items-center">
+          <img src="./../../../assets/91hYnazD-oL.jpg" class="header-book__img" alt="img1">
+          <h2 class="header-book__h2 text-center mt-4">DAISY DARKER</h2>
+          <p class="header-book__p text-center">ALICE FEENY</p>
+        </div>
+      </div>
     </div>
   </Header>
 </template>

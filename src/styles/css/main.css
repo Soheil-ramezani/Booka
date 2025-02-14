@@ -45,6 +45,14 @@ Header .header-middle .header-Left .header-left__btn {
   color: var(--primary-white);
   font-size: 1.5rem;
 }
+Header .header-middle .header-right .header-book .header-book__img {
+  width: 150px;
+  height: 300px;
+  border-radius: 100% 100% 0% 0%/63% 63% 0% 0%;
+}
+Header .header-middle .header-right .header-book .header-book__h2 {
+  font-size: 1.8rem;
+}
 
 nav .Left-side .Nav-Logo .Nav-Logo__h1 {
   font-size: 2.5rem;

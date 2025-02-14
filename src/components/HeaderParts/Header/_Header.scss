@@ -11,6 +11,17 @@ Header{
                 font-size: 1.5rem;
             }
         }
-        
+        .header-right{
+            .header-book{
+                .header-book__img{
+                    width: 150px;
+                    height: 300px;
+                    border-radius: 100% 100% 0% 0% / 63% 63% 0% 0%;
+                }
+                .header-book__h2{
+                    font-size: 1.8rem;
+                }
+            }
+        }
     }
 }
