@@ -1,5 +1,5 @@
 :root {
-    --primary-white: #FFFFFF;
+    --primary-white: #ffffff;
     --secondary-white: #FAFAFA;
     --dark-blue: #0B1220;
     --light-cream: #FAF8F6;
@@ -21,6 +21,9 @@ body {
 // Header Parts
 @import "./../../components/HeaderParts/Header/Header";
 @import "./../../components/HeaderParts/Navbar/Navbar";
+//MainParts
+@import "./../../components/mainParts/mainView";
+@import "./../../components/mainParts/BestSellers/BestSellers"
 
 // 320px — 480px: Mobile devices
 // 481px — 768px: iPads, Tablets

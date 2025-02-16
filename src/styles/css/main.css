@@ -1,5 +1,5 @@
 :root {
-  --primary-white: #FFFFFF;
+  --primary-white: #ffffff;
   --secondary-white: #FAFAFA;
   --dark-blue: #0B1220;
   --light-cream: #FAF8F6;
@@ -194,4 +194,29 @@ nav .Right-side .overlay .closebtn {
   top: 20px;
   right: 45px;
   font-size: 60px;
+}
+
+main {
+  background-color: var(--primary-white);
+  color: var(--dark-blue);
+}
+
+.BestSellers .BestSellers__h1 {
+  font-size: 4rem;
+}
+.BestSellers .BestSellers__ul .BestSellers__li img {
+  width: 200px;
+  height: 250px;
+  border-radius: 2px;
+}
+.BestSellers .BestSellers__ul .BestSellers__li div h6 {
+  font-size: 1.8rem;
+}
+.BestSellers .BestSellers__ul .BestSellers__li p {
+  font-size: 1.4rem;
+}
+.BestSellers .BestSellers__ul .BestSellers__li button {
+  color: var(--primary-white);
+  background-color: var(--dark-blue);
+  border-radius: 5px;
 }

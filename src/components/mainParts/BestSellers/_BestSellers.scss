@@ -1,0 +1,25 @@
+.BestSellers{
+    .BestSellers__h1{
+        font-size: 4rem;
+    }
+    .BestSellers__ul{
+        .BestSellers__li{
+            img{
+                width: 200px;
+                height: 250px;
+                border-radius: 2px;
+            }
+            div h6{
+                font-size: 1.8rem;
+            }
+            p{
+                font-size: 1.4rem;
+            }
+            button{
+                color: var(--primary-white);
+                background-color: var(--dark-blue);
+                border-radius: 5px;
+            }
+        }
+    }
+}

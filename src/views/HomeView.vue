@@ -1,9 +1,11 @@
 <script setup>
 import HeaderView from '@/components/HeaderParts/Header/HeaderView.vue'
+import mainVue from '@/components/mainParts/main.vue'
 </script>
 
 <template>
 <HeaderView/>
+<mainVue/>
 </template>
 
 
