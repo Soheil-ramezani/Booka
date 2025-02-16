@@ -201,7 +201,7 @@ main {
   color: var(--dark-blue);
 }
 
-.BestSellers .BestSellers__h1 {
+.BestSellers .BestSellers__div h1 {
   font-size: 4rem;
 }
 .BestSellers .BestSellers__ul .BestSellers__li img {
