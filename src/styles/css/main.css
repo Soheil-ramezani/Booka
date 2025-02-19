@@ -220,3 +220,24 @@ main {
   background-color: var(--dark-blue);
   border-radius: 5px;
 }
+
+.onlineBooks {
+  background-color: var(--dark-blue);
+}
+.onlineBooks .onlineBooks-LeftSide img {
+  width: 100%;
+  height: 600px;
+}
+.onlineBooks .onlineBooks-RightSide {
+  color: var(--primary-white);
+}
+.onlineBooks .onlineBooks-RightSide h2 {
+  font-size: 5.5rem;
+}
+.onlineBooks .onlineBooks-RightSide p {
+  font-size: 1.8rem;
+  max-width: 400px;
+}
+.onlineBooks .onlineBooks-RightSide button {
+  border: 1px solid var(--light-cream);
+}

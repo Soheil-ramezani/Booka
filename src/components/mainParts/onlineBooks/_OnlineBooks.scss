@@ -1,0 +1,22 @@
+.onlineBooks{
+    background-color: var(--dark-blue); 
+    .onlineBooks-LeftSide{
+        img{
+            width: 100%;
+            height: 600px;
+        }
+    }
+    .onlineBooks-RightSide{
+        color: var(--primary-white);
+        h2{
+            font-size: 5.5rem;
+        }
+        p{
+            font-size: 1.8rem;
+            max-width: 400px;
+        }
+        button{
+            border: 1px solid var(--light-cream);
+        }
+    }
+}
