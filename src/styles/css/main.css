@@ -260,3 +260,7 @@ main {
 .offers .offers-ranges .range3 h5 {
   font-size: 2rem;
 }
+.offers button {
+  border: 1px solid var(--dark-blue);
+  color: var(--dark-blue);
+}

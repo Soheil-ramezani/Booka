@@ -1,5 +1,5 @@
 <template>
-  <nav class="container pt-5 pb-5 flex flex-row justify-around">
+  <nav class="w-full pt-5 pb-5 flex flex-row justify-around">
     <!-- LeftSide -->
     <div class="Left-side w-5/12 flex flex-row justify-around items-center">
       <div class="Nav-Logo mr-10">

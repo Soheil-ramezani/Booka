@@ -1,14 +1,14 @@
 <template>
-  <div class="offers px-[15%] py-20">
+  <div class="offers w-full flex flex-col px-[15%] py-20">
     <h1 class="charm-regular mb-20">Offers</h1>
     <!-- books -->
-    <div class="offers-ranges flex flex-row items-center justify-between">
+    <div class="offers-ranges grid grid-flow-col grid-cols-3 gap-x-5 ">
       <!-- range1 -->
       <div class="range1 flex flex-col items-center justify-center">
         <img
           src="./../../../assets/imgs/Untitled-2.jpg"
           alt=""
-          class="range1__img"
+          class="range1__img w-full h-auto"
         />
         <h5 class="mt-4 charm-regular">
           This month's
@@ -21,7 +21,7 @@
         <img
           src="./../../../assets/imgs/photo17161509544.jpg"
           alt=""
-          class="range1__img"
+          class="range1__img w-full h-auto"
         />
         <h5 class="mt-4 charm-regular">
           This month's
@@ -34,7 +34,7 @@
         <img
           src="./../../../assets/imgs/photo17161509706.jpg"
           alt=""
-          class="range1__img"
+          class="range1__img w-full h-auto"
         />
         <h5 class="mt-4 charm-regular">
           This month's
@@ -42,7 +42,9 @@
           discount- 20%
         </h5>
       </div>
+      <!--  -->
     </div>
+    <button class="mt-[5%] self-center w-fit px-5 py-3">See All</button>
   </div>
 </template>
 
