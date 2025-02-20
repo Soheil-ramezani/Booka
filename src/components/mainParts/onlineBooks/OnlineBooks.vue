@@ -1,7 +1,7 @@
 <template>
-  <div class="onlineBooks flex flex-row  mb-96">
+  <div class="onlineBooks flex flex-row ">
     <div class="onlineBooks-LeftSide w-7/12">
-        <img src="./../../../assets/Untitled-1.jpg"  alt="onlineBooks">
+        <img src="./../../../assets/imgs/Untitled-1.jpg"  alt="onlineBooks">
     </div>
     <div class="onlineBooks-RightSide w-5/12 flex flex-col items-center justify-center">
         <h2 class="text-center">

@@ -15,7 +15,12 @@ body {
     margin: 0 auto;
     font-family: serif;
 }
-
+h1{
+    font-size: 4rem;
+}
+p{
+    font-size: 1.4rem;
+}
 // Fonts
 @import "fonts";
 // Header Parts
@@ -25,6 +30,7 @@ body {
 @import "./../../components/mainParts/mainView";
 @import "./../../components/mainParts/BestSellers/BestSellers";
 @import "./../../components/mainParts/onlineBooks/OnlineBooks";
+@import "./../../components/mainParts/OffersView/Offers"
 
 // 320px — 480px: Mobile devices
 // 481px — 768px: iPads, Tablets

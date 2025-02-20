@@ -16,6 +16,14 @@ body {
   font-family: serif;
 }
 
+h1 {
+  font-size: 4rem;
+}
+
+p {
+  font-size: 1.4rem;
+}
+
 .pacifico-regular {
   font-family: "Pacifico", serif;
   font-weight: 400;
@@ -201,9 +209,6 @@ main {
   color: var(--dark-blue);
 }
 
-.BestSellers .BestSellers__div h1 {
-  font-size: 4rem;
-}
 .BestSellers .BestSellers__ul .BestSellers__li img {
   width: 200px;
   height: 250px;
@@ -211,9 +216,6 @@ main {
 }
 .BestSellers .BestSellers__ul .BestSellers__li div h6 {
   font-size: 1.8rem;
-}
-.BestSellers .BestSellers__ul .BestSellers__li p {
-  font-size: 1.4rem;
 }
 .BestSellers .BestSellers__ul .BestSellers__li button {
   color: var(--primary-white);
@@ -240,4 +242,21 @@ main {
 }
 .onlineBooks .onlineBooks-RightSide button {
   border: 1px solid var(--light-cream);
+}
+
+.offers .offers-ranges .range1 img,
+.offers .offers-ranges .range3 img {
+  width: 300px;
+  height: 250px;
+  border-radius: 5px 5px 300px 300px/5px 5px 250px 250px;
+}
+.offers .offers-ranges .range2 img {
+  width: 300px;
+  height: 250px;
+  border-radius: 300px 300px 5px 5px/250px 250px 5px 5px;
+}
+.offers .offers-ranges .range1 h5,
+.offers .offers-ranges .range2 h5,
+.offers .offers-ranges .range3 h5 {
+  font-size: 2rem;
 }

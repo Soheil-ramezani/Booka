@@ -1,9 +1,5 @@
 .BestSellers{
-    .BestSellers__div{
-        h1{
-        font-size: 4rem;
-        }
-    }
+    
     
     .BestSellers__ul{
         .BestSellers__li{
@@ -15,9 +11,7 @@
             div h6{
                 font-size: 1.8rem;
             }
-            p{
-                font-size: 1.4rem;
-            }
+            
             button{
                 color: var(--primary-white);
                 background-color: var(--dark-blue);
