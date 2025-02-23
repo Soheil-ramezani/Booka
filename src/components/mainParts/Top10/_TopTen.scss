@@ -1,0 +1,19 @@
+.TopTen{
+    .topBanners{
+        .topBanner{
+            background-color: var(--dark-blue);
+            color: var(--light-cream);
+            border-radius: 5px;
+            .topBanner__img{
+                width: 200px;
+                height: 200px;
+            }
+            button{
+                width: 30%;
+                color: var(--primary-white);
+                border: 2px solid var(--primary-white);
+                border-radius: 5px;
+            }
+        }
+    }
+}

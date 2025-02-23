@@ -264,3 +264,19 @@ main {
   border: 1px solid var(--dark-blue);
   color: var(--dark-blue);
 }
+
+.TopTen .topBanners .topBanner {
+  background-color: var(--dark-blue);
+  color: var(--light-cream);
+  border-radius: 5px;
+}
+.TopTen .topBanners .topBanner .topBanner__img {
+  width: 200px;
+  height: 200px;
+}
+.TopTen .topBanners .topBanner button {
+  width: 30%;
+  color: var(--primary-white);
+  border: 2px solid var(--primary-white);
+  border-radius: 5px;
+}
