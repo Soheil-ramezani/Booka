@@ -265,6 +265,9 @@ main {
   color: var(--dark-blue);
 }
 
+.TopTen .topBanners {
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
 .TopTen .topBanners .topBanner {
   background-color: var(--dark-blue);
   color: var(--light-cream);
