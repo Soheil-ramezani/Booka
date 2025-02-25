@@ -20,6 +20,10 @@ h1 {
   font-size: 4rem;
 }
 
+h2 {
+  font-size: 2.5rem;
+}
+
 p {
   font-size: 1.4rem;
 }
@@ -282,4 +286,21 @@ main {
   color: var(--primary-white);
   border: 2px solid var(--primary-white);
   border-radius: 5px;
+}
+
+.footer {
+  background-color: var(--light-cream);
+}
+.footer .footer-links .footerLink .footerLinks__ul .footerLinks__li {
+  margin: 8px 0;
+  font-size: 1.5rem;
+}
+.footer .footerContact .footerContact__input {
+  border: 3px solid #EFEFEF;
+  color: var(--dark-blue);
+  outline: none;
+}
+.footer .footerContact .footerContact__btn {
+  color: var(--light-cream);
+  background-color: var(--dark-blue);
 }
