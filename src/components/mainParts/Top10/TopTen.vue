@@ -1,6 +1,6 @@
 <template>
   <div class="TopTen py-20 px-[15%]">
-    <h1>Top - 10 best selling books</h1>
+    <h1 class="italic">Top - 10 best selling books</h1>
     <div class="topBanners mt-20 grid items-center justify-center gap-5">
       <div class="topBanner w-fit flex flex-row">
         <img
