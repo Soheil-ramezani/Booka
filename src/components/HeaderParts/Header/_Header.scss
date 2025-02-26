@@ -16,7 +16,8 @@ Header {
 
         .header-right {
             .header-books {
-                .header-book--side {
+                grid-template-columns: repeat(auto-fit , minmax(190px,200px));
+                .header-book--sides {
                     .header-book__img {
                         width: 190px;
                         height: 350px;
@@ -27,7 +28,7 @@ Header {
                         font-size: 1.2rem;
                     }
                 }
-                .header-book--main{
+                .header-book--middle{
                     .header-book__img {
                         width: 190px;
                         height: 350px;

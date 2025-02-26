@@ -57,20 +57,23 @@ Header .header-middle .header-Left .header-left__btn {
   color: var(--primary-white);
   font-size: 1.5rem;
 }
-Header .header-middle .header-right .header-books .header-book--side .header-book__img {
+Header .header-middle .header-right .header-books {
+  grid-template-columns: repeat(auto-fit, minmax(190px, 200px));
+}
+Header .header-middle .header-right .header-books .header-book--sides .header-book__img {
   width: 190px;
   height: 350px;
   border-radius: 100% 100% 0% 0%/63% 63% 0% 0%;
 }
-Header .header-middle .header-right .header-books .header-book--side .header-book__h2 {
+Header .header-middle .header-right .header-books .header-book--sides .header-book__h2 {
   font-size: 1.2rem;
 }
-Header .header-middle .header-right .header-books .header-book--main .header-book__img {
+Header .header-middle .header-right .header-books .header-book--middle .header-book__img {
   width: 190px;
   height: 350px;
   border-radius: 0% 0% 100% 100%/0% 0% 63% 63%;
 }
-Header .header-middle .header-right .header-books .header-book--main .header-book__h2 {
+Header .header-middle .header-right .header-books .header-book--middle .header-book__h2 {
   font-size: 1.2rem;
 }
 
