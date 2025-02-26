@@ -7,7 +7,7 @@
       </RouterLink>
     </div>
     
-    <ul class="BestSellers__ul flex flex-row justify-between items-center">
+    <ul class="BestSellers__ul grid gap-[8.5rem]  justify-center items-center">
       <li class="BestSellers__li flex flex-col">
         <RouterLink>
           <img src="./../../../assets/91hYnazD-oL.jpg" alt="" />

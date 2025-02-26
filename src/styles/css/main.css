@@ -213,6 +213,9 @@ main {
   color: var(--dark-blue);
 }
 
+.BestSellers .BestSellers__ul {
+  grid-template-columns: repeat(auto-fit, 200px);
+}
 .BestSellers .BestSellers__ul .BestSellers__li img {
   width: 200px;
   height: 250px;

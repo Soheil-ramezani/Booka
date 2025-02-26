@@ -2,6 +2,7 @@
     
     
     .BestSellers__ul{
+        grid-template-columns: repeat( auto-fit ,max(200px));
         .BestSellers__li{
             img{
                 width: 200px;
