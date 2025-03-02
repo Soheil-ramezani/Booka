@@ -1,9 +1,10 @@
 .BestSellers{
     
     
-    .BestSellers__ul{
-        grid-template-columns: repeat( auto-fit ,max(200px));
-        .BestSellers__li{
+    .BestSellers-books{
+        overflow-x:auto ;
+        .BestSellers-book{
+            min-width: 200px;
             img{
                 width: 200px;
                 height: 250px;

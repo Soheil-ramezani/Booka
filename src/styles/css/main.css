@@ -216,18 +216,21 @@ main {
   color: var(--dark-blue);
 }
 
-.BestSellers .BestSellers__ul {
-  grid-template-columns: repeat(auto-fit, 200px);
+.BestSellers .BestSellers-books {
+  overflow-x: auto;
 }
-.BestSellers .BestSellers__ul .BestSellers__li img {
+.BestSellers .BestSellers-books .BestSellers-book {
+  min-width: 200px;
+}
+.BestSellers .BestSellers-books .BestSellers-book img {
   width: 200px;
   height: 250px;
   border-radius: 2px;
 }
-.BestSellers .BestSellers__ul .BestSellers__li div h6 {
+.BestSellers .BestSellers-books .BestSellers-book div h6 {
   font-size: 1.8rem;
 }
-.BestSellers .BestSellers__ul .BestSellers__li button {
+.BestSellers .BestSellers-books .BestSellers-book button {
   color: var(--primary-white);
   background-color: var(--dark-blue);
   border-radius: 5px;
