@@ -8,7 +8,7 @@
     </div>
     
     <div class="BestSellers-books flex flex-row items-center justify-around">
-      <div class="BestSellers-book mx-10 flex flex-col">
+      <div class="BestSellers-book mx-5 flex flex-col">
         <RouterLink>
           <img src="./../../../assets/91hYnazD-oL.jpg" alt="" />
           <div class="flex flex-row items-center justify-between mt-4">
@@ -33,7 +33,7 @@
           </button>
         </RouterLink>
       </div>
-      <div class="BestSellers-book mx-10 flex flex-col">
+      <div class="BestSellers-book mx-5 flex flex-col">
         <RouterLink>
           <img src="./../../../assets/91hYnazD-oL.jpg" alt="" />
           <div class="flex flex-row items-center justify-between mt-4">
@@ -58,7 +58,7 @@
           </button>
         </RouterLink>
       </div>
-      <div class="BestSellers-book mx-10 flex flex-col">
+      <div class="BestSellers-book mx-5 flex flex-col">
         <RouterLink>
           <img src="./../../../assets/91hYnazD-oL.jpg" alt="" />
           <div class="flex flex-row items-center justify-between mt-4">
@@ -83,7 +83,7 @@
           </button>
         </RouterLink>
       </div>
-      <div class="BestSellers-book mx-10 flex flex-col">
+      <div class="BestSellers-book mx-5 flex flex-col">
         <RouterLink>
           <img src="./../../../assets/91hYnazD-oL.jpg" alt="" />
           <div class="flex flex-row items-center justify-between mt-4">
@@ -108,7 +108,7 @@
           </button>
         </RouterLink>
       </div>
-      <div class="BestSellers-book mx-10 flex flex-col">
+      <div class="BestSellers-book mx-5 flex flex-col">
         <RouterLink>
           <img src="./../../../assets/91hYnazD-oL.jpg" alt="" />
           <div class="flex flex-row items-center justify-between mt-4">
@@ -133,7 +133,7 @@
           </button>
         </RouterLink>
       </div>
-      <div class="BestSellers-book mx-10 flex flex-col">
+      <div class="BestSellers-book mx-5 flex flex-col">
         <RouterLink>
           <img src="./../../../assets/91hYnazD-oL.jpg" alt="" />
           <div class="flex flex-row items-center justify-between mt-4">

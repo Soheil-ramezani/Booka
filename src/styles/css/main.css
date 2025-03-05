@@ -278,19 +278,26 @@ main {
   color: var(--dark-blue);
 }
 
-.TopTen .topBanners {
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+.top-ten .topBanners {
+  overflow: auto;
+  cursor: grab;
 }
-.TopTen .topBanners .topBanner {
+.top-ten .topBanners:active {
+  cursor: grabbing;
+}
+.top-ten .topBanners::-webkit-scrollbar {
+  display: none;
+}
+.top-ten .topBanners .topBanner {
   background-color: var(--dark-blue);
   color: var(--light-cream);
   border-radius: 5px;
 }
-.TopTen .topBanners .topBanner .topBanner__img {
+.top-ten .topBanners .topBanner .topBanner__img {
   width: 200px;
   height: 200px;
 }
-.TopTen .topBanners .topBanner button {
+.top-ten .topBanners .topBanner button {
   width: 30%;
   color: var(--primary-white);
   border: 2px solid var(--primary-white);

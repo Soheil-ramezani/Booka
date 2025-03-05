@@ -3,6 +3,7 @@
     
     .BestSellers-books{
         overflow-x:auto ;
+        
         .BestSellers-book{
             min-width: 200px;
             img{
@@ -21,4 +22,7 @@
             }
         }
     }
+    // .BestSellers-books::-webkit-scrollbar{
+    //     display: none;
+    // }
 }
