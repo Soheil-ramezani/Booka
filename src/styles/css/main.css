@@ -217,7 +217,14 @@ main {
 }
 
 .BestSellers .BestSellers-books {
-  overflow-x: auto;
+  overflow: auto;
+  cursor: grab;
+}
+.BestSellers .BestSellers-books:active {
+  cursor: grabbing;
+}
+.BestSellers .BestSellers-books::-webkit-scrollbar {
+  display: none;
 }
 .BestSellers .BestSellers-books .BestSellers-book {
   min-width: 200px;
