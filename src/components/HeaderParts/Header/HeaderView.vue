@@ -11,17 +11,20 @@ import Navbar from "../Navbar/Navbar.vue";
           // bigger
           'w-6/12': MediaWidth > 990,
           'items-start': MediaWidth > 990,
-          
+
           // smaller
           'w-full': MediaWidth < 990,
           'items-center': MediaWidth < 990,
-          
-        }">
-      
-        <h1 class="header-title__h1 charm-bold">
+        }"
+      >
+        <p v-if="MediaWidth >= 490" class="header-title__p1 charm-bold">
           Find Your <br />
           Next Book
-        </h1>
+        </p>
+        <p v-if="MediaWidth < 490" class="header-title__p2 charm-bold">
+          Find Your <br />
+          Next Book
+        </p>
         <p class="header-title__p">
           Our most popular and trending
           <b class="pacifico-regular">BOOKA</b> perfect <br />
@@ -31,7 +34,11 @@ import Navbar from "../Navbar/Navbar.vue";
           Explore Now
         </button>
       </div>
-      <div class="header-right w-6/12 justify-around items-center" v-show="this.MediaWidth > 990">
+      <!-- Header-right -->
+      <div
+        class="header-right w-6/12 justify-around items-center"
+        v-show="this.MediaWidth > 990"
+      >
         <!-- Books -->
         <div
           class="header-books w-full grid gap-10 items-center justify-center"

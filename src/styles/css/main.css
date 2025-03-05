@@ -49,8 +49,11 @@ p {
 Header {
   background-color: var(--light-cream);
 }
-Header .header-middle .header-Left .header-title__h1 {
+Header .header-middle .header-Left .header-title__p1 {
   font-size: 10rem;
+}
+Header .header-middle .header-Left .header-title__p2 {
+  font-size: 7rem;
 }
 Header .header-middle .header-Left .header-left__btn {
   background-color: var(--dark-blue);

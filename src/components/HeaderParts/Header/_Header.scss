@@ -3,10 +3,12 @@ Header {
 
     .header-middle {
         .header-Left {
-            .header-title__h1 {
+            .header-title__p1 {
                 font-size: 10rem;
             }
-
+            .header-title__p2{
+                font-size: 7rem;
+            }
             .header-left__btn {
                 background-color: var(--dark-blue);
                 color: var(--primary-white);
