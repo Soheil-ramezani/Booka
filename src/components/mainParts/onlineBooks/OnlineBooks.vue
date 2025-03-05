@@ -1,9 +1,15 @@
 <template>
-  <div class="onlineBooks flex flex-row ">
-    <div class="onlineBooks-LeftSide w-7/12">
+  <div class="onlineBooks flex flex-row"
+  :class="{'items-center justify-center':this.MediaWidth>=990}"
+  >
+    <div
+    v-if="this.MediaWidth>=990"
+     class="onlineBooks-LeftSide "
+    :class="{'w-7/12':this.MediaWidth>=990}">
         <img src="./../../../assets/imgs/Untitled-1.jpg"  alt="onlineBooks">
     </div>
-    <div class="onlineBooks-RightSide w-5/12 flex flex-col items-center justify-center">
+    <div class="onlineBooks-RightSide w-5/12 flex flex-col items-center justify-center"
+    :class="{'w-5/12 px-5':this.MediaWidth>=990,'w-full my-20':this.MediaWidth<990}">
         <h2 class="text-center">
             Online Book 
             <br>
@@ -22,10 +28,23 @@
 
 <script>
 export default {
-name:"OnlineBook"
+name:"OnlineBook",
+data() {
+    return {
+      MediaWidth: window.innerWidth,
+    };
+  },
+  mounted() {
+    window.addEventListener("resize", this.updateMediaWidth);
+  },
+  beforeUnmount() {
+    window.removeEventListener("resize", this.updateMediaWidth);
+  },
+  methods: {
+    updateMediaWidth() {
+      this.MediaWidth = window.innerWidth;
+    },
+  },
 }
 </script>
 
-<style>
-
-</style>
