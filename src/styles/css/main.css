@@ -15,6 +15,9 @@ body {
   margin: 0 auto;
   font-family: serif;
 }
+body::-webkit-scrollbar {
+  display: none;
+}
 
 h1 {
   font-size: 4rem;
