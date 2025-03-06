@@ -4,7 +4,7 @@ import Navbar from "../Navbar/Navbar.vue";
 <template>
   <Header class="header flex flex-col justify-center items-center pb-20">
     <Navbar />
-    <div class="header-middle flex flex-row items-center w-full">
+    <div class="header-middle mt-[40px] flex flex-row items-center w-full">
       <div
         class="header-Left pl-[10%] flex flex-col justify-center"
         :class="{

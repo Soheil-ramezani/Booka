@@ -1,4 +1,9 @@
 nav {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--light-cream);
+    /* Additional styles can be added here as needed */
     .Left-side {
         .Nav-Logo {
             .Nav-Logo__h1 {
@@ -95,9 +100,10 @@ nav {
                 border-left: 1px solid var(--dark-blue);
             }
         }
+
         // 
-         /* The Overlay (background) */
-         .overlay {
+        /* The Overlay (background) */
+        .overlay {
             /* Height & width depends on how you want to reveal the overlay (see JS below) */
             height: 100%;
             width: 0;
@@ -157,12 +163,10 @@ nav {
         }
 
         /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
-    
 
 
 
-    }
 
     }
 
-
+}
