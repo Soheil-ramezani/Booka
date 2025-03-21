@@ -1,8 +1,10 @@
 :root {
   --primary-white: #ffffff;
   --secondary-white: #FAFAFA;
+  --light-cream: #faf8f6;
+  --second-cream:#F5ECE0;
   --dark-blue: #0B1220;
-  --light-cream: #FAF8F6;
+  --Deep-sea-blue:#336D82 ;
   --color-brand: #57bd84;
 }
 
@@ -29,6 +31,10 @@ h2 {
 
 p {
   font-size: 1.4rem;
+}
+
+main {
+  background-color: var(--second-cream);
 }
 
 .pacifico-regular {
@@ -339,4 +345,26 @@ main {
 .footer .footerContact .footerContact__btn {
   color: var(--light-cream);
   background-color: var(--dark-blue);
+}
+
+.BookInfo {
+  grid-template-columns: 1fr 2.5fr 1.1fr;
+}
+.BookInfo .bookImg .bookImg__img {
+  width: 90%;
+  height: 500px;
+  border-radius: 10px;
+}
+.BookInfo .bookDetails .bookDetails__p {
+  font-size: 1.7rem;
+}
+.BookInfo .bookPrice {
+  border: 5px solid var(--Deep-sea-blue);
+  border-radius: 10px;
+}
+.BookInfo .bookPrice .prices {
+  grid-template-columns: repeat(auto-fit, minmax(35%, 1fr));
+}
+.BookInfo .bookPrice .prices .TypesPrice {
+  border: 3px solid var(--Deep-sea-blue);
 }

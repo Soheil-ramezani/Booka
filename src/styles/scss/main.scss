@@ -1,8 +1,10 @@
 :root {
     --primary-white: #ffffff;
     --secondary-white: #FAFAFA;
+    --light-cream: #faf8f6;
+    --second-cream:#F5ECE0;
     --dark-blue: #0B1220;
-    --light-cream: #FAF8F6;
+    --Deep-sea-blue:#336D82 ;
     --color-brand: #57bd84;
 }
 
@@ -30,13 +32,16 @@ h2{
 p {
     font-size: 1.4rem;
 }
+main{
+    background-color: var(--second-cream)
+}
 
 // Fonts
 @import "fonts";
 // Header Parts
 @import "./../../components/HeaderParts/Header/Header";
 @import "./../../components/HeaderParts/Navbar/Navbar";
-//MainParts
+//HomeMainParts
 @import "./../../components/mainParts/mainView";
 @import "./../../components/mainParts/BestSellers/BestSellers";
 @import "./../../components/mainParts/onlineBooks/OnlineBooks";
@@ -44,6 +49,8 @@ p {
 @import "./../../components/mainParts/Top10/TopTen";
 //Footer
 @import "./../../components/Footer/footer";
+//BookPage 
+@import "./../../components/BookPageParts/BookDetails/BookDetails";
 
 // 320px — 480px: Mobile devices
 // 481px — 768px: iPads, Tablets

@@ -1,0 +1,26 @@
+.BookInfo{
+    grid-template-columns: 1fr 2.5fr 1.1fr;
+    .bookImg{
+        .bookImg__img{
+            width: 90%;
+            height: 500px;
+            border-radius: 10px;
+        }
+    }
+    .bookDetails{
+        .bookDetails__p{
+            font-size: 1.7rem;
+        }
+    }
+    .bookPrice{
+        border: 5px solid var(--Deep-sea-blue);
+        border-radius: 10px;
+        .prices{
+           grid-template-columns:repeat(auto-fit,minmax(35%,1fr));
+        .TypesPrice{
+            border: 3px solid var(--Deep-sea-blue);;
+        } 
+        }
+        
+    }
+}
