@@ -352,45 +352,45 @@ main {
 .BookInfo {
   grid-template-columns: 1.5fr 2.5fr 1.1fr;
 }
-.BookInfo .bookImg .bookImg__img {
+.BookInfo .leftCol .bookImg .bookImg__img {
   width: 90%;
   height: 500px;
   border-radius: 10px;
 }
-.BookInfo .bookDetails .bookDetails__p {
+.BookInfo .centerCol .bookDetails .bookDetails__p {
   font-size: 1.7rem;
 }
-.BookInfo .bookPrice {
+.BookInfo .rightCol .bookPrice {
   border: 3px solid var(--dark-blue);
   border-radius: 10px;
   line-height: 1.2;
 }
-.BookInfo .bookPrice .prices {
+.BookInfo .rightCol .bookPrice .prices {
   grid-template-columns: repeat(auto-fit, minmax(35%, 1fr));
 }
-.BookInfo .bookPrice .prices .TypesPrice {
+.BookInfo .rightCol .bookPrice .prices .TypesPrice {
   border: 3px solid var(--dark-blue);
   border-radius: 5px;
 }
-.BookInfo .bookPrice .prices .TypesPrice--active {
+.BookInfo .rightCol .bookPrice .prices .TypesPrice--active {
   border: 3px solid var(--Sky-Blue);
   background-color: var(--Light-Sky-Blue);
 }
-.BookInfo .bookPrice .bookPrice__btn {
+.BookInfo .rightCol .bookPrice .bookPrice__btn {
   background-color: var(--Light-Sky-Blue);
   color: var(--dark-blue);
   border: 2px solid var(--dark-blue);
   border-radius: 5px;
 }
-.BookInfo .bookPrice .bookPrice__span {
+.BookInfo .rightCol .bookPrice .bookPrice__span {
   font-size: 1.4rem;
 }
-.BookInfo .bookPrice .bookPrice__a {
+.BookInfo .rightCol .bookPrice .bookPrice__a {
   color: blue;
   -webkit-text-decoration: dashed;
           text-decoration: dashed;
 }
-.BookInfo .bookPrice .bookPrice__img {
+.BookInfo .rightCol .bookPrice .bookPrice__img {
   width: 300px;
   height: 20px;
 }

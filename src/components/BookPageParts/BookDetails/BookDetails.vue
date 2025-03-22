@@ -1,10 +1,15 @@
 <template>
   <div class="BookInfo grid grid-flow-col py-[5rem] px-[1%]">
-    <!-- bookImg -->
+    <!-- LeftCol -->
+    <div class="leftCol">
+       <!-- bookImg -->
     <div class="bookImg h-full">
       <img src="../../../assets/91hYnazD-oL.jpg" alt="" class="bookImg__img" />
     </div>
-    <!-- bookDetails -->
+  </div>
+  <!-- centerCol -->
+    <div class="centerCol">
+       <!-- bookDetails -->
     <div
       class="bookDetails pt-5 h-full flex flex-col items-start justify-start"
     >
@@ -43,6 +48,9 @@
       </div>
       <hr class="w-[98%] outline-slate-600 border-slate-600" />
     </div>
+    </div>
+    <!--rightCol  -->
+   <div class="rightCol">
     <!-- BookPrice -->
     <div class="bookPrice flex flex-col items-center py-10 px-5">
       <div class="prices grid w-full gap-x-5 gap-y-3">
@@ -90,6 +98,8 @@
       </div>
       
     </div>
+  </div>
+    
   </div>
 </template>
 

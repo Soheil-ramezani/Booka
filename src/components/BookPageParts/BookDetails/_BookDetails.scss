@@ -1,17 +1,22 @@
 .BookInfo{
     grid-template-columns: 1.5fr 2.5fr 1.1fr;
-    .bookImg{
+    .leftCol{
+       .bookImg{
         .bookImg__img{
             width: 90%;
             height: 500px;
             border-radius: 10px;
         }
+    } 
     }
-    .bookDetails{
+    .centerCol{
+         .bookDetails{
         .bookDetails__p{
             font-size: 1.7rem;
         }
     }
+    }
+   .rightCol{
     .bookPrice{
         border: 3px solid var(--dark-blue);
         border-radius: 10px;
@@ -46,4 +51,6 @@
             height: 20px;
         }
     }
+   }
+    
 }
