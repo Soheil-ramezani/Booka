@@ -44,21 +44,51 @@
       <hr class="w-[98%] outline-slate-600 border-slate-600" />
     </div>
     <!-- BookPrice -->
-    <div class="bookPrice py-10 px-5 ">
-      <div class="prices grid  gap-x-5 gap-y-3">
-          <div class="TypesPrice px-1 h-fit flex flex-col justify-center items-start">
-        <span class="TypesPrice__span"> <b>Kindle</b> </span>
-        <p class="TypesPrice__p">$30</p>
-        <span class="TypesPrice__span"> Available instantly </span>
+    <div class="bookPrice flex flex-col items-center py-10 px-5">
+      <div class="prices grid w-full gap-x-5 gap-y-3">
+        <div
+          class="TypesPrice TypesPrice--active px-2 py-1 h-fit flex flex-col justify-center items-start"
+        >
+          <span class="TypesPrice__span"> <b>Kindle</b> </span>
+          <p class="TypesPrice__p">$30</p>
+          <span class="TypesPrice__span"> Available instantly </span>
+        </div>
+        <div
+          class="TypesPrice px-2 py-1 h-fit flex flex-col justify-center items-start"
+        >
+          <span class="TypesPrice__span"> <b>AudioBook</b> </span>
+          <p class="TypesPrice__p">$0.99</p>
+          <span class="TypesPrice__span"> with membership</span>
+        </div>
+        <div
+          class="TypesPrice px-2 py-1 h-fit flex flex-col justify-center items-start"
+        >
+          <span class="TypesPrice__span"> <b>Hardcover</b> </span>
+          <p class="TypesPrice__p">$0.99</p>
+        </div>
+        <div
+          class="TypesPrice px-2 py-1 h-fit flex flex-col justify-center items-start"
+        >
+          <span class="TypesPrice__span"> <b>Paperback</b> </span>
+          <p class="TypesPrice__p">$0.99</p>
+        </div>
       </div>
-          <div class="TypesPrice px-1 h-fit flex flex-col justify-center items-start">
-        <span class="TypesPrice__span"> <b>Kindle</b> </span>
-        <p class="TypesPrice__p">$30</p>
-        <span class="TypesPrice__span"> Available instantly </span>
+      <hr class="my-10 w-[98%] outline-slate-600 border-slate-600" />
+      <div class="flex flex-col items-center">
+        <button class="bookPrice__btn w-11/12 p-3">Buy now with 1-Click</button>
+      <span class="bookPrice__span mt-5 text-center"
+        >By placing your order,
+        <b>you're purchasing a license to the content</b> and you agree to the
+        <a href="#" class="bookPrice__a">Kindle Store Terms of Use.</a></span
+      >
+      <hr class="my-10 w-[98%] outline-slate-600 border-slate-600" />
+      <img src="https://m.media-amazon.com/images/I/21EzREA+0yL.svg" alt="" class="bookPrice__img">
+      <span class="bookPrice__span mt-5 text-center">
+        Unlimited reading. Over 4 million titles. 
+      </span>
+      <button class="bookPrice__btn w-11/12 p-5 mt-3"> Read for Free</button>
       </div>
       
-      </div>
-    
     </div>
   </div>
 </template>
