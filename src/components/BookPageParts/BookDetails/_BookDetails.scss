@@ -1,56 +1,74 @@
-.BookInfo{
+.BookInfo {
     grid-template-columns: 1.5fr 2.5fr 1.1fr;
-    .leftCol{
-       .bookImg{
-        .bookImg__img{
-            width: 90%;
-            height: 500px;
-            border-radius: 10px;
+
+    .leftCol {
+        .bookImg {
+            .bookImg__img {
+                width: 90%;
+                height: 500px;
+                border-radius: 10px;
+            }
         }
-    } 
+
+        .leftCol_btns {
+            .leftCol__btn {
+                border: 1px solid var(--dark-blue);
+                border-radius: 5px;
+            }
+        }
+
     }
-    .centerCol{
-         .bookDetails{
-        .bookDetails__p{
-            font-size: 1.7rem;
+
+    .centerCol {
+        .bookDetails {
+            .bookDetails__p {
+                font-size: 1.7rem;
+            }
         }
     }
-    }
-   .rightCol{
-    .bookPrice{
-        border: 3px solid var(--dark-blue);
-        border-radius: 10px;
-        line-height: 1.2;
-        .prices{
-           grid-template-columns:repeat(auto-fit,minmax(35%,1fr));
-        .TypesPrice{
+
+    .rightCol {
+        .bookPrice {
             border: 3px solid var(--dark-blue);
-            border-radius: 5px;
-        } 
-        .TypesPrice--active{
-            border: 3px solid var(--Sky-Blue);
-            background-color: var(--Light-Sky-Blue);
-        }
-       
-        }
-         .bookPrice__btn{
-            background-color: var(--Light-Sky-Blue);
-            color: var(--dark-blue);
-            border: 2px solid var(--dark-blue);
-            border-radius: 5px;
-        }
-        .bookPrice__span{
-            font-size: 1.4rem;
-        }
-        .bookPrice__a{
-            color: blue;
-            text-decoration: dashed;
-        }
-        .bookPrice__img{
-            width: 300px;
-            height: 20px;
+            border-radius: 10px;
+            line-height: 1.2;
+
+            .prices {
+                grid-template-columns: repeat(auto-fit, minmax(35%, 1fr));
+
+                .TypesPrice {
+                    border: 3px solid var(--dark-blue);
+                    border-radius: 5px;
+                }
+
+                .TypesPrice--active {
+                    border: 3px solid var(--Sky-Blue);
+                    background-color: var(--Light-Sky-Blue);
+                }
+
+            }
+
+            .bookPrice__btn {
+                background-color: var(--Light-Sky-Blue);
+                color: var(--dark-blue);
+                border: 2px solid var(--dark-blue);
+                border-radius: 5px;
+            }
+
+            .bookPrice__span {
+                font-size: 1.4rem;
+            }
+
+            .bookPrice__a {
+                color: blue;
+                text-decoration: dashed;
+            }
+
+            .bookPrice__img {
+                width: 300px;
+                height: 20px;
+            }
         }
     }
-   }
-    
+
 }

@@ -357,6 +357,10 @@ main {
   height: 500px;
   border-radius: 10px;
 }
+.BookInfo .leftCol .leftCol_btns .leftCol__btn {
+  border: 1px solid var(--dark-blue);
+  border-radius: 5px;
+}
 .BookInfo .centerCol .bookDetails .bookDetails__p {
   font-size: 1.7rem;
 }
