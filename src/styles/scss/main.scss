@@ -37,6 +37,11 @@ p {
 main{
     background-color: var(--second-cream)
 }
+.link {
+    color: blue;
+    text-decoration: dashed;
+}
+
 
 // Fonts
 @import "fonts";
