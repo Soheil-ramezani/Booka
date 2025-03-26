@@ -1,5 +1,12 @@
+<script setup>
+import NavBar from "@/components/HeaderParts/Navbar/Navbar.vue";
+import BookDetails from "@/components/BookPageParts/BookDetails/BookDetails.vue";
+</script>
 <template>
-  <div class="BookInfo grid grid-flow-col py-[5rem] px-[1%]">
+  <div class="book-page">
+    <NavBar />
+    <main class="mt-[62.5px] flex flex-col items-center">
+      <div class="BookInfo grid grid-flow-col py-[5rem] px-[1%]">
     <!-- LeftCol -->
     <div class="leftCol">
       <!-- bookImg -->
@@ -225,13 +232,13 @@
       </div>
     </div>
   </div>
+      <hr class="w-[90%] mb-[500px] outline-slate-600 border-slate-600" />
+    </main>
+  </div>
 </template>
 
 <script>
 export default {
-  name: "BookDetails",
+  name: "BookPage",
 };
 </script>
-
-<style>
-</style>

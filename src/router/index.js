@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import BookPage from '@/views/BookPage.vue'
+import BookPage from '@/views/bookPage/BookPage.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
