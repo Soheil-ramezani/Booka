@@ -244,6 +244,7 @@ import dragScroll from "@/components/dragScroll/dragScroll.vue";
         </div>
       </div>
       <hr class="w-[90%]  outline-slate-600 border-slate-600" />
+      <!-- suggestion books part -->
       <div class="partTitle my-3 flex w-full items-center justify-between">
       <span class="partTitle__span charm-regular">Other Books You May Enjoy</span>
     </div>
