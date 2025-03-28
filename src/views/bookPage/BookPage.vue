@@ -5,7 +5,7 @@ import dragScroll from "@/components/dragScroll/dragScroll.vue";
 <template>
   <div class="book-page">
     <NavBar />
-    <main class="mt-[62.5px] flex flex-col items-center">
+    <main class="mt-[62.5px] px-[5%] flex flex-col items-center">
       <!-- BookDetails -->
       <div class="BookInfo grid grid-flow-col py-[5rem] px-[1%]">
         <!-- LeftCol -->
@@ -244,6 +244,9 @@ import dragScroll from "@/components/dragScroll/dragScroll.vue";
         </div>
       </div>
       <hr class="w-[90%]  outline-slate-600 border-slate-600" />
+      <div class="partTitle my-3 flex w-full items-center justify-between">
+      <span class="partTitle__span charm-regular">Other Books You May Enjoy</span>
+    </div>
       <dragScroll/>
     </main>
   </div>

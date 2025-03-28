@@ -41,7 +41,11 @@ main{
     color: blue;
     text-decoration: dashed;
 }
-
+.partTitle{
+    .partTitle__span{
+        font-size: 2.5rem;
+    }
+}
 
 // Fonts
 @import "fonts";

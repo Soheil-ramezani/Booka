@@ -45,6 +45,10 @@ main {
           text-decoration: dashed;
 }
 
+.partTitle .partTitle__span {
+  font-size: 2.5rem;
+}
+
 .pacifico-regular {
   font-family: "Pacifico", serif;
   font-weight: 400;
