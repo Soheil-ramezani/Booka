@@ -1,6 +1,6 @@
 <template>
   <swiper
-    :slidesPerView="5.5"
+    :slidesPerView="6.5"
     :spaceBetween="10"
     :modules="modules"
     class="mySwiper my-10"

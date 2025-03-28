@@ -1,23 +1,30 @@
-.top-ten {
-
-
-    .topBanners {
-        overflow: auto;
-        cursor: grab;
-
-        &:active {
-
-            cursor: grabbing;
-        }
-        &::-webkit-scrollbar{
-            display: none;
-        }
-
-        .topBanner {
+.swiper {
+    width: 100%;
+    height: fit-content;
+  
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+  
+      /* Center slide text vertically */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  
+      
+  
+      .slides {
+        width: 200px;
+        height: 300px;
+      }
+    }
+}
+.topBanner {
             background-color: var(--dark-blue);
             color: var(--light-cream);
             border-radius: 5px;
-
+            
             .topBanner__img {
                 width: 200px;
                 height: 200px;
@@ -30,5 +37,3 @@
                 border-radius: 5px;
             }
         }
-    }
-}

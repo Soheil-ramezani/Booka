@@ -251,33 +251,6 @@ main {
   color: var(--dark-blue);
 }
 
-.BestSellers .BestSellers-books {
-  overflow: auto;
-  cursor: grab;
-}
-.BestSellers .BestSellers-books:active {
-  cursor: grabbing;
-}
-.BestSellers .BestSellers-books::-webkit-scrollbar {
-  display: none;
-}
-.BestSellers .BestSellers-books .BestSellers-book {
-  min-width: 200px;
-}
-.BestSellers .BestSellers-books .BestSellers-book img {
-  width: 200px;
-  height: 250px;
-  border-radius: 2px;
-}
-.BestSellers .BestSellers-books .BestSellers-book div h6 {
-  font-size: 1.8rem;
-}
-.BestSellers .BestSellers-books .BestSellers-book button {
-  color: var(--primary-white);
-  background-color: var(--dark-blue);
-  border-radius: 5px;
-}
-
 .onlineBooks {
   background-color: var(--dark-blue);
 }
@@ -320,26 +293,35 @@ main {
   color: var(--dark-blue);
 }
 
-.top-ten .topBanners {
-  overflow: auto;
-  cursor: grab;
+.swiper {
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
 }
-.top-ten .topBanners:active {
-  cursor: grabbing;
+.swiper .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.top-ten .topBanners::-webkit-scrollbar {
-  display: none;
+.swiper .swiper-slide .slides {
+  width: 200px;
+  height: 300px;
 }
-.top-ten .topBanners .topBanner {
+
+.topBanner {
   background-color: var(--dark-blue);
   color: var(--light-cream);
   border-radius: 5px;
 }
-.top-ten .topBanners .topBanner .topBanner__img {
+.topBanner .topBanner__img {
   width: 200px;
   height: 200px;
 }
-.top-ten .topBanners .topBanner button {
+.topBanner button {
   width: 30%;
   color: var(--primary-white);
   border: 2px solid var(--primary-white);
