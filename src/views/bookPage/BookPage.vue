@@ -1,6 +1,6 @@
 <script setup>
 import NavBar from "@/components/HeaderParts/Navbar/Navbar.vue";
-import dragScroll from "@/components/dragScroll/dragScroll.vue";
+import DragScroll from "@/components/dragScroll/dragScroll.vue";
 import FooterView from "@/components/Footer/FooterView.vue";
 </script>
 <template>
@@ -249,7 +249,7 @@ import FooterView from "@/components/Footer/FooterView.vue";
       <div class="partTitle my-3 flex w-full items-center justify-between">
       <span class="partTitle__span charm-regular">Other Books You May Enjoy</span>
     </div>
-      <dragScroll/>
+      <DragScroll/>
     </main>
     <FooterView/>
   </div>

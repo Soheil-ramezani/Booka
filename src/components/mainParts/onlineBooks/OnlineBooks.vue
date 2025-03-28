@@ -1,5 +1,5 @@
 <template>
-  <div class="onlineBooks flex flex-row"
+  <div class="onlineBooks flex flex-row w-full"
   :class="{'items-center justify-center':this.MediaWidth>=990}"
   >
     <div

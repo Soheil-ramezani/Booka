@@ -29,7 +29,7 @@ import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 
 export default {
-  name:'dragScroll',
+  name:'DragScroll',
   components: {
     Swiper,
     SwiperSlide,
