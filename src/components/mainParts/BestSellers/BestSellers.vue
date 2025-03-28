@@ -50,6 +50,9 @@ export default {
         { id: 4, title: 'Banner 3' },
         { id: 5, title: 'Banner 3' },
         { id: 6, title: 'Banner 3' },
+        { id: 6, title: 'Banner 3' },
+        { id: 6, title: 'Banner 3' },
+        { id: 6, title: 'Banner 3' },
         // ... more banners
       ]
     };

@@ -359,6 +359,31 @@ main {
   background-color: var(--dark-blue);
 }
 
+.swiper {
+  width: 100%;
+  height: 250px;
+}
+.swiper .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.swiper .swiper-slide img {
+  display: block;
+  width: 200px;
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.swiper .swiper-slide .slides {
+  width: 200px;
+  height: 300px;
+}
+
 .BookInfo {
   grid-template-columns: 1.5fr 2.5fr 1.1fr;
 }
