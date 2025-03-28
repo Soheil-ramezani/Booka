@@ -1,6 +1,7 @@
 <script setup>
 import NavBar from "@/components/HeaderParts/Navbar/Navbar.vue";
 import dragScroll from "@/components/dragScroll/dragScroll.vue";
+import FooterView from "@/components/Footer/FooterView.vue";
 </script>
 <template>
   <div class="book-page">
@@ -250,6 +251,7 @@ import dragScroll from "@/components/dragScroll/dragScroll.vue";
     </div>
       <dragScroll/>
     </main>
+    <FooterView/>
   </div>
 </template>
 
