@@ -36,7 +36,8 @@ p {
 }
 
 main {
-  background-color: var(--second-cream);
+  background-color: var(--primary-white);
+  color: var(--dark-blue);
 }
 
 .link {
@@ -246,11 +247,6 @@ nav .Right-side .overlay .closebtn {
   font-size: 60px;
 }
 
-main {
-  background-color: var(--primary-white);
-  color: var(--dark-blue);
-}
-
 .onlineBooks {
   background-color: var(--dark-blue);
 }
@@ -291,41 +287,6 @@ main {
 .offers button {
   border: 1px solid var(--dark-blue);
   color: var(--dark-blue);
-}
-
-.swiper {
-  width: 100%;
-  height: -moz-fit-content;
-  height: fit-content;
-}
-.swiper .swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-  /* Center slide text vertically */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.swiper .swiper-slide .slides {
-  width: 200px;
-  height: 300px;
-}
-
-.topBanner {
-  background-color: var(--dark-blue);
-  color: var(--light-cream);
-  border-radius: 5px;
-}
-.topBanner .topBanner__img {
-  width: 200px;
-  height: 200px;
-}
-.topBanner button {
-  width: 30%;
-  color: var(--primary-white);
-  border: 2px solid var(--primary-white);
-  border-radius: 5px;
 }
 
 .footer {

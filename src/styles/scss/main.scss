@@ -35,7 +35,8 @@ p {
     font-size: 1.4rem;
 }
 main{
-    background-color: var(--second-cream)
+    background-color: var(--primary-white);
+    color: var(--dark-blue);
 }
 .link {
     color: blue;
@@ -53,7 +54,6 @@ main{
 @import "./../../components/HeaderParts/Header/Header";
 @import "./../../components/HeaderParts/Navbar/Navbar";
 //HomeMainParts
-@import "./../../components/mainParts/mainView";
 @import "./../../components/mainParts/onlineBooks/OnlineBooks";
 @import "./../../components/mainParts/OffersView/Offers";
 //Footer
