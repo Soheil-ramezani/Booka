@@ -1,5 +1,5 @@
 <script setup>
-import Navbar from "../Navbar/Navbar.vue";
+import Navbar from '../Navbar/Navbar.vue';
 </script>
 <template>
   <Header class="header flex flex-col justify-center items-center pb-20">
@@ -43,17 +43,17 @@ import Navbar from "../Navbar/Navbar.vue";
         <div
           class="header-books w-full grid gap-10 items-center justify-center"
         >
-          <!-- Right book -->
+          <!-- left book -->
           <div
             class="header-book--sides h-full flex flex-col pt-20 items-center"
           >
             <img
-              src="./../../../assets/91hYnazD-oL.jpg"
+              src="https://m.media-amazon.com/images/I/91qNbDQgAQL._AC_UY327_FMwebp_QL65_.jpg"
               class="header-book__img"
               alt="img1"
             />
-            <h2 class="header-book__h2 text-center mt-4">DAISY DARKER</h2>
-            <p class="header-book__p text-center">ALICE FEENY</p>
+            <h2 class="header-book__h2 text-center mt-4">Once Upon a Tome</h2>
+            <p class="header-book__p text-center">Oliver Darkshire </p>
           </div>
           <!-- middle book -->
           <div
@@ -67,18 +67,18 @@ import Navbar from "../Navbar/Navbar.vue";
               alt="img1"
             />
           </div>
-          <!-- left -->
+          <!--Right Book -->
           <div
             v-show="this.MediaWidth > 1300"
             class="header-book--sides h-full flex flex-col pt-20 items-center"
           >
             <img
-              src="./../../../assets/91hYnazD-oL.jpg"
+              src="https://m.media-amazon.com/images/I/515j2DspaRL._AC_UY327_FMwebp_QL65_.jpg"
               class="header-book__img"
               alt="img1"
             />
-            <h2 class="header-book__h2 text-center mt-4">DAISY DARKER</h2>
-            <p class="header-book__p text-center">ALICE FEENY</p>
+            <h2 class="header-book__h2 text-center mt-4">Commerce in Culture</h2>
+            <p class="header-book__p text-center">Cynthia J. Brokaw </p>
           </div>
         </div>
       </div>
