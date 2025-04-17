@@ -21,6 +21,17 @@ import OffersView from "@/components/mainParts/OffersView/OffersView.vue";
       <!-- DragScroll -->
       <DragScroll />
     </div>
+    <!-- Top rated -->
+    <div class="BestSellers container flex flex-col items-center">
+      <!-- Title -->
+      <div
+        class="partTitle px-[5%] mt-10 flex w-full items-center justify-between"
+      >
+        <h1 class="partTitle__h1 charm-regular">Top rated</h1>
+      </div>
+      <!-- DragScroll -->
+      <DragScroll />
+    </div>
     <OnlineBooks />
     <OffersView />
     <!-- Popular -->
@@ -40,28 +51,9 @@ import OffersView from "@/components/mainParts/OffersView/OffersView.vue";
   </div>
 </template>
 
-
-
-<!-- <script>
+<script>
 export default {
-  data() {
-    return {
-      items: [] // Array to hold the fetched data
-    };
-  },
-  mounted() {
-    // Fetch data from the API
-    fetch('https://gutendex.com/books') // Replace with your API endpoint
-      .then(response => response.json())
-      .then(data => {
-        this.items = data; // Store the fetched data in the items array
-        data.results.forEach(item=>{
-          console.log(item.formats["image/jpeg"])
-        }) // Log the fetched data to the console
-      })
-      .catch(error => {
-        console.error('Error fetching data:', error);
-      });
-  }
+  name:"HomeView"
 }
-</script> -->
+</script>
+
