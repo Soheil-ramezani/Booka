@@ -325,6 +325,9 @@ nav .Right-side .overlay .closebtn {
   height: 300px;
 }
 
+.mySwiper .swiperItem {
+  min-width: 170px;
+}
 .mySwiper .swiperItem .swiperItem__img {
   width: 150px;
   height: 200px;
