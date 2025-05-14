@@ -8,20 +8,30 @@ import FooterView from "@/components/Footer/FooterView.vue";
     <NavBar />
     <main class="mt-[62.5px] px-[5%] flex flex-col items-center">
       <!-- BookDetails -->
-      <div class="BookInfo grid grid-flow-col py-[5rem] px-[1%]">
+      <div
+        class="BookInfo grid  py-[5rem] px-[1%]"
+        :class="{
+          'grid-cols-Book-Info-3': this.MediaWidth > 1160,
+          'grid-cols-Book-Info-2': 850 < this.MediaWidth < 1160,
+          'grid-flow-col':this.MediaWidth>=800,
+          'grid-flow-row': this.MediaWidth<800
+        }"
+      >
         <!-- LeftCol -->
-        <div class="leftCol">
+        <div class="leftCol w-full flex flex-col items-center justify-center">
           <!-- bookImg -->
-          <div class="bookImg">
+          <div class="bookImg flex flex-col items-center justify-center  ">
             <img
               src="../../assets/91hYnazD-oL.jpg"
               alt=""
-              class="bookImg__img"
+            :class="{'bookImg__img':this.MediaWidth>670,
+              'bookImg__img2':this.MediaWidth<670
+            }"
             />
           </div>
           <!-- bookBtns -->
           <div
-            class="leftCol_btns mt-10 flex flex-row items-center justify-center pr-[20%]"
+            class="leftCol_btns mt-10"
           >
             <button class="leftCol__btn mx-2 px-3 py-2">
               <span class="leftCol__span">Read sample</span>
@@ -184,9 +194,9 @@ import FooterView from "@/components/Footer/FooterView.vue";
           </div>
         </div>
         <!--rightCol  -->
-        <div class="rightCol">
+        <div  class="rightCol">
           <!-- BookPrice -->
-          <div class="bookPrice flex flex-col items-center py-10 px-5">
+          <div v-if="this.MediaWidth > 1160" class="bookPrice flex flex-col items-center py-10 px-5">
             <div class="prices grid w-full gap-x-5 gap-y-3">
               <div
                 class="TypesPrice TypesPrice--active px-2 py-1 h-fit flex flex-col justify-center items-start"
@@ -218,7 +228,7 @@ import FooterView from "@/components/Footer/FooterView.vue";
             <hr class="my-10 w-[98%] outline-slate-600 border-slate-600" />
             <div class="flex flex-col items-center">
               <button class="bookPrice__btn w-11/12 p-3">
-                Buy now with 1-Click
+                Buy now with One Click
               </button>
               <span class="bookPrice__span mt-5 text-center"
                 >By placing your order,
@@ -244,19 +254,59 @@ import FooterView from "@/components/Footer/FooterView.vue";
           </div>
         </div>
       </div>
-      <hr class="w-[90%]  outline-slate-600 border-slate-600" />
+      <!-- book price-row -->
+      <div v-if="this.MediaWidth < 1160" class="bookPrice-row w-full mb-10 py-10 px-5">
+        <div class="prices2 grid   w-full gap-x-5 ">
+          <div
+            class="TypesPrice TypesPrice--active px-2 py-1 h-fit flex flex-col justify-center items-start"
+          >
+            <span class="TypesPrice__span"> <b>Kindle</b> </span>
+            <p class="TypesPrice__p">$30</p>
+            <span class="TypesPrice__span"> Available instantly </span>
+          </div>
+          <div
+            class="TypesPrice px-2 py-1 h-fit flex flex-col justify-center items-start"
+          >
+            <span class="TypesPrice__span"> <b>AudioBook</b> </span>
+            <p class="TypesPrice__p">$0.99</p>
+            <span class="TypesPrice__span"> with membership</span>
+          </div>
+          <div
+            class="TypesPrice px-2 py-1  flex flex-col justify-center items-start"
+          >
+            <span class="TypesPrice__span"> <b>Hardcover</b> </span>
+            <p class="TypesPrice__p">$0.99</p>
+          </div>
+          <div
+            class="TypesPrice px-2 py-1  flex flex-col justify-center items-start"
+          >
+            <span class="TypesPrice__span"> <b>Paperback</b> </span>
+            <p class="TypesPrice__p">$0.99</p>
+          </div>
+        </div>
+      </div>
+      <!--  -->
+      <hr class="w-[90%] outline-slate-600 border-slate-600" />
       <!-- suggestion books part -->
       <div class="partTitle my-3 flex w-full items-center justify-between">
-      <span class="partTitle__span charm-regular">Other Books You May Enjoy</span>
-    </div>
-      <DragScroll/>
+        <span class="partTitle__span charm-regular"
+          >Other Books You May Enjoy</span
+        >
+      </div>
+      <!-- DragScroll -->
+      <DragScroll />
     </main>
-    <FooterView/>
+    <FooterView />
   </div>
 </template>
 
 <script>
 export default {
   name: "BookPage",
+  data() {
+    return {
+      MediaWidth: window.innerWidth,
+    };
+  },
 };
 </script>

@@ -337,12 +337,14 @@ nav .Right-side .overlay .closebtn {
   font-size: 1.5rem;
 }
 
-.BookInfo {
-  grid-template-columns: 1.5fr 2.5fr 1.1fr;
-}
 .BookInfo .leftCol .bookImg .bookImg__img {
   width: 90%;
   height: 500px;
+  border-radius: 10px;
+}
+.BookInfo .leftCol .bookImg .bookImg__img2 {
+  width: 300px;
+  height: 250px;
   border-radius: 10px;
 }
 .BookInfo .leftCol .leftCol_btns .leftCol__btn {
@@ -368,21 +370,61 @@ nav .Right-side .overlay .closebtn {
   border: 3px solid var(--Sky-Blue);
   background-color: var(--Light-Sky-Blue);
 }
-.BookInfo .rightCol .bookPrice .bookPrice__btn {
+.BookInfo .rightCol .bookPrice .TypesPrice--active {
+  border: 3px solid var(--Sky-Blue);
+  background-color: var(--Light-Sky-Blue);
+}
+.BookInfo .rightCol .bookPrice__btn {
   background-color: var(--Light-Sky-Blue);
   color: var(--dark-blue);
   border: 2px solid var(--dark-blue);
   border-radius: 5px;
 }
-.BookInfo .rightCol .bookPrice .bookPrice__span {
+.BookInfo .rightCol .bookPrice__span {
   font-size: 1.4rem;
 }
-.BookInfo .rightCol .bookPrice .bookPrice__a {
+.BookInfo .rightCol .bookPrice__a {
   color: blue;
   -webkit-text-decoration: dashed;
           text-decoration: dashed;
 }
-.BookInfo .rightCol .bookPrice .bookPrice__img {
+.BookInfo .rightCol .bookPrice__img {
+  width: 300px;
+  height: 20px;
+}
+
+.bookPrice-row {
+  border: 3px solid var(--dark-blue);
+  border-radius: 10px;
+  line-height: 1.2;
+}
+.bookPrice-row .prices2 {
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+.bookPrice-row .prices2 .TypesPrice {
+  border: 3px solid var(--dark-blue);
+  border-radius: 5px;
+  height: 70px;
+}
+.bookPrice-row .prices2 .TypesPrice--active {
+  border: 3px solid var(--Sky-Blue);
+  background-color: var(--Light-Sky-Blue);
+}
+.bookPrice-row .bookPrice__btn {
+  background-color: var(--Light-Sky-Blue);
+  color: var(--dark-blue);
+  border: 2px solid var(--dark-blue);
+  border-radius: 5px;
+}
+.bookPrice-row .bookPrice__span {
+  font-size: 1.4rem;
+}
+.bookPrice-row .bookPrice__a {
+  color: blue;
+  -webkit-text-decoration: dashed;
+          text-decoration: dashed;
+}
+.bookPrice-row .bookPrice__img {
   width: 300px;
   height: 20px;
 }
