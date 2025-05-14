@@ -8,9 +8,6 @@
       <div class="Nav-menu" v-show="this.MediaWidth >= 600">
         <ul class="Nav-menu__ul flex flex-row">
           <li class="Nav-menu__li text-nowrap mx-5">
-            <RouterLink class="menu__RouterLink">Books</RouterLink>
-          </li>
-          <li class="Nav-menu__li text-nowrap mx-5">
             <RouterLink class="menu__RouterLink">Categories</RouterLink>
           </li>
           <li
@@ -95,10 +92,9 @@
 
         <!-- Overlay content -->
         <div class="overlay-content">
-          <a href="#">Books</a>
+          <a href="#">cart</a>
+          <a href="#">Sing in</a>
           <a href="#">Categories</a>
-          <a href="#">Wishlist</a>
-          <a href="#">Blogs</a>
           <a href="#">About Us</a>
         </div>
       </div>
