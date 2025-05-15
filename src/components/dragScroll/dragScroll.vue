@@ -6,7 +6,10 @@
     :modules="modules"
     class="mySwiper container my-10"
   >
+  <!-- query: {id:item.title,movie: JSON.stringify(item) } -->
     <swiper-slide v-for="book in this.books" :key="book.id">
+      <RouterLink
+       :to="{ name: 'BookPage', query:{id:book.id ,Book: JSON.stringify(book)} }">
       <div
         class="swiperItem flex flex-col items-center"
         @click="console.log(book)"
@@ -19,8 +22,9 @@
         >
         <!-- put book's Author name here -->
         <span class="swiperItem__item charm-regular">{{ book.author }}</span>
-        <p></p>
+        
       </div>
+    </RouterLink>
     </swiper-slide>
   </swiper>
   <swiper

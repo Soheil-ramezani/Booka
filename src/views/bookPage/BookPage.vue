@@ -306,7 +306,14 @@ export default {
   data() {
     return {
       MediaWidth: window.innerWidth,
+      BookInfos:null,
     };
-  },
+  }
+  ,
+  beforeMount(){
+    const BookInfo = JSON.parse(this.$route.query.Book)
+    this.BookInfos = BookInfo // Now you can use the movie object//for parsing queries
+  }
+
 };
 </script>

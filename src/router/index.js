@@ -13,7 +13,8 @@ const router = createRouter({
     {
       path: '/BookPage',
       name: 'BookPage',
-      component: BookPage
+      component: BookPage,
+      props: true, // Enable props
     },
     // {
     //   path: '/about',
