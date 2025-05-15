@@ -9,30 +9,29 @@ import FooterView from "@/components/Footer/FooterView.vue";
     <main class="mt-[62.5px] px-[5%] flex flex-col items-center">
       <!-- BookDetails -->
       <div
-        class="BookInfo grid  py-[5rem] px-[1%]"
+        class="BookInfo grid py-[5rem] px-[1%]"
         :class="{
           'grid-cols-Book-Info-3': this.MediaWidth > 1160,
           'grid-cols-Book-Info-2': 850 < this.MediaWidth < 1160,
-          'grid-flow-col':this.MediaWidth>=800,
-          'grid-flow-row': this.MediaWidth<800
+          'grid-flow-col': this.MediaWidth >= 800,
+          'grid-flow-row': this.MediaWidth < 800,
         }"
       >
         <!-- LeftCol -->
         <div class="leftCol w-full flex flex-col items-center justify-center">
           <!-- bookImg -->
-          <div class="bookImg flex flex-col items-center justify-center  ">
+          <div class="bookImg flex flex-col items-center justify-center">
             <img
-              src="../../assets/91hYnazD-oL.jpg"
+              :src="BookInfos.imageUrl"
               alt=""
-            :class="{'bookImg__img':this.MediaWidth>670,
-              'bookImg__img2':this.MediaWidth<670
-            }"
+              :class="{
+                bookImg__img: this.MediaWidth > 670,
+                bookImg__img2: this.MediaWidth < 670,
+              }"
             />
           </div>
           <!-- bookBtns -->
-          <div
-            class="leftCol_btns mt-10"
-          >
+          <div class="leftCol_btns mt-10">
             <button class="leftCol__btn mx-2 px-3 py-2">
               <span class="leftCol__span">Read sample</span>
             </button>
@@ -65,14 +64,14 @@ import FooterView from "@/components/Footer/FooterView.vue";
             <!-- firstLine -->
             <div>
               <h2>
-                The Templar Legacy: A Novel (Cotton Malone Book 1)
-                <span class="bookDetails__span text-slate-700">Edition</span>
+                {{ BookInfos.name }}
               </h2>
             </div>
             <!-- second line -->
             <div>
-              <span class="bookDetails__span text-slate-700">Author</span>
-              <span class="bookDetails__span text-slate-700">Format</span>
+              <span class="bookDetails__span text-slate-700">
+                {{ BookInfos.author }}</span
+              >
             </div>
             <hr class="w-[98%] outline-slate-600 border-slate-600" />
             <!-- middle part -->
@@ -84,16 +83,7 @@ import FooterView from "@/components/Footer/FooterView.vue";
               </p>
               <br />
               <p class="bookDetails__p mb-10">
-                <b>
-                  "In The Lost for Words Bookshop, Stephanie Butland has created
-                  a bibliophile's delight. Witty and irreverent, funny and sad,
-                  this is a charming tribute to stories on the page and in our
-                  lives--and the powers they can hold over us."
-                  <br />—Matthew Sullivan author of Midnight at the Bright Ideas
-                  Bookstore "Burns fiercely with love and hurt. A rare and
-                  beautiful novel. <br />"—Linda Green, bestselling author of
-                  While My Eyes Were Closed</b
-                >
+                <b> {{ BookInfos.summary }}</b>
               </p>
             </div>
             <hr class="w-[98%] outline-slate-600 border-slate-600" />
@@ -194,9 +184,12 @@ import FooterView from "@/components/Footer/FooterView.vue";
           </div>
         </div>
         <!--rightCol  -->
-        <div  class="rightCol">
+        <div class="rightCol">
           <!-- BookPrice -->
-          <div v-if="this.MediaWidth > 1160" class="bookPrice flex flex-col items-center py-10 px-5">
+          <div
+            v-if="this.MediaWidth > 1160"
+            class="bookPrice flex flex-col items-center py-10 px-5"
+          >
             <div class="prices grid w-full gap-x-5 gap-y-3">
               <div
                 class="TypesPrice TypesPrice--active px-2 py-1 h-fit flex flex-col justify-center items-start"
@@ -227,7 +220,10 @@ import FooterView from "@/components/Footer/FooterView.vue";
             </div>
             <hr class="my-10 w-[98%] outline-slate-600 border-slate-600" />
             <div class="flex flex-col items-center">
-              <button class="bookPrice__btn w-11/12 p-3">
+              <button
+                class="bookPrice__btn w-11/12 p-3"
+                @click="console.log(this.BookInfos)"
+              >
                 Buy now with One Click
               </button>
               <span class="bookPrice__span mt-5 text-center"
@@ -255,8 +251,10 @@ import FooterView from "@/components/Footer/FooterView.vue";
         </div>
       </div>
       <!-- book price-row -->
-      <div v-if="this.MediaWidth < 1160" class="bookPrice-row w-full mb-10 py-10 px-5">
-        <div class="prices2 grid   w-full gap-x-5 ">
+      <div v-if="this.MediaWidth < 1160"
+        class="bookPrice-row w-full mb-10 py-10 px-5"
+      >
+        <div class="prices2 grid w-full gap-x-5">
           <div
             class="TypesPrice TypesPrice--active px-2 py-1 h-fit flex flex-col justify-center items-start"
           >
@@ -272,13 +270,13 @@ import FooterView from "@/components/Footer/FooterView.vue";
             <span class="TypesPrice__span"> with membership</span>
           </div>
           <div
-            class="TypesPrice px-2 py-1  flex flex-col justify-center items-start"
+            class="TypesPrice px-2 py-1 flex flex-col justify-center items-start"
           >
             <span class="TypesPrice__span"> <b>Hardcover</b> </span>
             <p class="TypesPrice__p">$0.99</p>
           </div>
           <div
-            class="TypesPrice px-2 py-1  flex flex-col justify-center items-start"
+            class="TypesPrice px-2 py-1 flex flex-col justify-center items-start"
           >
             <span class="TypesPrice__span"> <b>Paperback</b> </span>
             <p class="TypesPrice__p">$0.99</p>
@@ -306,14 +304,21 @@ export default {
   data() {
     return {
       MediaWidth: window.innerWidth,
-      BookInfos:null,
+      BookInfos: null,
     };
-  }
-  ,
-  beforeMount(){
-    const BookInfo = JSON.parse(this.$route.query.Book)
-    this.BookInfos = BookInfo // Now you can use the movie object//for parsing queries
-  }
-
+  },
+  beforeMount() {
+    const BookObject = JSON.parse(this.$route.query.Book);
+    this.BookInfos = BookObject; // Now you can use the movie object//for parsing queries
+  },
+  watch: {
+    "$route.query": {
+      handler() {
+        const BookInfo = JSON.parse(this.$route.query.Book);
+        this.BookInfos = BookInfo; // Now you can use the movie object//for parsing queries
+      },
+      immediate: true,
+    },
+  },
 };
 </script>

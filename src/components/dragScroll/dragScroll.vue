@@ -1,102 +1,123 @@
 <template>
   <swiper
-  v-if="this.MediaWidth>=1300"
+    v-if="this.MediaWidth >= 1300"
     :slidesPerView="7.5"
     :spaceBetween="10"
     :modules="modules"
     class="mySwiper container my-10"
   >
-  <!-- query: {id:item.title,movie: JSON.stringify(item) } -->
+    <!-- query: {id:item.title,movie: JSON.stringify(item) } -->
     <swiper-slide v-for="book in this.books" :key="book.id">
       <RouterLink
-       :to="{ name: 'BookPage', query:{id:book.id ,Book: JSON.stringify(book)} }">
-      <div
-        class="swiperItem flex flex-col items-center"
-        @click="console.log(book)"
+        :to="{
+          name: 'BookPage',
+          query: { id: book.id, Book: JSON.stringify(book) },
+        }"
       >
-        <!-- put book's img name here -->
-        <img class="swiperItem__img" :src="book.imageUrl" alt="#" />
-        <!-- put book's name here -->
-        <span class="swiperItem__item"
-          ><b>{{ book.name }}</b></span
+        <div
+          class="swiperItem flex flex-col items-center"
+          @click="console.log(book)"
         >
-        <!-- put book's Author name here -->
-        <span class="swiperItem__item charm-regular">{{ book.author }}</span>
-        
-      </div>
-    </RouterLink>
+          <!-- put book's img name here -->
+          <img class="swiperItem__img" :src="book.imageUrl" alt="#" />
+          <!-- put book's name here -->
+          <span class="swiperItem__item"
+            ><b>{{ book.name }}</b></span
+          >
+          <!-- put book's Author name here -->
+          <span class="swiperItem__item charm-regular">{{ book.author }}</span>
+        </div>
+      </RouterLink>
     </swiper-slide>
   </swiper>
   <swiper
-  v-else-if="this.MediaWidth >1050"
+    v-else-if="this.MediaWidth > 1050"
     :slidesPerView="6.5"
     :spaceBetween="10"
     :modules="modules"
     class="mySwiper container my-10"
   >
     <swiper-slide v-for="book in this.books" :key="book.id">
-      <div
-        class="swiperItem flex flex-col items-center"
-        @click="console.log(book)"
-      >
-        <!-- put book's img name here -->
-        <img class="swiperItem__img" :src="book.imageUrl" alt="#" />
-        <!-- put book's name here -->
-        <span class="swiperItem__item"
-          ><b>{{ book.name }}</b></span
+      <RouterLink
+        :to="{
+          name: 'BookPage',
+          query: { id: book.id, Book: JSON.stringify(book) },
+        }"
+        ><div
+          class="swiperItem flex flex-col items-center"
+          @click="console.log(book)"
         >
-        <!-- put book's Author name here -->
-        <span class="swiperItem__item charm-regular">{{ book.author }}</span>
-        <p></p>
-      </div>
+          <!-- put book's img name here -->
+          <img class="swiperItem__img" :src="book.imageUrl" alt="#" />
+          <!-- put book's name here -->
+          <span class="swiperItem__item"
+            ><b>{{ book.name }}</b></span
+          >
+          <!-- put book's Author name here -->
+          <span class="swiperItem__item charm-regular">{{ book.author }}</span>
+          <p></p></div
+      ></RouterLink>
     </swiper-slide>
   </swiper>
   <swiper
-  v-else-if="this.MediaWidth >780"
+    v-else-if="this.MediaWidth > 780"
     :slidesPerView="4.5"
     :spaceBetween="10"
     :modules="modules"
     class="mySwiper container my-10"
   >
     <swiper-slide v-for="book in this.books" :key="book.id">
-      <div
-        class="swiperItem flex flex-col items-center"
-        @click="console.log(book)"
+      <RouterLink
+        :to="{
+          name: 'BookPage',
+          query: { id: book.id, Book: JSON.stringify(book) },
+        }"
       >
-        <!-- put book's img name here -->
-        <img class="swiperItem__img" :src="book.imageUrl" alt="#" />
-        <!-- put book's name here -->
-        <span class="swiperItem__item"
-          ><b>{{ book.name }}</b></span
+        <div
+          class="swiperItem flex flex-col items-center"
+          @click="console.log(book)"
         >
-        <!-- put book's Author name here -->
-        <span class="swiperItem__item charm-regular">{{ book.author }}</span>
-        <p></p>
-      </div>
+          <!-- put book's img name here -->
+          <img class="swiperItem__img" :src="book.imageUrl" alt="#" />
+          <!-- put book's name here -->
+          <span class="swiperItem__item"
+            ><b>{{ book.name }}</b></span
+          >
+          <!-- put book's Author name here -->
+          <span class="swiperItem__item charm-regular">{{ book.author }}</span>
+          <p></p></div
+      ></RouterLink>
     </swiper-slide>
   </swiper>
   <swiper
-  v-else
+    v-else
     :slidesPerView="2.5"
     :spaceBetween="10"
     :modules="modules"
     class="mySwiper container my-10"
   >
     <swiper-slide v-for="book in this.books" :key="book.id">
-      <div
-        class="swiperItem flex flex-col items-center"
-        @click="console.log(book)"
+      <RouterLink
+        :to="{
+          name: 'BookPage',
+          query: { id: book.id, Book: JSON.stringify(book) },
+        }"
       >
-        <!-- put book's img name here -->
-        <img class="swiperItem__img" :src="book.imageUrl" alt="#" />
-        <!-- put book's name here -->
-        <span class="swiperItem__item"
-          ><b>{{ book.name }}</b></span
+        <div
+          class="swiperItem flex flex-col items-center"
+          @click="console.log(book)"
         >
-        <!-- put book's Author name here -->
-        <span class="swiperItem__item charm-regular">{{ book.author }}</span>
-        <p></p>
-      </div>
+          <!-- put book's img name here -->
+          <img class="swiperItem__img" :src="book.imageUrl" alt="#" />
+          <!-- put book's name here -->
+          <span class="swiperItem__item"
+            ><b>{{ book.name }}</b></span
+          >
+          <!-- put book's Author name here -->
+          <span class="swiperItem__item charm-regular">{{ book.author }}</span>
+          <p></p>
+        </div>
+      </RouterLink>
     </swiper-slide>
   </swiper>
 </template>
@@ -224,7 +245,7 @@ export default {
 */
       ],
       // media screen width
-      MediaWidth:window.innerWidth,
+      MediaWidth: window.innerWidth,
     };
   },
   setup() {
