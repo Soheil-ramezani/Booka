@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import BookPage from '@/views/bookPage/BookPage.vue'
-
+import OrdersPage from '@/views/OrdersPage/Orders.vue'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -13,9 +13,14 @@ const router = createRouter({
     {
       path: '/BookPage',
       name: 'BookPage',
-      component: BookPage,
+      component:BookPage,
       props: true, // Enable props
     },
+    {
+      path: '/Orders',
+      name: 'Orders',
+      component:OrdersPage,
+    }
     // {
     //   path: '/about',
     //   name: 'about',
