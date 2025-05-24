@@ -220,11 +220,8 @@ import FooterView from "@/components/Footer/FooterView.vue";
             </div>
             <hr class="my-10 w-[98%] outline-slate-600 border-slate-600" />
             <div class="flex flex-col items-center">
-              <button
-                class="bookPrice__btn w-11/12 p-3"
-                @click="console.log(this.BookInfos)"
-              >
-                Buy now with One Click
+              <button class="bookPrice__btn w-11/12 p-3" @click="AddToCard(this.BookInfos)">
+                Add To Card
               </button>
               <span class="bookPrice__span mt-5 text-center"
                 >By placing your order,
@@ -251,7 +248,8 @@ import FooterView from "@/components/Footer/FooterView.vue";
         </div>
       </div>
       <!-- book price-row -->
-      <div v-if="this.MediaWidth < 1160"
+      <div
+        v-if="this.MediaWidth < 1160"
         class="bookPrice-row w-full mb-10 py-10 px-5"
       >
         <div class="prices2 grid w-full gap-x-5">
@@ -305,11 +303,28 @@ export default {
     return {
       MediaWidth: window.innerWidth,
       BookInfos: null,
+      storageKey : 'customerOrders',
     };
   },
   beforeMount() {
     const BookObject = JSON.parse(this.$route.query.Book);
     this.BookInfos = BookObject; // Now you can use the movie object//for parsing queries
+  },
+  methods:{
+    AddToCard(orderData){
+  // Get Previous Orders
+  const existingOrders = localStorage.getItem(this.storageKey);
+  const orders = existingOrders ? JSON.parse(existingOrders) : [];
+
+  // Add new order
+  orders.push(orderData);
+
+  // Resave in localStorage
+  localStorage.setItem(this.storageKey, JSON.stringify(orders));
+  console.log(orderData)
+
+      alert("this book added to your card")
+    }
   },
   watch: {
     "$route.query": {
@@ -320,5 +335,6 @@ export default {
       immediate: true,
     },
   },
+
 };
 </script>
