@@ -1,0 +1,24 @@
+.OrderPage {
+    .Order-main {
+        .order__ul {
+            .order__li {
+                background-color: var(--light-cream);
+                border-radius: 10px;
+                .order-img {
+                    img {
+                        width: 200px;
+                        height: 250px;
+                        border-radius: 10px;
+                    }
+                }
+                .orderNum{
+                    .orderNum__div{
+                        background-color: var(--dark-blue);
+                        color: white;
+                        border-radius: 5px;
+                    }
+                }
+            }
+        }
+    }
+}

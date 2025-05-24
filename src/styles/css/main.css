@@ -31,6 +31,10 @@ h2 {
   font-size: 2.5rem;
 }
 
+h3 {
+  font-size: 2rem;
+}
+
 p {
   font-size: 1.4rem;
 }
@@ -427,4 +431,19 @@ nav .Right-side .overlay .closebtn {
 .bookPrice-row .bookPrice__img {
   width: 300px;
   height: 20px;
+}
+
+.OrderPage .Order-main .order__ul .order__li {
+  background-color: var(--light-cream);
+  border-radius: 10px;
+}
+.OrderPage .Order-main .order__ul .order__li .order-img img {
+  width: 200px;
+  height: 250px;
+  border-radius: 10px;
+}
+.OrderPage .Order-main .order__ul .order__li .orderNum .orderNum__div {
+  background-color: var(--dark-blue);
+  color: white;
+  border-radius: 5px;
 }
