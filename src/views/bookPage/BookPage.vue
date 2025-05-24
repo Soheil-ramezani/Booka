@@ -220,7 +220,7 @@ import FooterView from "@/components/Footer/FooterView.vue";
             </div>
             <hr class="my-10 w-[98%] outline-slate-600 border-slate-600" />
             <div class="flex flex-col items-center">
-              <button class="bookPrice__btn w-11/12 p-3" @click="AddToCard(this.BookInfos)">
+              <button class="bookPrice__btn w-11/12 p-3" @click="SaveAtLocalStorage(this.BookInfos)">
                 Add To Card
               </button>
               <span class="bookPrice__span mt-5 text-center"
@@ -311,7 +311,8 @@ export default {
     this.BookInfos = BookObject; // Now you can use the movie object//for parsing queries
   },
   methods:{
-    AddToCard(orderData){
+    // Save
+    SaveAtLocalStorage(orderData){
   // Get Previous Orders
   const existingOrders = localStorage.getItem(this.storageKey);
   const orders = existingOrders ? JSON.parse(existingOrders) : [];
