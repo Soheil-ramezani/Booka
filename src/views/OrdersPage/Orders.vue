@@ -44,19 +44,30 @@ import FooterView from "@/components/Footer/FooterView.vue";
               <div
                 style="flex: 1; border-top: 1px dotted #000; margin: 0 10px"
               ></div>
-              <div class="ml-[10px]">Book's price</div>
+              <div class="ml-[10px]">{{order.price}}$</div>
             </div>
             <!-- order num -->
             <div class="orderNum mt-10 flex flex-row self-end">
-              <button class="orderNum__btn" @click="this.bookNumber++">
-                +
-              </button>
+              <button class="orderNum__btn" @click="order.quantity++">+</button>
               <div class="orderNum__div mx-10">
                 <span class="m-5">
-                  {{ bookNumber }}
+                  {{ order.quantity }}
                 </span>
               </div>
-              <button class="orderNum__btn" @click="lessBookNum()">-</button>
+              <button
+                class="orderNum__btn"
+                @click="
+                  () => {
+                    if (order.quantity <= 1) {
+                      order.quantity = 1;
+                    } else {
+                      order.quantity--;
+                    }
+                  }
+                "
+              >
+                -
+              </button>
             </div>
           </div>
         </li>
@@ -75,26 +86,16 @@ export default {
   name: "OrderPage",
   data() {
     return {
-      bookNumber: 1,
-      totalPrice: 1000,
       storageKey: "customerOrders",
       orders: null,
     };
   },
-  methods: {
-    lessBookNum() {
-      if (this.bookNumber <= 0) {
-        this.bookNumber = 0;
-      } else {
-        this.bookNumber--;
-      }
-    },
-  },
+  methods: {},
   beforeMount() {
     // Get Books Data from Local storage
     this.orders = JSON.parse(localStorage.getItem(this.storageKey)) || [];
     this.orders.forEach((item) => {
-      item.number = 1;
+      item.quantity = 1;
     });
   },
 };
