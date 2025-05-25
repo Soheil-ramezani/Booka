@@ -28,7 +28,7 @@ import FooterView from "@/components/Footer/FooterView.vue";
               <div
                 style="flex: 1; border-top: 1px dotted #000; margin: 0 10px"
               ></div>
-              <div class="ml-[10px]">{{order.name}}</div>
+              <div class="ml-[10px]">{{ order.name }}</div>
             </div>
             <!-- author -->
             <div class="flex items-center w-full">
@@ -61,7 +61,6 @@ import FooterView from "@/components/Footer/FooterView.vue";
           </div>
         </li>
       </ul>
-      <button @click="console.log(this.orders)">Click Me!</button>
       <!-- Total price -->
       <div class="OrderTotalPrice">
         <h2>Total Price :{{ totalPrice }}$</h2>
@@ -78,8 +77,8 @@ export default {
     return {
       bookNumber: 1,
       totalPrice: 1000,
-      storageKey : 'customerOrders',
-      orders:null,
+      storageKey: "customerOrders",
+      orders: null,
     };
   },
   methods: {
@@ -94,7 +93,9 @@ export default {
   beforeMount() {
     // Get Books Data from Local storage
     this.orders = JSON.parse(localStorage.getItem(this.storageKey)) || [];
-    
+    this.orders.forEach((item) => {
+      item.number = 1;
+    });
   },
 };
 </script>

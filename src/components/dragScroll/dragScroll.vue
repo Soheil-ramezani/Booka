@@ -148,6 +148,7 @@ export default {
             "https://m.media-amazon.com/images/I/91BbLCJOruL._AC_UY327_FMwebp_QL65_.jpg",
           summary:
             "A psychological thriller about a woman who shoots her husband and then stops speaking.",
+          price: 32,
         },
         {
           id: 2,
@@ -157,6 +158,7 @@ export default {
             "https://m.media-amazon.com/images/I/81O1oy0y9eL._AC_UF1000,1000_QL80_.jpg",
           summary:
             "A murder mystery and coming-of-age story set in the marshes of North Carolina.",
+          price: 56,
         },
         {
           id: 3,
@@ -166,6 +168,7 @@ export default {
             "https://m.media-amazon.com/images/I/91bYsX41DVL._AC_UF1000,1000_QL80_.jpg",
           summary:
             "A guide to building good habits and breaking bad ones through tiny changes.",
+          price: 24,
         },
         {
           id: 4,
@@ -175,6 +178,7 @@ export default {
             "https://m.media-amazon.com/images/I/81YzHKeWq7L._AC_UF1000,1000_QL80_.jpg",
           summary:
             "A novel about a library between life and death where each book represents a different life path.",
+          price: 34,
         },
         {
           id: 5,
@@ -184,6 +188,7 @@ export default {
             "https://m.media-amazon.com/images/I/61xta2jWBBL._AC_UY327_FMwebp_QL65_.jpg",
           summary:
             "A memoir about a woman who leaves her survivalist family and goes on to earn a PhD.",
+          price: 60,
         },
         {
           id: 6,
@@ -193,6 +198,7 @@ export default {
             "https://m.media-amazon.com/images/I/91O-uZgXpyL._AC_UY327_FMwebp_QL65_.jpg",
           summary:
             "A sci-fi novel about a lone astronaut who must save the earth from an alien threat.",
+          price: 71,
         },
         {
           id: 7,
@@ -202,6 +208,7 @@ export default {
             "https://m.media-amazon.com/images/I/71b86Ngu0KL._AC_UY327_FMwebp_QL65_.jpg",
           summary:
             "A historical novel set during the Great Depression about a woman's struggle to survive.",
+          price: 24,
         },
         {
           id: 8,
@@ -211,6 +218,7 @@ export default {
             "https://m.media-amazon.com/images/I/61wvPTKenCL._AC_UY327_FMwebp_QL65_.jpg",
           summary:
             "A story about twin sisters who choose to live in very different worlds - one black, one passing as white.",
+          price: 54,
         },
         {
           id: 9,
@@ -220,6 +228,7 @@ export default {
             "https://m.media-amazon.com/images/I/71-1WBgjGoL._AC_UY327_FMwebp_QL65_.jpg",
           summary:
             "A science fiction classic about politics, religion, and power on a desert planet.",
+          price: 31,
         },
         {
           id: 10,
@@ -229,6 +238,7 @@ export default {
             "https://m.media-amazon.com/images/I/51iDejsms3L._AC_UY327_FMwebp_QL65_.jpg",
           summary:
             "A retelling of the Iliad focusing on the romantic relationship between Achilles and Patroclus.",
+          price: 29,
         },
         // ... (continuing with IDs 11-30)
 
