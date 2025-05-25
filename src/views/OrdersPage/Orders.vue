@@ -10,12 +10,12 @@ import FooterView from "@/components/Footer/FooterView.vue";
 
     <main class="Order-main px-[22%] mt-[62.5px]">
       <!-- Order List -->
-      <ul class="order__ul mt-[100px]">
+      <ul class="order__ul mt-[100px]" v-for="order in orders" :key="order.id">
         <!--order List element -->
         <li class="order__li my-10 flex justify-between">
           <!-- order List element img  -->
           <div class="order-img">
-            <img src="./../../assets/91hYnazD-oL.jpg" alt="" />
+            <img :src="order.imageUrl" :alt="order.name" />
           </div>
           <!--  -->
           <!-- order List element texts -->
@@ -28,7 +28,7 @@ import FooterView from "@/components/Footer/FooterView.vue";
               <div
                 style="flex: 1; border-top: 1px dotted #000; margin: 0 10px"
               ></div>
-              <div class="ml-[10px]">BookName</div>
+              <div class="ml-[10px]">{{order.name}}</div>
             </div>
             <!-- author -->
             <div class="flex items-center w-full">
@@ -36,7 +36,7 @@ import FooterView from "@/components/Footer/FooterView.vue";
               <div
                 style="flex: 1; border-top: 1px dotted #000; margin: 0 10px"
               ></div>
-              <div class="ml-[10px]">Book's author</div>
+              <div class="ml-[10px]">{{ order.author }}</div>
             </div>
             <!-- Book price -->
             <div class="flex items-center w-full">
@@ -92,6 +92,7 @@ export default {
     },
   },
   beforeMount() {
+    // Get Books Data from Local storage
     this.orders = JSON.parse(localStorage.getItem(this.storageKey)) || [];
     
   },
