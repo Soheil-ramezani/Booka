@@ -24,7 +24,11 @@ import FooterView from "@/components/Footer/FooterView.vue";
     </header>
 
     <main
-      class="Order-main px-[20%] mt-[112px]"
+      class="Order-main  mt-[112px]"
+      :class="{ 'main-minHeight': this.MediaWidth >= 990,
+        'px-[20%]':this.MediaWidth >= 760,
+        'px-[10%]':this.MediaWidth < 760,
+       }"
     >
       <!-- Order List -->
       <ul
@@ -34,7 +38,13 @@ import FooterView from "@/components/Footer/FooterView.vue";
         :key="order.id"
       >
         <!--order List element -->
-        <li class="order__li my-10 flex justify-between">
+        <li
+          class="order__li my-10 flex justify-between"
+          :class="{
+            'flex-row': this.MediaWidth >= 760,
+            'flex-col items-center': this.MediaWidth < 760,
+          }"
+        >
           <!-- order List element img  -->
           <div class="order-img">
             <img :src="order.imageUrl" :alt="order.name" />
@@ -42,45 +52,35 @@ import FooterView from "@/components/Footer/FooterView.vue";
           <!--  -->
           <!-- order List element texts -->
           <div
-            class="order-text flex flex-col items-center justify-between mt-[3%] pr-[20px] w-4/6"
+            class="order-text flex flex-col items-center justify-between"
+            :class="{ 'm-[3%]  w-4/6': this.MediaWidth >= 760 ,'w-full px-5':this.MediaWidth<760}"
           >
             <!-- Book Name -->
             <div class="flex items-center w-full">
-              <div class="mr-[10px]">name</div>
+              <div>name</div>
               <div
                 style="flex: 1; border-top: 1px dotted #000; margin: 0 10px"
               ></div>
-              <div class="ml-[10px]">{{ order.name }}</div>
+              <div class="text-nowrap">{{ order.name }}</div>
             </div>
             <!-- author -->
             <div class="flex items-center w-full">
-              <div class="mr-[10px]">author</div>
+              <div>author</div>
               <div
                 style="flex: 1; border-top: 1px dotted #000; margin: 0 10px"
               ></div>
-              <div class="ml-[10px]">{{ order.author }}</div>
+              <div class="text-nowrap">{{ order.author }}</div>
             </div>
             <!-- Book price -->
             <div class="flex items-center w-full">
-              <div class="mr-[10px]">price</div>
+              <div>price</div>
               <div
                 style="flex: 1; border-top: 1px dotted #000; margin: 0 10px"
               ></div>
-              <div class="ml-[10px]">{{ order.price }}$</div>
+              <div>{{ order.price }}$</div>
             </div>
             <!-- order num -->
-            <div class="orderNum mt-10 flex flex-row self-end">
-              <button
-                class="orderNum__btn"
-                @click="order.quantity++, calculateTotal()"
-              >
-                +
-              </button>
-              <div class="orderNum__div mx-10">
-                <span class="m-5" ref="BookNums">
-                  {{ order.quantity }}
-                </span>
-              </div>
+            <div class="orderNum mt-10 flex flex-row">
               <button
                 class="orderNum__btn"
                 @click="
@@ -96,6 +96,17 @@ import FooterView from "@/components/Footer/FooterView.vue";
                 "
               >
                 -
+              </button>
+              <div class="orderNum__div mx-5">
+                <span class="m-5" ref="BookNums">
+                  {{ order.quantity }}
+                </span>
+              </div>
+              <button
+                class="orderNum__btn"
+                @click="order.quantity++, calculateTotal()"
+              >
+                +
               </button>
             </div>
           </div>
