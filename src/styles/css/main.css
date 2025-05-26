@@ -2,11 +2,11 @@
   --primary-white: #ffffff;
   --secondary-white: #FAFAFA;
   --light-cream: #faf8f6;
-  --second-cream:#F5ECE0;
+  --second-cream: #F5ECE0;
   --dark-blue: #27445D;
-  --Sky-Blue:#3674B5 ;
-  --Light-Sky-Blue:#A1E3F9;
-  --Steel-Blue:#578FCA;
+  --Sky-Blue: #3674B5;
+  --Light-Sky-Blue: #A1E3F9;
+  --Steel-Blue: #578FCA;
   --color-brand: #57bd84;
 }
 
@@ -42,6 +42,7 @@ p {
 main {
   background-color: var(--primary-white);
   color: var(--dark-blue);
+  min-height: 41.5vh;
 }
 
 .link {

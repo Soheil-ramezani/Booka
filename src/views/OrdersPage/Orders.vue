@@ -9,6 +9,7 @@ import FooterView from "@/components/Footer/FooterView.vue";
       <!-- Total price -->
       <div
         class="OrderTotalPrice mt-[62.5px] flex items-center justify-around w-full fixed top-0"
+        v-show="this.orders.length > 0"
       >
         <h2 class="inline-block">Total Price :{{ totalPrice }}$</h2>
         <div class="TotalPrice__div inline-block">
@@ -22,9 +23,9 @@ import FooterView from "@/components/Footer/FooterView.vue";
       </div>
     </header>
 
-    <main class="Order-main px-[22%] mt-[112px]">
+    <main class="Order-main px-[20%] mt-[112px]">
       <!-- Order List -->
-      <ul class="order__ul" v-for="order in orders" :key="order.id">
+      <ul v-show="this.orders.length > 0" class="order__ul"  v-for="order in orders" :key="order.id"  >
         <!--order List element -->
         <li class="order__li my-10 flex justify-between">
           <!-- order List element img  -->
@@ -92,7 +93,11 @@ import FooterView from "@/components/Footer/FooterView.vue";
             </div>
           </div>
         </li>
-      </ul>
+      </ul> 
+      <div v-show="this.orders.length ==0" class="EmptyCart flex flex-col items-center justify-center">
+        <h1>Your Cart is empty</h1>
+        <p>Add Something to make us happy :)</p>
+      </div>
     </main>
     <FooterView />
   </div>

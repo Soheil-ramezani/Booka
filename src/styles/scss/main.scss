@@ -2,11 +2,11 @@
     --primary-white: #ffffff;
     --secondary-white: #FAFAFA;
     --light-cream: #faf8f6;
-    --second-cream:#F5ECE0;
+    --second-cream: #F5ECE0;
     --dark-blue: #27445D;
-    --Sky-Blue:#3674B5 ;
-    --Light-Sky-Blue:#A1E3F9;
-    --Steel-Blue:#578FCA;
+    --Sky-Blue: #3674B5;
+    --Light-Sky-Blue: #A1E3F9;
+    --Steel-Blue: #578FCA;
     --color-brand: #57bd84;
 }
 
@@ -18,35 +18,41 @@ body {
     font-size: 1.6rem;
     margin: 0 auto;
     font-family: serif;
-    &::-webkit-scrollbar{
+    &::-webkit-scrollbar {
         display: none;
     }
+    
 }
 
 h1 {
     font-size: 4rem;
 }
 
-h2{
+h2 {
     font-size: 2.5rem;
 }
-h3{
+
+h3 {
     font-size: 2rem;
 }
 
 p {
     font-size: 1.4rem;
 }
-main{
+
+main {
     background-color: var(--primary-white);
     color: var(--dark-blue);
+    min-height: 41.5vh;
 }
+
 .link {
     color: blue;
     text-decoration: dashed;
 }
-.partTitle{
-    .partTitle__span{
+
+.partTitle {
+    .partTitle__span {
         font-size: 2.5rem;
     }
 }
