@@ -18,10 +18,11 @@ body {
     font-size: 1.6rem;
     margin: 0 auto;
     font-family: serif;
+
     &::-webkit-scrollbar {
         display: none;
     }
-    
+
 }
 
 h1 {
@@ -43,6 +44,9 @@ p {
 main {
     background-color: var(--primary-white);
     color: var(--dark-blue);
+}
+
+.main-minHeight {
     min-height: 41.5vh;
 }
 

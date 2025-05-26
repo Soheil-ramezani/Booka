@@ -42,6 +42,9 @@ p {
 main {
   background-color: var(--primary-white);
   color: var(--dark-blue);
+}
+
+.main-minHeight {
   min-height: 41.5vh;
 }
 

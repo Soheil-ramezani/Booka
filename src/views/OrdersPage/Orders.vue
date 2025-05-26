@@ -23,9 +23,16 @@ import FooterView from "@/components/Footer/FooterView.vue";
       </div>
     </header>
 
-    <main class="Order-main px-[20%] mt-[112px]">
+    <main
+      class="Order-main px-[20%] mt-[112px]"
+    >
       <!-- Order List -->
-      <ul v-show="this.orders.length > 0" class="order__ul"  v-for="order in orders" :key="order.id"  >
+      <ul
+        v-show="this.orders.length > 0"
+        class="order__ul"
+        v-for="order in orders"
+        :key="order.id"
+      >
         <!--order List element -->
         <li class="order__li my-10 flex justify-between">
           <!-- order List element img  -->
@@ -93,8 +100,11 @@ import FooterView from "@/components/Footer/FooterView.vue";
             </div>
           </div>
         </li>
-      </ul> 
-      <div v-show="this.orders.length ==0" class="EmptyCart flex flex-col items-center justify-center">
+      </ul>
+      <div
+        v-show="this.orders.length == 0"
+        class="EmptyCart flex flex-col items-center justify-center"
+      >
         <h1>Your Cart is empty</h1>
         <p>Add Something to make us happy :)</p>
       </div>
@@ -111,6 +121,7 @@ export default {
       storageKey: "customerOrders",
       orders: null,
       totalPrice: 0,
+      MediaWidth: window.innerWidth,
     };
   },
 
@@ -132,8 +143,8 @@ export default {
     },
     ClearLocalStorage() {
       localStorage.removeItem(this.storageKey);
-      this.orders=[]
-      this.totalPrice ==0
+      this.orders = [];
+      this.totalPrice == 0;
     },
   },
 };
