@@ -197,7 +197,7 @@ nav .Right-side .Nav-searchbar label {
   width: 1px;
   overflow: hidden;
 }
-nav .Right-side .Nav-Right__btns a {
+nav .Right-side .Nav_Right__btns .logIn-btn {
   border-left: 1px solid var(--dark-blue);
 }
 nav .Right-side .overlay {
@@ -433,6 +433,14 @@ nav .Right-side .overlay .closebtn {
   height: 20px;
 }
 
+.OrderPage .order-header .OrderTotalPrice {
+  background-color: var(--light-cream);
+}
+.OrderPage .order-header .OrderTotalPrice .TotalPrice__div .TotalPrice__btn {
+  border-radius: 5px;
+  background-color: var(--dark-blue);
+  color: var(--light-cream);
+}
 .OrderPage .Order-main .order__ul .order__li {
   background-color: var(--light-cream);
   border-radius: 10px;

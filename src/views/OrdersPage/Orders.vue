@@ -4,13 +4,27 @@ import FooterView from "@/components/Footer/FooterView.vue";
 </script>
 <template>
   <div class="OrderPage">
-    <header>
+    <header class="order-header">
       <Navbar />
+      <!-- Total price -->
+      <div
+        class="OrderTotalPrice mt-[62.5px] flex items-center justify-around w-full fixed top-0"
+      >
+        <h2 class="inline-block">Total Price :{{ totalPrice }}$</h2>
+        <div class="TotalPrice__div inline-block">
+          <button
+            class="TotalPrice__btn px-5 py-1"
+            @click="ClearLocalStorage()"
+          >
+            Clear Card
+          </button>
+        </div>
+      </div>
     </header>
 
-    <main class="Order-main px-[22%] mt-[62.5px]">
+    <main class="Order-main px-[22%] mt-[112px]">
       <!-- Order List -->
-      <ul class="order__ul mt-[100px]" v-for="order in orders" :key="order.id">
+      <ul class="order__ul" v-for="order in orders" :key="order.id">
         <!--order List element -->
         <li class="order__li my-10 flex justify-between">
           <!-- order List element img  -->
@@ -20,7 +34,7 @@ import FooterView from "@/components/Footer/FooterView.vue";
           <!--  -->
           <!-- order List element texts -->
           <div
-            class="order-text flex flex-col items-center justify-start mt-[3%] pr-[20px] w-4/6"
+            class="order-text flex flex-col items-center justify-between mt-[3%] pr-[20px] w-4/6"
           >
             <!-- Book Name -->
             <div class="flex items-center w-full">
@@ -48,7 +62,12 @@ import FooterView from "@/components/Footer/FooterView.vue";
             </div>
             <!-- order num -->
             <div class="orderNum mt-10 flex flex-row self-end">
-              <button class="orderNum__btn" @click="order.quantity++ , calculateTotal() ">+</button>
+              <button
+                class="orderNum__btn"
+                @click="order.quantity++, calculateTotal()"
+              >
+                +
+              </button>
               <div class="orderNum__div mx-10">
                 <span class="m-5" ref="BookNums">
                   {{ order.quantity }}
@@ -60,10 +79,10 @@ import FooterView from "@/components/Footer/FooterView.vue";
                   () => {
                     if (order.quantity <= 1) {
                       order.quantity = 1;
-                      calculateTotal()
+                      calculateTotal();
                     } else {
                       order.quantity--;
-                      calculateTotal()
+                      calculateTotal();
                     }
                   }
                 "
@@ -74,10 +93,6 @@ import FooterView from "@/components/Footer/FooterView.vue";
           </div>
         </li>
       </ul>
-      <!-- Total price -->
-      <div class="OrderTotalPrice">
-        <h2>Total Price :{{ totalPrice }}$</h2>
-      </div>
     </main>
     <FooterView />
   </div>
@@ -93,7 +108,7 @@ export default {
       totalPrice: 0,
     };
   },
- 
+
   beforeMount() {
     // Get Books Data from Local storage
     this.orders = JSON.parse(localStorage.getItem(this.storageKey)) || [];
@@ -104,11 +119,16 @@ export default {
   mounted() {
     this.calculateTotal();
   },
-   methods: {
+  methods: {
     calculateTotal() {
       this.totalPrice = this.orders.reduce((sum, item) => {
         return sum + item.price * item.quantity;
       }, 0);
+    },
+    ClearLocalStorage() {
+      localStorage.removeItem(this.storageKey);
+      this.orders=[]
+      this.totalPrice ==0
     },
   },
 };
