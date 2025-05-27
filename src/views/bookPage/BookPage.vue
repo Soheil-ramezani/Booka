@@ -221,7 +221,7 @@ import FooterView from "@/components/Footer/FooterView.vue";
             <hr class="my-10 w-[98%] outline-slate-600 border-slate-600" />
             <div class="flex flex-col items-center">
               <button class="bookPrice__btn w-11/12 p-3" @click="SaveAtLocalStorage(this.BookInfos)">
-                Add To Card
+                Add To Cart
               </button>
               <span class="bookPrice__span mt-5 text-center"
                 >By placing your order,
@@ -252,6 +252,7 @@ import FooterView from "@/components/Footer/FooterView.vue";
         v-if="this.MediaWidth < 1160"
         class="bookPrice-row w-full mb-10 py-10 px-5"
       >
+      <!-- Prices -->
         <div class="prices2 grid w-full gap-x-5">
           <div
             class="TypesPrice TypesPrice--active px-2 py-1 h-fit flex flex-col justify-center items-start"
@@ -279,6 +280,12 @@ import FooterView from "@/components/Footer/FooterView.vue";
             <span class="TypesPrice__span"> <b>Paperback</b> </span>
             <p class="TypesPrice__p">$0.99</p>
           </div>
+        </div>
+        <!-- ADD to cart  -->
+        <div class="AddTocart__btn mt-10 flex items-center justify-center">
+          <button class="bookPrice__btn w-11/12 p-3" @click="SaveAtLocalStorage(this.BookInfos)">
+                Add To Cart
+              </button>
         </div>
       </div>
       <!--  -->
@@ -322,8 +329,7 @@ export default {
 
   // Resave in localStorage
   localStorage.setItem(this.storageKey, JSON.stringify(orders));
-  console.log(orderData)
-
+ 
       alert("this book added to your card")
     }
   },
