@@ -7,21 +7,25 @@
       </div>
       <div class="Nav-menu" v-show="this.MediaWidth >= 600">
         <ul class="Nav-menu__ul flex flex-row">
-          <li class="Nav-menu__li text-nowrap mx-5">
-            <RouterLink class="menu__RouterLink">Categories</RouterLink>
-          </li>
+          <!-- Home -->
           <li
             class="Nav-menu__li text-nowrap mx-5"
             v-show="this.MediaWidth >= 1024"
           >
-            <RouterLink class="menu__RouterLink">Wishlist</RouterLink>
+            <RouterLink :to="{name: 'home'}" class="menu__RouterLink">Home</RouterLink>
           </li>
+          <!-- Categories -->
+          <li class="Nav-menu__li text-nowrap mx-5">
+            <RouterLink class="menu__RouterLink">Categories</RouterLink>
+          </li>
+         <!-- Blogs -->
           <li
             class="Nav-menu__li text-nowrap mx-5"
             v-show="this.MediaWidth >= 1024"
           >
             <RouterLink class="menu__RouterLink">Blogs</RouterLink>
           </li>
+           <!--AboutUs  -->
           <li class="Nav-menu__li text-nowrap mx-5">
             <RouterLink class="menu__RouterLink">About Us</RouterLink>
           </li>
@@ -92,7 +96,8 @@
 
         <!-- Overlay content -->
         <div class="overlay-content">
-          <a href="#">cart</a>
+          <RouterLink :to="{name:'home'}" >Home</RouterLink>
+          <RouterLink :to="{name:'Orders'}" href="#">cart</RouterLink>
           <a href="#">Sing in</a>
           <a href="#">Categories</a>
           <a href="#">About Us</a>

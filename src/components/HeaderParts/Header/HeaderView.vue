@@ -1,10 +1,11 @@
 <script setup>
-import Navbar from '../Navbar/Navbar.vue';
+import Navbar from "../Navbar/Navbar.vue";
 </script>
 <template>
   <Header class="header flex flex-col justify-center items-center pb-20">
     <Navbar />
     <div class="header-middle mt-[40px] flex flex-row items-center w-full">
+      <!-- Header Left -->
       <div
         class="header-Left pl-[10%] flex flex-col justify-center"
         :class="{
@@ -47,38 +48,50 @@ import Navbar from '../Navbar/Navbar.vue';
           <div
             class="header-book--sides h-full flex flex-col pt-20 items-center"
           >
-            <img
-              src="https://m.media-amazon.com/images/I/91qNbDQgAQL._AC_UY327_FMwebp_QL65_.jpg"
-              class="header-book__img"
-              alt="img1"
-            />
-            <h2 class="header-book__h2 text-center mt-4">Once Upon a Tome</h2>
-            <p class="header-book__p text-center">Oliver Darkshire </p>
+            <RouterLink :to="{ name: 'BookPage', query: { id: this.HeaderBooks[0].id, Book: JSON.stringify(this.HeaderBooks[0]) } }">
+              <img
+                src="https://m.media-amazon.com/images/I/81mdiQ5B+7L._SL1500_.jpg"
+                class="header-book__img"
+                alt="img1"
+              />
+              <h2 class="header-book__h2 text-center mt-4">
+                The Bookstore Keepers
+              </h2>
+              <p class="header-book__p text-center">Alice Hoffman</p>
+            </RouterLink>
           </div>
           <!-- middle book -->
           <div
             class="header-book--middle h-full flex flex-col pt-20 items-center"
           >
+          <RouterLink :to="{ name: 'BookPage', query: { id: this.HeaderBooks[1].id, Book: JSON.stringify(this.HeaderBooks[1]) }}">
             <h2 class="header-book__h2 text-center mt-4">DAISY DARKER</h2>
             <p class="header-book__p text-center">ALICE FEENY</p>
             <img
-              src="./../../../assets/91hYnazD-oL.jpg"
+              src="https://m.media-amazon.com/images/I/81QNZEa16fL._SL1500_.jpg"
               class="header-book__img"
               alt="img1"
             />
+          </RouterLink>
+            
           </div>
           <!--Right Book -->
           <div
             v-show="this.MediaWidth > 1300"
             class="header-book--sides h-full flex flex-col pt-20 items-center"
           >
-            <img
+          <RouterLink :to="{ name: 'BookPage', query: { id: this.HeaderBooks[2].id, Book: JSON.stringify(this.HeaderBooks[2]) }}">
+             <img
               src="https://m.media-amazon.com/images/I/515j2DspaRL._AC_UY327_FMwebp_QL65_.jpg"
               class="header-book__img"
               alt="img1"
             />
-            <h2 class="header-book__h2 text-center mt-4">Commerce in Culture</h2>
-            <p class="header-book__p text-center">Cynthia J. Brokaw </p>
+            <h2 class="header-book__h2 text-center mt-4">
+              Commerce in Culture
+            </h2>
+            <p class="header-book__p text-center">Cynthia J. Brokaw</p>
+          </RouterLink>
+           
           </div>
         </div>
       </div>
@@ -92,6 +105,38 @@ export default {
   data() {
     return {
       MediaWidth: window.innerWidth,
+      HeaderBooks: [
+        {
+          id: 1,
+          name: "The Bookstore Keepers ",
+          author: " Alice Hoffman",
+          imageUrl:
+            "https://m.media-amazon.com/images/I/81mdiQ5B+7L._SL1500_.jpg",
+          summary:
+            "From New York Times bestselling author Alice Hoffman comes a deeply moving short story about the love of family and the power of dreams.",
+          price: "19",
+        },
+        {
+          id: 2,
+          name: "DAISY DARKER",
+          author: " ALICE FEENY",
+          imageUrl:
+            "https://m.media-amazon.com/images/I/81QNZEa16fL._SL1500_.jpg",
+          summary:
+            "Lorsque la marée montera, ils seront coupés du reste du monde. Lorsqu'elle redescendra, plus rien ne sera jamais comme avant...",
+          price: "37",
+        },
+        {
+          id: 3,
+          name: "Commerce in Culture",
+          author: " Cynthia J. Brokaw",
+          imageUrl:
+            "https://m.media-amazon.com/images/I/515j2DspaRL._AC_UY327_FMwebp_QL65_.jpg",
+          summary:
+            "The Ming dynasty was the last great Chinese dynasty before the Manchu conquest in 1644. During that time, China, not Europe, was the center of the world: the European voyages of exploration were searching not just for new lands but also for new trade routes to the Far East. In this book, Timothy Brook eloquently narrates the changing landscape of life over the three centuries of the Ming (1368-1644), when China was transformed from a closely administered agrarian realm into a place of commercial profits and intense competition for status.",
+          price: "41",
+        }
+      ],
     };
   },
   mounted() {
