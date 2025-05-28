@@ -1,14 +1,20 @@
-# BookShop
+#  Welcome to BOOKA ![License](https://img.shields.io/badge/License-Apache%202.0-blue)
 
-This template should help get you started developing with Vue 3 in Vite.
 
-## Recommended IDE Setup
+This website is an e-commerce website specializing in book sales, built using Vue 3 and Tailwind CSS. In this project, I mainly focused on developing most of the functions that are used by the user. One of the challenges I faced was establishing a connection between local storage and different pages, as well as transferring data between various pages in different scenarios.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+# Techs
+ - HTML
+ - CSS
+ - Java Script
+ - Vue3
+ - Tailwind
+ - Sass
+ - Vue Router
+ - Vite
+## Developer
+[Soheil Ramezani](https://github.com/Soheil-ramezani)
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
 
 ## Project Setup
 
@@ -22,14 +28,6 @@ npm install
 npm run dev
 ```
 
-### Compile and Minify for Production
+## License
 
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+[Apache2.0](https://www.apache.org/licenses/LICENSE-2.0)
