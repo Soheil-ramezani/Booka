@@ -1,9 +1,5 @@
-<script setup>
-import Navbar from "../Navbar/Navbar.vue";
-</script>
 <template>
   <Header class="header flex flex-col justify-center items-center pb-20">
-    <Navbar />
     <div class="header-middle mt-[40px] flex flex-row items-center w-full">
       <!-- Header Left -->
       <div

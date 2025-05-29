@@ -1,5 +1,6 @@
 <script setup>
-import HeaderView from "@/components/HeaderParts/Header/HeaderView.vue";
+import Navbar from "@/components/Navbar/Navbar.vue";
+import HeaderView from "@/components/Header/HeaderView.vue";
 import FooterView from "@/components/Footer/FooterView.vue";
 import DragScroll from "@/components/dragScroll/dragScroll.vue";
 import OnlineBooks from "@/components/mainParts/onlineBooks/OnlineBooks.vue";
@@ -8,6 +9,7 @@ import OffersView from "@/components/mainParts/OffersView/OffersView.vue";
 
 <template>
   <div>
+    <Navbar/>
     <HeaderView />
     <main class="flex flex-col items-center">
     <!-- BestSellers -->

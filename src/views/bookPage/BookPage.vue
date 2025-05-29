@@ -1,11 +1,11 @@
 <script setup>
-import NavBar from "@/components/HeaderParts/Navbar/Navbar.vue";
+import Navbar from "@/components/Navbar/Navbar.vue";
 import DragScroll from "@/components/dragScroll/dragScroll.vue";
 import FooterView from "@/components/Footer/FooterView.vue";
 </script>
 <template>
   <div class="book-page">
-    <NavBar />
+    <Navbar />
     <main class="mt-[62.5px] px-[5%] flex flex-col items-center">
       <!-- BookDetails -->
       <div
