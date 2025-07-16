@@ -16,18 +16,18 @@
           </li>
           <!-- Categories -->
           <li class="Nav-menu__li text-nowrap mx-5">
-            <RouterLink class="menu__RouterLink">Categories</RouterLink>
+            <a href="#" class="menu__RouterLink">Categories</a>
           </li>
          <!-- Blogs -->
           <li
             class="Nav-menu__li text-nowrap mx-5"
             v-show="this.MediaWidth >= 1024"
           >
-            <RouterLink class="menu__RouterLink">Blogs</RouterLink>
+            <a href="#" class="menu__RouterLink">Blogs</a>
           </li>
            <!--AboutUs  -->
           <li class="Nav-menu__li text-nowrap mx-5">
-            <RouterLink class="menu__RouterLink">About Us</RouterLink>
+            <a href="#" class="menu__RouterLink">About Us</a>
           </li>
         </ul>
       </div>
@@ -71,7 +71,7 @@
             ></path>
           </svg>
         </RouterLink>
-        <RouterLink class="logIn-btn   pl-5">Sign in</RouterLink>
+        <a href="#" class="logIn-btn   pl-5">Sign in</a>
       </div>
       <!-- Hamburger-menu -->
       <div class="Nav-hamburger" v-show="this.MediaWidth < 600">
