@@ -54,8 +54,25 @@ import OffersView from "@/components/mainParts/OffersView/OffersView.vue";
 </template>
 
 <script>
+import { mapStores } from "pinia";
+import {useMediaStore} from '@/stores/counter'
 export default {
-  name:"HomeView"
+  name:"HomeView",
+   data() {
+    return {
+      MediaWidth: window.innerWidth,
+    };
+  },
+  computed:{
+    ...mapStores(useMediaStore)
+  },
+  mounted(){
+    console.log(this.MediaSizeStore.MediaWidth)
+    this.MediaSizeStore.setNewMediaWidth(this.MediaWidth)
+    console.log(this.MediaSizeStore.MediaWidth)
+  }
+  
+  
 }
 </script>
 
