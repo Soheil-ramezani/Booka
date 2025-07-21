@@ -1,9 +1,15 @@
 <script setup>
 import Navbar from "@/components/Navbar/Navbar.vue";
 import FooterView from "@/components/Footer/FooterView.vue";
-// MediaStore From Pinia 
-import {useMediaStore} from '@/stores/counter'
-const MediaSize=useMediaStore()
+// MediaStore From Pinia
+import { useMediaStore } from "@/stores/counter";
+const MediaSize = useMediaStore();
+// Get Books Data from Local storage
+var orders = JSON.parse(localStorage.getItem("customerOrders")) || [];
+orders.forEach((item) => {
+  item.quantity = 1;
+});
+console.log(orders);
 </script>
 <template>
   <div class="OrderPage">
@@ -12,7 +18,7 @@ const MediaSize=useMediaStore()
       <!-- Total price -->
       <div
         class="OrderTotalPrice mt-[62.5px] flex items-center justify-around w-full fixed top-0"
-        v-show="this.orders.length > 0"
+        v-show="orders.length > 0"
       >
         <h2 class="inline-block">Total Price :{{ totalPrice }}$</h2>
         <div class="TotalPrice__div inline-block">
@@ -27,15 +33,16 @@ const MediaSize=useMediaStore()
     </header>
 
     <main
-      class="Order-main  mt-[112px]"
-      :class="{ 'main-minHeight': MediaSize.MediaWidth >= 990,
-        'px-[20%]':MediaSize.MediaWidth >= 760,
-        'px-[10%]':MediaSize.MediaWidth < 760,
-       }"
+      class="Order-main mt-[112px]"
+      :class="{
+        'main-minHeight': MediaSize.MediaWidth >= 990,
+        'px-[20%]': MediaSize.MediaWidth >= 760,
+        'px-[10%]': MediaSize.MediaWidth < 760,
+      }"
     >
       <!-- Order List -->
       <ul
-        v-show="this.orders.length > 0"
+        v-show="orders.length > 0"
         class="order__ul"
         v-for="order in orders"
         :key="order.id"
@@ -56,7 +63,10 @@ const MediaSize=useMediaStore()
           <!-- order List element texts -->
           <div
             class="order-text flex flex-col items-center justify-between"
-            :class="{ 'm-[3%]  w-4/6': MediaSize.MediaWidth >= 760 ,'w-full px-5':MediaSize.MediaWidth<760}"
+            :class="{
+              'm-[3%]  w-4/6': MediaSize.MediaWidth >= 760,
+              'w-full px-5': MediaSize.MediaWidth < 760,
+            }"
           >
             <!-- Book Name -->
             <div class="flex items-center w-full">
@@ -116,7 +126,7 @@ const MediaSize=useMediaStore()
         </li>
       </ul>
       <div
-        v-show="this.orders.length == 0"
+        v-show="orders.length == 0"
         class="EmptyCart flex flex-col items-center justify-center"
       >
         <h1>Your Cart is empty</h1>
@@ -133,31 +143,32 @@ export default {
   data() {
     return {
       storageKey: "customerOrders",
-      orders: null,
       totalPrice: 0,
+      MediaWidth: window.innerWidth,
     };
   },
-  
-  beforeMount() {
-    // Get Books Data from Local storage
-    this.orders = JSON.parse(localStorage.getItem(this.storageKey)) || [];
-    this.orders.forEach((item) => {
-      item.quantity = 1;
-    });
-  },
+
+  // beforeMount() {
+  //   // Get Books Data from Local storage
+  //   this.orders = JSON.parse(localStorage.getItem(this.storageKey)) || [];
+  //   this.orders.forEach((item) => {
+  //     item.quantity = 1;
+  //   });
+  // },
   mounted() {
     this.calculateTotal();
   },
   methods: {
     calculateTotal() {
-      this.totalPrice = this.orders.reduce((sum, item) => {
+      this.totalPrice = orders.reduce((sum, item) => {
         return sum + item.price * item.quantity;
       }, 0);
     },
     ClearLocalStorage() {
       localStorage.removeItem(this.storageKey);
-      this.orders = [];
       this.totalPrice == 0;
+      orders=[]
+      
     },
   },
 };
