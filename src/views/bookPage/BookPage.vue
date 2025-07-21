@@ -2,6 +2,8 @@
 import Navbar from "@/components/Navbar/Navbar.vue";
 import DragScroll from "@/components/dragScroll/dragScroll.vue";
 import FooterView from "@/components/Footer/FooterView.vue";
+import {useMediaStore} from '@/stores/counter'
+const MediaSize=useMediaStore()
 </script>
 <template>
   <div class="book-page">
@@ -9,12 +11,10 @@ import FooterView from "@/components/Footer/FooterView.vue";
     <main class="mt-[62.5px] px-[5%] flex flex-col items-center">
       <!-- BookDetails -->
       <div
-        class="BookInfo grid py-[5rem] px-[1%]"
+        class="BookInfo grid  py-[5rem] px-[1%]"
         :class="{
-          'grid-cols-Book-Info-3': this.MediaWidth > 1160,
-          'grid-cols-Book-Info-2': 850 < this.MediaWidth < 1160,
-          'grid-flow-col': this.MediaWidth >= 800,
-          'grid-flow-row': this.MediaWidth < 800,
+          'grid-flow-col': MediaSize.MediaWidth >= 800,
+          'grid-flow-row': MediaSize.MediaWidth< 800,
         }"
       >
         <!-- LeftCol -->
@@ -25,8 +25,8 @@ import FooterView from "@/components/Footer/FooterView.vue";
               :src="BookInfos.imageUrl"
               alt=""
               :class="{
-                bookImg__img: this.MediaWidth > 670,
-                bookImg__img2: this.MediaWidth < 670,
+                bookImg__img: MediaSize.MediaWidth > 670,
+                bookImg__img2: MediaSize.MediaWidth < 670,
               }"
             />
           </div>
@@ -187,7 +187,7 @@ import FooterView from "@/components/Footer/FooterView.vue";
         <div class="rightCol">
           <!-- BookPrice -->
           <div
-            v-if="this.MediaWidth > 1160"
+            v-if="MediaSize.MediaWidth > 1160"
             class="bookPrice flex flex-col items-center py-10 px-5"
           >
             <div class="prices grid w-full gap-x-5 gap-y-3">
@@ -252,7 +252,7 @@ import FooterView from "@/components/Footer/FooterView.vue";
       </div>
       <!-- book price-row -->
       <div
-        v-if="this.MediaWidth < 1160"
+        v-if="MediaSize.MediaWidth < 1160"
         class="bookPrice-row w-full mb-10 py-10 px-5"
       >
         <!-- Prices -->
@@ -314,12 +314,10 @@ export default {
   name: "BookPage",
   data() {
     return {
-     MediaWidth: null,
       BookInfos: null,
       storageKey : 'customerOrders',
     };
   },
-  
   methods:{
     // Save
     SaveAtLocalStorage(orderData){
@@ -340,10 +338,6 @@ export default {
     const BookObject = JSON.parse(this.$route.query.Book);
     this.BookInfos = BookObject; // Now you can use the movie object//for parsing queries
   },
-  mounted(){
-    this.MediaWidth=window.innerWidth;
-  },
- 
   watch: {
     "$route.query": {
       handler() {

@@ -440,6 +440,11 @@ nav .Right-side .overlay .closebtn {
   height: 20px;
 }
 
+@media screen and (min-width: 1160px) {
+  .BookInfo {
+    grid-template-columns: 1.5fr 2.5fr 1.1fr;
+  }
+}
 .OrderPage .order-header .OrderTotalPrice {
   background-color: var(--light-cream);
 }

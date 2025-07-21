@@ -132,10 +132,10 @@ export default {
       storageKey: "customerOrders",
       orders: null,
       totalPrice: 0,
-      MediaWidth: window.innerWidth,
+      MediaWidth:window.innerWidth,
     };
   },
-
+  
   beforeMount() {
     // Get Books Data from Local storage
     this.orders = JSON.parse(localStorage.getItem(this.storageKey)) || [];

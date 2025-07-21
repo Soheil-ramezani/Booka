@@ -67,8 +67,8 @@ main {
 // Fonts
 @import "fonts";
 // Header Parts
-@import "./../../components/HeaderParts/Header/Header";
-@import "./../../components/HeaderParts/Navbar/Navbar";
+@import "./../../components/Header/Header";
+@import "./../../components/Navbar/Navbar";
 //HomeMainParts
 @import "./../../components/mainParts/onlineBooks/OnlineBooks";
 @import "./../../components/mainParts/OffersView/Offers";
