@@ -2,6 +2,7 @@
 import Navbar from "@/components/Navbar/Navbar.vue";
 import DragScroll from "@/components/dragScroll/dragScroll.vue";
 import FooterView from "@/components/Footer/FooterView.vue";
+// MediaStore From Pinia 
 import {useMediaStore} from '@/stores/counter'
 const MediaSize=useMediaStore()
 </script>

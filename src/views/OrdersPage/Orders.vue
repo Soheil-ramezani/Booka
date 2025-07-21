@@ -1,6 +1,9 @@
 <script setup>
 import Navbar from "@/components/Navbar/Navbar.vue";
 import FooterView from "@/components/Footer/FooterView.vue";
+// MediaStore From Pinia 
+import {useMediaStore} from '@/stores/counter'
+const MediaSize=useMediaStore()
 </script>
 <template>
   <div class="OrderPage">
@@ -25,9 +28,9 @@ import FooterView from "@/components/Footer/FooterView.vue";
 
     <main
       class="Order-main  mt-[112px]"
-      :class="{ 'main-minHeight': this.MediaWidth >= 990,
-        'px-[20%]':this.MediaWidth >= 760,
-        'px-[10%]':this.MediaWidth < 760,
+      :class="{ 'main-minHeight': MediaSize.MediaWidth >= 990,
+        'px-[20%]':MediaSize.MediaWidth >= 760,
+        'px-[10%]':MediaSize.MediaWidth < 760,
        }"
     >
       <!-- Order List -->
@@ -41,8 +44,8 @@ import FooterView from "@/components/Footer/FooterView.vue";
         <li
           class="order__li my-10 flex justify-between"
           :class="{
-            'flex-row': this.MediaWidth >= 760,
-            'flex-col items-center': this.MediaWidth < 760,
+            'flex-row': MediaSize.MediaWidth >= 760,
+            'flex-col items-center': MediaSize.MediaWidth < 760,
           }"
         >
           <!-- order List element img  -->
@@ -53,7 +56,7 @@ import FooterView from "@/components/Footer/FooterView.vue";
           <!-- order List element texts -->
           <div
             class="order-text flex flex-col items-center justify-between"
-            :class="{ 'm-[3%]  w-4/6': this.MediaWidth >= 760 ,'w-full px-5':this.MediaWidth<760}"
+            :class="{ 'm-[3%]  w-4/6': MediaSize.MediaWidth >= 760 ,'w-full px-5':MediaSize.MediaWidth<760}"
           >
             <!-- Book Name -->
             <div class="flex items-center w-full">
@@ -132,7 +135,6 @@ export default {
       storageKey: "customerOrders",
       orders: null,
       totalPrice: 0,
-      MediaWidth:window.innerWidth,
     };
   },
   
