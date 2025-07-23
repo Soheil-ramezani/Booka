@@ -35,6 +35,13 @@ import OffersView from "@/components/mainParts/OffersView/OffersView.vue";
       <DragScroll />
     </div>
     <OnlineBooks />
+    <!-- Offers -->
+     <!-- Title -->
+      <div
+        class="partTitle px-[5%] mt-10 flex w-full items-center justify-between"
+      >
+        <h1 class="partTitle__h1 charm-regular">Offers</h1>
+      </div>
     <OffersView />
     <!-- Popular -->
      <div class="PopularBooks container flex flex-col items-center">

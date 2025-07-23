@@ -1,6 +1,5 @@
 <template>
   <div v-if="MediaWidth>=650" class="offers w-full flex flex-col px-[15%] py-20">
-    <h1 class="charm-regular mb-20">Offers</h1>
     <!-- books -->
     <div class="offers-ranges grid grid-flow-col grid-cols-3 gap-x-5 ">
       <!-- range1 -->
