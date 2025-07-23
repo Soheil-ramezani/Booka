@@ -223,7 +223,7 @@ const MediaSize=useMediaStore()
             <div class="flex flex-col items-center">
               <button
                 class="bookPrice__btn w-11/12 p-3"
-                @click="SaveAtLocalStorage(this.BookInfos)"
+                @click="SaveAtLocalStorage(BookInfos)"
               >
                 Add To Cart
               </button>
@@ -289,7 +289,7 @@ const MediaSize=useMediaStore()
         <div class="AddTocart__btn mt-10 flex items-center justify-center">
           <button
             class="bookPrice__btn w-11/12 p-3"
-            @click="SaveAtLocalStorage(this.BookInfos)"
+            @click="SaveAtLocalStorage(BookInfos)"
           >
             Add To Cart
           </button>
@@ -316,21 +316,20 @@ export default {
   data() {
     return {
       BookInfos: null,
-      storageKey : 'customerOrders',
     };
   },
   methods:{
     // Save
     SaveAtLocalStorage(orderData){
   // Get Previous Orders
-  const existingOrders = localStorage.getItem(this.storageKey);
+  const existingOrders = localStorage.getItem('customerOrders');
   const orders = existingOrders ? JSON.parse(existingOrders) : [];
 
   // Add new order
   orders.push(orderData);
 
   // Resave in localStorage
-  localStorage.setItem(this.storageKey, JSON.stringify(orders));
+  localStorage.setItem('customerOrders', JSON.stringify(orders));
  
       alert("this book added to your card")
     }
