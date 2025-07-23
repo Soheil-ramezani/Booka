@@ -10,10 +10,7 @@
   >
     <!-- for bigger than 650px -->
     <!-- Company -->
-    <div
-      class="footerLink flex flex-col justify-center items-start"
-      v-show="this.MediaWidth >= 560"
-    >
+    <div class="footerLink flex flex-col justify-center items-start">
       <h2 class="mb-[1%]">Company</h2>
       <ul class="footerLinks__ul">
         <li class="footerLinks__li">About us</li>
@@ -23,7 +20,10 @@
       </ul>
     </div>
     <!-- Help -->
-    <div class="footerLink flex flex-col justify-center items-start">
+    <div
+      class="footerLink flex flex-col justify-center items-start"
+      v-show="this.MediaWidth >= 560"
+    >
       <h2 class="mb-[1%]">Help</h2>
       <ul class="footerLinks__ul">
         <li class="footerLinks__li">Subscription instruction</li>
@@ -52,9 +52,39 @@
           'flex gap-5': this.MediaWidth < 360,
         }"
       >
-        <li class="footerLinks__li">Instagram</li>
-        <li class="footerLinks__li">Facebook</li>
-        <li class="footerLinks__li">Twitter</li>
+        <!-- Instagram -->
+        <li class="footerLinks__li flex flex-row items-center">
+          <lord-icon
+            src="https://cdn.lordicon.com/cuwcpyqc.json"
+            trigger="hover"
+            colors="primary:#000000,secondary:#242424"
+            style="width: 25px; height: 25px"
+          >
+          </lord-icon>
+          Instagram
+        </li>
+        <!-- FaceBook -->
+        <li class="footerLinks__li flex flex-row items-center">
+          <lord-icon
+            src="https://cdn.lordicon.com/lplofcfe.json"
+            trigger="hover"
+            colors="primary:#000000,secondary:#242424"
+            style="width: 25px; height: 25px"
+          >
+          </lord-icon
+          >Facebook
+        </li>
+        <!-- Twitter -->
+        <li class="footerLinks__li flex flex-row items-center">
+          <lord-icon
+            src="https://cdn.lordicon.com/vnvsnvov.json"
+            trigger="hover"
+            colors="primary:#000000,secondary:#242424"
+            style="width: 25px; height: 25px"
+          >
+          </lord-icon
+          >Twitter
+        </li>
       </ul>
     </div>
     <!-- Contact us -->
@@ -68,7 +98,16 @@
         class="footerContact__input mb-5 py-2 px-4"
         placeholder="Enter email here"
       />
-      <button class="footerContact__btn w-full py-2 px-4">Send Email</button>
+      <button class="footerContact__btn w-full py-2 px-4 flex flex-row items-center justify-center">
+        <lord-icon
+          src="https://cdn.lordicon.com/ozlkyfxg.json"
+          trigger="hover"
+          colors="primary:#ffffff,secondary:#ffffff"
+          style="width: 25px; height: 25px"
+        >
+        </lord-icon>
+        Send Email
+      </button>
     </div>
   </footer>
 </template>
