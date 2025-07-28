@@ -158,7 +158,7 @@ export default {
       }, 0);
     },
     ClearLocalStorage() {
-      localStorage.removeItem();
+      localStorage.removeItem('customerOrders');
       this.totalPrice == 0;
       this.orders = [];
     },
