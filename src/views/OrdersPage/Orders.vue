@@ -93,8 +93,8 @@ const MediaSize = useMediaStore();
                 @click="
                   () => {
                     if (order.quantity <= 1) {
-                      order.quantity = 1;
-                      calculateTotal();
+                     deleteBook(order.id)
+                     calculateTotal();
                     } else {
                       order.quantity--;
                       calculateTotal();
@@ -161,6 +161,9 @@ export default {
       localStorage.removeItem('customerOrders');
       this.totalPrice == 0;
       this.orders = [];
+    },
+    deleteBook(bookId){
+      this.orders=this.orders.filter(book=>book.id !== bookId)
     },
   },
 };
