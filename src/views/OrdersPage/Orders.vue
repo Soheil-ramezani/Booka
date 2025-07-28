@@ -4,12 +4,6 @@ import FooterView from "@/components/Footer/FooterView.vue";
 // MediaStore From Pinia
 import { useMediaStore } from "@/stores/counter";
 const MediaSize = useMediaStore();
-// Get Books Data from Local storage
-var orders = JSON.parse(localStorage.getItem("customerOrders")) || [];
-orders.forEach((item) => {
-  item.quantity = 1;
-});
-console.log(orders);
 </script>
 <template>
   <div class="OrderPage">
@@ -142,33 +136,31 @@ export default {
   name: "OrderPage",
   data() {
     return {
-      storageKey: "customerOrders",
+      orders: JSON.parse(localStorage.getItem('customerOrders')) || [],
       totalPrice: 0,
-      MediaWidth: window.innerWidth,
     };
   },
 
-  // beforeMount() {
-  //   // Get Books Data from Local storage
-  //   this.orders = JSON.parse(localStorage.getItem(this.storageKey)) || [];
-  //   this.orders.forEach((item) => {
-  //     item.quantity = 1;
-  //   });
-  // },
+  beforeMount() {
+    // Get Books Data from Local storage
+    this.orders.forEach((item) => {
+      item.quantity = 1;
+    })
+    console.log(this.orders)
+  },
   mounted() {
     this.calculateTotal();
   },
   methods: {
     calculateTotal() {
-      this.totalPrice = orders.reduce((sum, item) => {
-        return sum + item.price * item.quantity;
+      this.totalPrice = this.orders.reduce((accumulator, element) => {
+        return accumulator + element.quantity * element.price;
       }, 0);
     },
     ClearLocalStorage() {
-      localStorage.removeItem(this.storageKey);
+      localStorage.removeItem();
       this.totalPrice == 0;
-      orders=[]
-      
+      this.orders = [];
     },
   },
 };
