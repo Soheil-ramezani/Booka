@@ -23,11 +23,11 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-h1 {
+h1, .h1Style {
   font-size: 4rem;
 }
 
-h2 {
+h2, .h2Style {
   font-size: 2.5rem;
 }
 
@@ -181,7 +181,7 @@ nav .Right-side .Nav-searchbar button {
   background: var(--color-brand);
   border-radius: 0 0.7rem 0.7rem 0;
 }
-nav .Right-side .Nav-searchbar input:not(:-moz-placeholder-shown) {
+nav .Right-side .Nav-searchbar input:not(:-moz-placeholder) {
   border-radius: 0.7rem 0 0 0.7rem;
   width: calc(100% - var(--btn-width));
 }
@@ -189,7 +189,7 @@ nav .Right-side .Nav-searchbar input:not(:placeholder-shown) {
   border-radius: 0.7rem 0 0 0.7rem;
   width: calc(100% - var(--btn-width));
 }
-nav .Right-side .Nav-searchbar input:not(:-moz-placeholder-shown) + button {
+nav .Right-side .Nav-searchbar input:not(:-moz-placeholder) + button {
   display: block;
 }
 nav .Right-side .Nav-searchbar input:not(:placeholder-shown) + button {
@@ -466,4 +466,105 @@ nav .Right-side .overlay .closebtn {
   background-color: var(--dark-blue);
   color: white;
   border-radius: 5px;
+}
+
+.LoginPage .ImgSide .ImgSide__img {
+  width: 100%;
+  height: 100vh;
+}
+.LoginPage .RightSide {
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--primary-white);
+  background-size: cover;
+}
+.LoginPage .RightSide .Login-title__p {
+  color: var(--dark-blue);
+}
+.LoginPage .RightSide .Login__form {
+  background: rgba(255, 255, 255, 0.28);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.9px);
+  -webkit-backdrop-filter: blur(7.9px);
+  border: 1px solid rgba(255, 255, 255, 0.46);
+  gap: 25px;
+}
+.LoginPage .RightSide .Login__form .form-login {
+  /* reset input */
+}
+.LoginPage .RightSide .Login__form .form-login .form__group {
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 10px;
+}
+.LoginPage .RightSide .Login__form .form-login .form__field {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid var(--Steel-Blue);
+  outline: 0;
+  font-size: 1.3rem;
+  color: black;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+.LoginPage .RightSide .Login__form .form-login .form__field::-moz-placeholder {
+  color: transparent;
+}
+.LoginPage .RightSide .Login__form .form-login .form__field::placeholder {
+  color: transparent;
+}
+.LoginPage .RightSide .Login__form .form-login .form__field:-moz-placeholder ~ .form__label {
+  font-size: 1.3rem;
+  cursor: text;
+  top: 20px;
+}
+.LoginPage .RightSide .Login__form .form-login .form__field:placeholder-shown ~ .form__label {
+  font-size: 1.3rem;
+  cursor: text;
+  top: 20px;
+}
+.LoginPage .RightSide .Login__form .form-login .form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: var(--Steel-Blue);
+}
+.LoginPage .RightSide .Login__form .form-login .form__field:focus {
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  -o-border-image: linear-gradient(to right, #11998e, #38ef7d);
+     border-image: linear-gradient(to right, #11998e, #38ef7d);
+  border-image-slice: 1;
+}
+.LoginPage .RightSide .Login__form .form-login .form__field:focus ~ .form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: #11998e;
+  font-weight: 700;
+}
+.LoginPage .RightSide .Login__form .form-login .form__field:required,
+.LoginPage .RightSide .Login__form .form-login .form__field:invalid {
+  box-shadow: none;
+}
+.LoginPage .RightSide .Login-btns .submit-btn {
+  background-color: var(--Steel-Blue);
+  color: var(--primary-white);
+  border-radius: 40px;
+}
+.LoginPage .RightSide .Login-btns .google-btn {
+  font-weight: 600;
+  border-radius: 40px;
+}
+.LoginPage .RightSide .createAccount .createAccount__a {
+  font-weight: 600;
+  color: var(--Steel-Blue);
 }

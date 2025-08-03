@@ -1,0 +1,112 @@
+.LoginPage {
+  .ImgSide {
+    .ImgSide__img {
+      width: 100%;
+      height: 100vh;
+    }
+  }
+
+  .RightSide {
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--primary-white);
+    background-size: cover;
+
+    .Login-title__p {
+      color: var(--dark-blue);
+    }
+
+    .Login__form {
+      background: rgba(255, 255, 255, 0.28);
+      border-radius: 16px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(7.9px);
+      -webkit-backdrop-filter: blur(7.9px);
+      border: 1px solid rgba(255, 255, 255, 0.46);
+      gap: 25px;
+
+      .form-login {
+        .form__group {
+          position: relative;
+          padding: 15px 0 0;
+          margin-top: 10px;
+        }
+
+        .form__field {
+          font-family: inherit;
+          width: 100%;
+          border: 0;
+          border-bottom: 2px solid var(--Steel-Blue);
+          outline: 0;
+          font-size: 1.3rem;
+          color: black;
+          padding: 7px 0;
+          background: transparent;
+          transition: border-color 0.2s;
+        }
+
+        .form__field::placeholder {
+          color: transparent;
+        }
+
+        .form__field:placeholder-shown~.form__label {
+          font-size: 1.3rem;
+          cursor: text;
+          top: 20px;
+        }
+
+        .form__label {
+          position: absolute;
+          top: 0;
+          display: block;
+          transition: 0.2s;
+          font-size: 1rem;
+          color: var(--Steel-Blue);
+        }
+
+        .form__field:focus {
+          padding-bottom: 6px;
+          font-weight: 700;
+          border-width: 3px;
+          border-image: linear-gradient(to right, #11998e, #38ef7d);
+          border-image-slice: 1;
+        }
+
+        .form__field:focus~.form__label {
+          position: absolute;
+          top: 0;
+          display: block;
+          transition: 0.2s;
+          font-size: 1rem;
+          color: #11998e;
+          font-weight: 700;
+        }
+
+        /* reset input */
+        .form__field:required,
+        .form__field:invalid {
+          box-shadow: none;
+        }
+      }
+
+    }
+
+    .Login-btns {
+      .submit-btn {
+        background-color: var(--Steel-Blue);
+        color: var(--primary-white);
+        border-radius: 40px;
+      }
+      .google-btn{
+        font-weight: 600;
+        border-radius: 40px;
+      }
+    }
+    .createAccount{
+      .createAccount__a{
+        font-weight: 600;
+        color: var(--Steel-Blue);
+      }
+    }
+  }
+}
