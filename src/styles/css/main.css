@@ -472,16 +472,16 @@ nav .Right-side .overlay .closebtn {
   width: 100%;
   height: 100vh;
 }
-.LoginPage .RightSide {
+.LoginPage .right-section {
   height: 100vh;
   width: 100vw;
   background-color: var(--primary-white);
   background-size: cover;
 }
-.LoginPage .RightSide .Login-title__p {
+.LoginPage .right-section .Login-title__p {
   color: var(--dark-blue);
 }
-.LoginPage .RightSide .Login__form {
+.LoginPage .right-section .Login__form {
   background: rgba(255, 255, 255, 0.28);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -490,15 +490,15 @@ nav .Right-side .overlay .closebtn {
   border: 1px solid rgba(255, 255, 255, 0.46);
   gap: 25px;
 }
-.LoginPage .RightSide .Login__form .form-login {
+.LoginPage .right-section .Login__form .form-login {
   /* reset input */
 }
-.LoginPage .RightSide .Login__form .form-login .form__group {
+.LoginPage .right-section .Login__form .form-login .form__group {
   position: relative;
   padding: 15px 0 0;
   margin-top: 10px;
 }
-.LoginPage .RightSide .Login__form .form-login .form__field {
+.LoginPage .right-section .Login__form .form-login .form__field {
   font-family: inherit;
   width: 100%;
   border: 0;
@@ -510,23 +510,23 @@ nav .Right-side .overlay .closebtn {
   background: transparent;
   transition: border-color 0.2s;
 }
-.LoginPage .RightSide .Login__form .form-login .form__field::-moz-placeholder {
+.LoginPage .right-section .Login__form .form-login .form__field::-moz-placeholder {
   color: transparent;
 }
-.LoginPage .RightSide .Login__form .form-login .form__field::placeholder {
+.LoginPage .right-section .Login__form .form-login .form__field::placeholder {
   color: transparent;
 }
-.LoginPage .RightSide .Login__form .form-login .form__field:-moz-placeholder ~ .form__label {
+.LoginPage .right-section .Login__form .form-login .form__field:-moz-placeholder ~ .form__label {
   font-size: 1.3rem;
   cursor: text;
   top: 20px;
 }
-.LoginPage .RightSide .Login__form .form-login .form__field:placeholder-shown ~ .form__label {
+.LoginPage .right-section .Login__form .form-login .form__field:placeholder-shown ~ .form__label {
   font-size: 1.3rem;
   cursor: text;
   top: 20px;
 }
-.LoginPage .RightSide .Login__form .form-login .form__label {
+.LoginPage .right-section .Login__form .form-login .form__label {
   position: absolute;
   top: 0;
   display: block;
@@ -534,7 +534,7 @@ nav .Right-side .overlay .closebtn {
   font-size: 1rem;
   color: var(--Steel-Blue);
 }
-.LoginPage .RightSide .Login__form .form-login .form__field:focus {
+.LoginPage .right-section .Login__form .form-login .form__field:focus {
   padding-bottom: 6px;
   font-weight: 700;
   border-width: 3px;
@@ -542,7 +542,7 @@ nav .Right-side .overlay .closebtn {
      border-image: linear-gradient(to right, #11998e, #38ef7d);
   border-image-slice: 1;
 }
-.LoginPage .RightSide .Login__form .form-login .form__field:focus ~ .form__label {
+.LoginPage .right-section .Login__form .form-login .form__field:focus ~ .form__label {
   position: absolute;
   top: 0;
   display: block;
@@ -551,20 +551,20 @@ nav .Right-side .overlay .closebtn {
   color: #11998e;
   font-weight: 700;
 }
-.LoginPage .RightSide .Login__form .form-login .form__field:required,
-.LoginPage .RightSide .Login__form .form-login .form__field:invalid {
+.LoginPage .right-section .Login__form .form-login .form__field:required,
+.LoginPage .right-section .Login__form .form-login .form__field:invalid {
   box-shadow: none;
 }
-.LoginPage .RightSide .Login-btns .submit-btn {
+.LoginPage .right-section .Login-btns .submit-btn {
   background-color: var(--Steel-Blue);
   color: var(--primary-white);
   border-radius: 40px;
 }
-.LoginPage .RightSide .Login-btns .google-btn {
+.LoginPage .right-section .Login-btns .google-btn {
   font-weight: 600;
   border-radius: 40px;
 }
-.LoginPage .RightSide .createAccount .createAccount__a {
+.LoginPage .right-section .createAccount .createAccount__a {
   font-weight: 600;
   color: var(--Steel-Blue);
 }

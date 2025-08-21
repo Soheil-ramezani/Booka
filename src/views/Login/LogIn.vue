@@ -1,7 +1,7 @@
 <template>
   <main class="LoginPage flex flex-row items-center justify-center">
     <!-- LeftSide -->
-    <section class="ImgSide w-5/12">
+    <section v-if="mediaWidth>=900" class="ImgSide w-5/12">
       <img
         class="ImgSide__img"
         src="../../assets/imgs/@Wallpaper_4K3D (13689)4K.png"
@@ -9,10 +9,12 @@
       />
     </section>
     <!-- RightSide -->
+     <!-- Login -->
     <section
-      class="RightSide w-7/12 px-[20%] flex flex-col justify-center items-center gap-5"
+      class="LoginSection right-section  px-[20%] flex flex-col justify-center items-center gap-5"
+      :class="{'w-7/12':mediaWidth>=900}"
     >
-      <div class="LoginTitles">
+      <div class="LoginTitles text-center">
         <h1 class="h2Style pacifico-regular mb-7">Welcome Back to BOOKA</h1>
         <h2 class="Login-title__p mb-5">
           A World of the Best Books, at your fingertips
@@ -21,7 +23,7 @@
       <!-- Forms -->
       <form
         action="#"
-        class="Login__form w-full flex flex-col justify-center items-center pt-[20px] pb-[40px]"
+        class="Login__form w-full flex flex-col justify-center items-center pt-[20px] pb-[40px] min-w-[390px]"
       >
         <!-- UserName -->
         <div class="form-login w-[90%]">
@@ -51,7 +53,7 @@
             />
 
             <label for="Password" class="form__label"> Password </label>
-            <div>
+            <div class="flex items-center pt-5 ">
               <svg
                 @click="changeInputType()"
                 v-show="showPassword"
@@ -59,6 +61,7 @@
                 viewBox="0 0 24 24"
                 width="24"
                 height="24"
+                style="cursor: pointer;"
                 fill="rgba(159,207,248,1)"
               >
                 <path
@@ -73,6 +76,7 @@
                 viewBox="0 0 24 24"
                 width="24"
                 height="24"
+                style="cursor: pointer;"
                 fill="rgba(159,207,248,1)"
               >
                 <path
@@ -91,14 +95,14 @@
       <div
         class="Login-btns w-full flex flex-col items-center justify-center gap-5"
       >
-        <button class="submit-btn w-[65%] py-5">Log in</button>
+        <button class="submit-btn w-[65%] py-5 text-nowrap min-w-[215px]">Log in</button>
         <div class="flex flex-row w-full items-center justify-center">
           <hr class="Login-btns__hr w-[20%] border-y-[1px] border-slate-400" />
           <p class="Login-btns__p mx-5 text-slate-500">OR</p>
           <hr class="Login-btns__hr w-[20%] border-y-[1px] border-slate-400" />
         </div>
         <button
-          class="google-btn bg-slate-200 w-[65%] py-5 flex items-center justify-center"
+          class="google-btn bg-slate-200 w-[65%] py-5 flex items-center justify-center text-nowrap min-w-[215px]"
         >
           <lord-icon
             src="https://cdn.lordicon.com/smafogdu.json"
@@ -119,6 +123,8 @@
         <a href="#" class="createAccount__a">Sign up</a>
       </div>
     </section>
+    <!-- Signup  -->
+     <section></section>
   </main>
 </template>
 
@@ -129,6 +135,7 @@ export default {
     return {
       showLoginForm: false,
       showPassword: false,
+      mediaWidth:window.innerWidth,
     };
   },
   methods: {
