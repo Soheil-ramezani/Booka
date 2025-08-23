@@ -71,7 +71,7 @@
             ></path>
           </svg>
         </RouterLink>
-        <a href="#" class="logIn-btn   pl-5">Sign in</a>
+        <RouterLink to="/LogIn" class="logIn-btn   pl-5">Log in</RouterLink>
       </div>
       <!-- Hamburger-menu -->
       <div class="Nav-hamburger" v-show="this.MediaWidth < 600">
