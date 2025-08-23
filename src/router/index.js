@@ -8,24 +8,40 @@ const router = createRouter({
       path: '/',
       name: 'home',
       component: HomeView,
-       props: true, // Enable props
+      props: true, // Enable props
     },
     {
       path: '/BookPage',
       name: 'BookPage',
-      component:() => import('@/views/bookPage/BookPage.vue'),
+      component: () => import('@/views/bookPage/BookPage.vue'),
       props: true, // Enable props
     },
     {
       path: '/Orders',
       name: 'Orders',
-      component:OrdersPage,
+      component: OrdersPage,
     },
     {
-      path:'/LogIn',
-      name:'LogIn',
-      component:()=>import('@/views/Login/LogIn.vue')
-
+      path: '/LogIn',
+      name: 'LogIn',
+      component: () => import('@/views/Login/LogIn.vue'),
+      children: [
+        {
+          path: '',
+          name: 'logInForm',
+          component: () => import('@/components/Forms/LogInForm/logInForm.vue')
+        },
+        {
+          path: 'signUpForm',
+          name: 'signUpForm',
+          component: () => import('@/components/Forms/signUpForm/signUpForm.vue')
+        },
+        {
+          path: 'forgotForm',
+          name: 'forgotForm',
+          component: () => import('@/components/Forms/forgotpassForm/forgotForm.vue')
+        }
+      ]
     }
     // {
     //   path: '/about',
