@@ -146,7 +146,6 @@ export default {
     this.orders.forEach((item) => {
       item.quantity = 1;
     })
-    console.log(this.orders)
   },
   mounted() {
     this.calculateTotal();

@@ -1,9 +1,13 @@
 <script setup>
+// MediaStore From Pinia
+import { useMediaStore } from "@/stores/counter";
+const MediaSize = useMediaStore();
+console.log(MediaSize)
 </script>
 <template>
   <main class="LoginPage flex flex-row items-center justify-center">
     <!-- LeftSide -->
-    <section v-if="mediaWidth >= 900" class="ImgSide w-5/12">
+    <section v-if="MediaSize.MediaWidth>= 900" class="ImgSide w-5/12">
       <img
         class="ImgSide__img"
         src="../../assets/imgs/@Wallpaper_4K3D (13689)4K.png"
@@ -22,7 +26,6 @@ export default {
     return {
       // showCreatedPassword: false,
       // showRepeatPassword: false,
-      mediaWidth: window.innerWidth,
     };
   },
   methods: {
