@@ -42,6 +42,11 @@ const router = createRouter({
           component: () => import('@/components/Forms/forgotpassForm/forgotForm.vue')
         }
       ]
+    },
+    {
+      path: '/userpanel',
+      name: 'userPanel',
+      component: () => import('@/views/userPanel/userPanel.vue')
     }
     // {
     //   path: '/about',
