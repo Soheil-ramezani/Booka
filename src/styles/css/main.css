@@ -568,3 +568,16 @@ nav .Right-side .overlay .closebtn {
   font-weight: 600;
   color: var(--Steel-Blue);
 }
+
+.userPanel-main .userPanel-sidebar {
+  background-color: var(--light-cream);
+}
+.userPanel-main .userPanel-sidebar .userPanel-sidebar-list .userPanel-sidebar-li a {
+  border-radius: 20px;
+}
+.userPanel-main .userPanel-sidebar .userPanel-sidebar-list .userPanel-sidebar-li a p {
+  font-size: 1.8rem;
+}
+.userPanel-main .userPanel-sidebar .userPanel-sidebar-list .userPanel-sidebar-li a:hover {
+  background-color: var(--second-cream);
+}

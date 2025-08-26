@@ -1,0 +1,17 @@
+.userPanel-main{
+    .userPanel-sidebar{
+        background-color: var(--light-cream);
+        .userPanel-sidebar-list{
+            .userPanel-sidebar-li a{
+                border-radius: 20px;
+                p{
+                    font-size: 1.8rem;
+                } 
+                &:hover{
+                    background-color: var(--second-cream);
+                }
+            }
+            
+        }
+    }
+}
