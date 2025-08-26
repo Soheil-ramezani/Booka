@@ -46,7 +46,14 @@ const router = createRouter({
     {
       path: '/userpanel',
       name: 'userPanel',
-      component: () => import('@/views/userPanel/userPanel.vue')
+      component: () => import('@/views/userPanel/userPanel.vue'),
+      children:[
+        {
+          path:'',
+          name:'userPanelDashboard',
+          component:()=>import('@/components/userPanelParts/dashboard/dashboard.vue')
+        }
+      ]
     }
     // {
     //   path: '/about',

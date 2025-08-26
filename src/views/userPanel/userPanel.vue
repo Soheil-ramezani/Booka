@@ -7,7 +7,7 @@ import Navbar from "@/components/Navbar/Navbar.vue";
     <header>
       <navbar />
     </header>
-    <main class="userPanel-main h-[90vh] mt-[62.5px]">
+    <main class="userPanel-main flex flex-row mt-[62.5px]">
       <!-- sidebar -->
       <aside class="userPanel-sidebar w-1/6 h-full">
         <ol
@@ -75,6 +75,8 @@ import Navbar from "@/components/Navbar/Navbar.vue";
           </li>
         </ol>
       </aside>
+      <!-- components shown  -->
+       <RouterView/>
     </main>
     <FooterView />
   </div>
