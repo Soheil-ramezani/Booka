@@ -25,11 +25,13 @@ body {
 
 }
 
-h1,.h1Style {
+h1,
+.h1Style {
     font-size: 4rem;
 }
 
-h2,.h2Style {
+h2,
+.h2Style {
     font-size: 2.5rem;
 }
 
@@ -56,9 +58,10 @@ main {
 }
 
 .partTitle {
-    .partTitle__h1{
+    .partTitle__h1 {
         font-size: 4rem;
     }
+
     .partTitle__span {
         font-size: 2.5rem;
     }

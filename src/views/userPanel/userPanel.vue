@@ -9,7 +9,7 @@ import Navbar from "@/components/Navbar/Navbar.vue";
     </header>
     <main class="userPanel-main flex flex-row mt-[62.5px]">
       <!-- sidebar -->
-      <aside class="userPanel-sidebar w-1/6 h-full">
+      <aside class="userPanel-sidebar w-1/6 ">
         <ol
           class="userPanel-sidebar-list flex flex-col justify-start items-start pl-[10%] gap-7"
         >

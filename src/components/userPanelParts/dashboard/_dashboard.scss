@@ -1,0 +1,14 @@
+.user-Dashboard{
+    background-color: var(--primary-white);
+    .Dashboard-list{
+        .List-rows{
+            .List__input{
+                background-color: var(--primary-white);
+            }
+            .List__button{
+                background-color: var(--Light-Sky-Blue);
+                border-radius: 10px;
+            }
+        }
+    }
+}
