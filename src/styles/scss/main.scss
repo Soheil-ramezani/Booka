@@ -49,7 +49,7 @@ main {
 }
 
 .main-minHeight {
-    min-height: 41.5vh;
+    min-height: 49vh;
 }
 
 .link {
@@ -89,6 +89,8 @@ main {
 @import "./../../views/userPanel/userPanel";
 // user panel dashboard
 @import "./../../components/userPanelParts/dashboard/dashboard";
+// user panel order History
+@import"./../../components/userPanelParts/orderHistory/orderHistory";
 // 320px — 480px: Mobile devices
 // 481px — 768px: iPads, Tablets
 // 769px — 1024px: Small screens, laptops

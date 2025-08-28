@@ -9,7 +9,7 @@ import Navbar from "@/components/Navbar/Navbar.vue";
     </header>
     <main class="userPanel-main flex flex-row mt-[62.5px]">
       <!-- sidebar -->
-      <aside class="userPanel-sidebar w-1/6 ">
+      <aside class="userPanel-sidebar w-1/6  ">
         <ol
           class="userPanel-sidebar-list flex flex-col justify-start items-start pl-[10%] gap-7"
         >
@@ -30,7 +30,7 @@ import Navbar from "@/components/Navbar/Navbar.vue";
           </li>
           <!-- dashboard -->
           <li class="userPanel-sidebar-li w-[80%]">
-            <a href="#" class="px-[5%] flex flex-row items-center justify-start gap-5">
+            <RouterLink to="/userPanel" class="px-[5%] flex flex-row items-center justify-start gap-5">
               <lord-icon
                 src="https://cdn.lordicon.com/gitajdzc.json"
                 trigger="in"
@@ -41,11 +41,11 @@ import Navbar from "@/components/Navbar/Navbar.vue";
               >
               </lord-icon>
               <p>dashboard</p>
-            </a>
+            </RouterLink>
           </li>
           <!-- Order History -->
           <li class="userPanel-sidebar-li w-[80%]">
-            <a href="#" class="px-[5%] flex flex-row items-center justify-start gap-5">
+            <RouterLink :to="{name:'orderHistory'}" class="px-[5%] flex flex-row items-center justify-start gap-5">
               <lord-icon
                 src="https://cdn.lordicon.com/qfijwmqj.json"
                 trigger="in"
@@ -57,7 +57,7 @@ import Navbar from "@/components/Navbar/Navbar.vue";
               >
               </lord-icon>
               <p>Order History</p>
-            </a>
+            </RouterLink>
           </li>
           <!-- Track Orders -->
           <li class="userPanel-sidebar-li  w-[80%]">
