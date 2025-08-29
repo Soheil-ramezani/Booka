@@ -37,7 +37,7 @@ const MediaSize = useMediaStore();
       <!-- Order List -->
       <ul
         v-show="orders.length > 0"
-        class="order__ul"
+        class="order__ul mb-5"
         v-for="order in orders"
         :key="order.id"
       >
@@ -93,8 +93,8 @@ const MediaSize = useMediaStore();
                 @click="
                   () => {
                     if (order.quantity <= 1) {
-                     deleteBook(order.id)
-                     calculateTotal();
+                      deleteBook(order.id);
+                      calculateTotal();
                     } else {
                       order.quantity--;
                       calculateTotal();
@@ -119,6 +119,19 @@ const MediaSize = useMediaStore();
           </div>
         </li>
       </ul>
+      <!--  Finalize order btn -->
+      <div
+        v-show="orders.length > 0"
+        class="order__div w-full flex justify-end mb-10"
+      >
+        <button
+          class="orderList__Btn p-5"
+          @click.prevent="addToOrderList(orders)"
+        >
+          Finalize order
+        </button>
+      </div>
+      <!--  -->
       <div
         v-show="orders.length == 0"
         class="EmptyCart flex flex-col items-center justify-center"
@@ -136,7 +149,7 @@ export default {
   name: "OrderPage",
   data() {
     return {
-      orders: JSON.parse(localStorage.getItem('customerOrders')) || [],
+      orders: JSON.parse(localStorage.getItem("customerOrders")) || [],
       totalPrice: 0,
     };
   },
@@ -145,7 +158,7 @@ export default {
     // Get Books Data from Local storage
     this.orders.forEach((item) => {
       item.quantity = 1;
-    })
+    });
   },
   mounted() {
     this.calculateTotal();
@@ -157,12 +170,22 @@ export default {
       }, 0);
     },
     ClearLocalStorage() {
-      localStorage.removeItem('customerOrders');
+      localStorage.removeItem("customerOrders");
       this.totalPrice == 0;
       this.orders = [];
     },
-    deleteBook(bookId){
-      this.orders=this.orders.filter(book=>book.id !== bookId)
+    deleteBook(bookId) {
+      this.orders = this.orders.filter((book) => book.id !== bookId);
+    },
+    addToOrderList(orders) {
+      const OldOrderList = localStorage.getItem("OrderList");
+      const OrderList = OldOrderList ? JSON.parse(OldOrderList) : [];
+      // Add new order
+      OrderList.push(orders);
+      // Resave in localStorage
+      localStorage.setItem("OrderList", JSON.stringify(OrderList));
+    
+      alert("Your order has been successfully submitted");
     },
   },
 };

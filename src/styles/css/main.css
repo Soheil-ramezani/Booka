@@ -469,6 +469,10 @@ nav .Right-side .overlay .closebtn {
   color: white;
   border-radius: 5px;
 }
+.OrderPage .Order-main .order__div .orderList__Btn {
+  background-color: var(--Light-Sky-Blue);
+  border-radius: 50px;
+}
 
 .LoginPage .ImgSide .ImgSide__img {
   width: 100%;

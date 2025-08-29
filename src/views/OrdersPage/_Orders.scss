@@ -1,9 +1,10 @@
 .OrderPage {
-    .order-header{
-        .OrderTotalPrice{
+    .order-header {
+        .OrderTotalPrice {
             background-color: var(--light-cream);
+
             .TotalPrice__div {
-                .TotalPrice__btn{
+                .TotalPrice__btn {
                     border-radius: 5px;
                     background-color: var(--dark-blue);
                     color: var(--light-cream);
@@ -11,11 +12,13 @@
             }
         }
     }
+
     .Order-main {
         .order__ul {
             .order__li {
                 background-color: var(--light-cream);
                 border-radius: 10px;
+
                 .order-img {
                     img {
                         width: 200px;
@@ -23,14 +26,21 @@
                         border-radius: 10px;
                     }
                 }
-                .orderNum{
-                    .orderNum__div{
+
+                .orderNum {
+                    .orderNum__div {
                         background-color: var(--dark-blue);
                         color: white;
                         border-radius: 5px;
                     }
                 }
             }
+
+        }
+
+        .order__div .orderList__Btn {
+            background-color: var(--Light-Sky-Blue);
+            border-radius: 50px;
         }
     }
 }
