@@ -54,7 +54,7 @@ const router = createRouter({
           component: () => import('@/components/userPanelParts/dashboard/dashboard.vue')
         },
         {
-          path:'/orderHistory',
+          path:'orderHistory',
           name:'orderHistory',
           component:()=> import('@/components/userPanelParts/orderHistory/orderHistory.vue')
         }

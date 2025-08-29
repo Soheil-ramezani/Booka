@@ -1,0 +1,19 @@
+.orderHistory {
+    .orderList {
+        .orderList-row {
+            background-color: var(--second-cream);
+            border-radius: 20px;
+
+            .orderList-books {
+                .orderLis-item {
+                    .orderLis-item__img {
+                        width: 150px;
+                        height: 100px;
+                        border-radius: 15px;
+                    }
+                }
+            }
+
+        }
+    }
+}

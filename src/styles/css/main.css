@@ -598,3 +598,13 @@ nav .Right-side .overlay .closebtn {
   background-color: var(--Light-Sky-Blue);
   border-radius: 10px;
 }
+
+.orderHistory .orderList .orderList-row {
+  background-color: var(--second-cream);
+  border-radius: 20px;
+}
+.orderHistory .orderList .orderList-row .orderList-books .orderLis-item .orderLis-item__img {
+  width: 150px;
+  height: 100px;
+  border-radius: 15px;
+}
