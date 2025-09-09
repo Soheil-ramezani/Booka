@@ -3,7 +3,7 @@
     class="orderHistory min-h-[60vh] w-5/6 flex items-center justify-center"
   >
     <div class="cleanHistory flex" v-if="orderList.length == 0">
-      <h3>Your order history is clean ;)</h3>
+      <h3>Your order history is empty ;)</h3>
     </div>
     <!--  -->
     <div class="orderList" v-if="orderList.length !== 0">

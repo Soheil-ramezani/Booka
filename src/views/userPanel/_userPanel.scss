@@ -1,17 +1,34 @@
-.userPanel-main{
-    .userPanel-sidebar{
+.userPanel-main {
+    .userPanel-sidebar {
         background-color: var(--light-cream);
-        .userPanel-sidebar-list{
-            .userPanel-sidebar-li a{
-                border-radius: 20px;
-                p{
-                    font-size: 1.8rem;
-                } 
-                &:hover{
+
+        .userPanel-sidebar-list {
+            .userPanel-sidebar-li {
+                a {
+                    border-radius: 20px;
+
+                    p {
+                        font-size: 1.8rem;
+                    }
+
+                    &:hover {
+                        background-color: var(--second-cream);
+                        border-bottom: 1px solid black;
+                        transition: 0.5s ease-in-out;
+                    }
+                }
+
+                .active-route {
                     background-color: var(--second-cream);
+                    border-bottom: 1px solid black;
                 }
             }
-            
+
+            .username {
+                background-color: var(--second-cream);
+                border-radius: 20px;
+            }
+
         }
     }
 }

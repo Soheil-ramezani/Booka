@@ -1,23 +1,24 @@
 <template>
   <section class="user-Dashboard flex items-center justify-center w-5/6 min-h-[60vh]">
-    <form action="#" class="Dashboard-list flex flex-col justify-center gap-7 w-full text-nowrap">
+    <form action="#" class="Dashboard-list flex flex-col justify-center gap-7 w-full text-nowrap pl-[5%]">
+      <h2 class="h2Style">Your Account information:</h2>
       <!-- UserId -->
-      <div class="List-rows flex flex-row justify-start items-center pl-[5%]">
+      <div class="List-rows flex flex-row justify-start items-center ">
         <label for="userId">Your Id :</label>
         <input type="text" class="List__input w-2/4" :value="this.singleUser.userid" name="userId" disabled />
       </div>
       <!-- Username -->
-      <div class="List-rows flex flex-row justify-start items-center pl-[5%]">
+      <div class="List-rows flex flex-row justify-start items-center ">
         <label for="username">Your username:</label>
         <input type="text" class="List__input w-2/4" :value="this.singleUser.username" name="username" disabled />
       </div>
       <!-- userPhoneNumber -->
-      <div class="List-rows flex flex-row justify-start items-center pl-[5%]">
+      <div class="List-rows flex flex-row justify-start items-center ">
         <label for="userPhoneNumber">Your phone number:</label>
         <input type="tel" class="List__input w-2/4" :value="this.singleUser.userPhone" name="userPhoneNumber" disabled />
       </div>
       <!-- UserEmail -->
-      <div class="List-rows flex flex-row justify-start items-center pl-[5%]">
+      <div class="List-rows flex flex-row justify-start items-center ">
         <label for="user-Email">Your Email:</label>
         <input
           type="email"
@@ -28,7 +29,7 @@
         />
       </div>
       <!-- UserAddress -->
-      <div class="List-rows flex flex-row justify-start items-center pl-[5%]">
+      <div class="List-rows flex flex-row justify-start items-center ">
         <label for="user-address">Your address:</label>
         <input type="text" class="List__input w-2/4" :value="this.singleUser.userAddress" name="user-address" disabled />
       </div>

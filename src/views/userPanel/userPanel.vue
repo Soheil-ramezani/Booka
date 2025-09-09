@@ -1,37 +1,43 @@
 <script setup>
 import FooterView from "@/components/Footer/FooterView.vue";
 import Navbar from "@/components/Navbar/Navbar.vue";
+// MediaStore From Pinia
+import { useMediaStore } from "@/stores/counter";
+const MediaSize = useMediaStore();
 </script>
 <template>
   <div>
     <header>
       <navbar />
     </header>
-    <main class="userPanel-main flex flex-row mt-[62.5px]">
+    <main
+      class="userPanel-main flex mt-[62.5px]"
+      :class="{
+        'flex-row': MediaSize.MediaWidth >= 660,
+        'flex-col': MediaSize.MediaWidth <= 660,
+      }"
+    >
       <!-- sidebar -->
-      <aside class="userPanel-sidebar w-1/6  ">
+      <aside class="userPanel-sidebar  min-w-[230px]"
+      :class="{
+            'w-1/6': MediaSize.MediaWidth >= 660,
+            'w-full': MediaSize.MediaWidth <= 660,
+          }">
         <ol
-          class="userPanel-sidebar-list flex flex-col justify-start items-start pl-[10%] gap-7"
+          class="userPanel-sidebar-list w-full flex   gap-7"
+          :class="{
+            'flex-col justify-start items-start pl-[10%]': MediaSize.MediaWidth >= 660,
+            'flex-row items-center justify-around px-[5%]': MediaSize.MediaWidth <= 660,
+          }"
         >
-          <!-- username -->
-          <li class="userPanel-sidebar-li  w-[80%]">
-            <a href="#" class="px-[5%] flex flex-row items-center justify-start gap-5">
-              <lord-icon
-                src="https://cdn.lordicon.com/kdduutaw.json"
-                trigger="in"
-                delay="1000"
-                stroke="bold"
-                colors="primary:#121331,secondary:#000000"
-                style="width: 36px; height: 36px"
-              >
-              </lord-icon>
-              <p>username</p>
-            </a>
-          </li>
           <!-- dashboard -->
-          <li class="userPanel-sidebar-li w-[80%]">
-            <RouterLink to="/userPanel" class="px-[5%] flex flex-row items-center justify-start gap-5">
+          <li class="userPanel-sidebar-li px-2 w-[80%] text-nowrap">
+            <RouterLink
+              to="/userPanel"
+              class="px-[5%] flex flex-row items-center justify-center w-fit gap-5 active-rou"
+            >
               <lord-icon
+              v-if="MediaSize.MediaWidth>=560"
                 src="https://cdn.lordicon.com/gitajdzc.json"
                 trigger="in"
                 delay="1000"
@@ -44,9 +50,13 @@ import Navbar from "@/components/Navbar/Navbar.vue";
             </RouterLink>
           </li>
           <!-- Order History -->
-          <li class="userPanel-sidebar-li w-[80%]">
-            <RouterLink :to="{name:'orderHistory'}" class="px-[5%] flex flex-row items-center justify-start gap-5">
+          <li class="userPanel-sidebar-li px-2 w-[80%] text-nowrap">
+            <RouterLink
+              :to="{ name: 'orderHistory' }"
+              class="px-[5%] flex flex-row items-center justify-center w-fit gap-5"
+            >
               <lord-icon
+              v-if="MediaSize.MediaWidth>=560"
                 src="https://cdn.lordicon.com/qfijwmqj.json"
                 trigger="in"
                 delay="1000"
@@ -60,9 +70,13 @@ import Navbar from "@/components/Navbar/Navbar.vue";
             </RouterLink>
           </li>
           <!-- Track Orders -->
-          <li class="userPanel-sidebar-li  w-[80%]">
-            <a href="#" class="px-[5%] flex flex-row items-center justify-start gap-5">
+          <li class="userPanel-sidebar-li px-2 w-[80%] text-nowrap">
+            <a
+              href="#"
+              class="px-[5%] flex flex-row items-center justify-center w-fit gap-5"
+            >
               <lord-icon
+               v-if="MediaSize.MediaWidth>=560"
                 src="https://cdn.lordicon.com/onmwuuox.json"
                 trigger="in"
                 delay="1000"
@@ -76,7 +90,7 @@ import Navbar from "@/components/Navbar/Navbar.vue";
         </ol>
       </aside>
       <!-- components shown  -->
-       <RouterView/>
+      <RouterView />
     </main>
     <FooterView />
   </div>
