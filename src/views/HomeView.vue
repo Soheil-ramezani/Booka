@@ -74,9 +74,7 @@ export default {
     ...mapStores(useMediaStore)
   },
   mounted(){
-    console.log(this.MediaSizeStore.MediaWidth)
     this.MediaSizeStore.setNewMediaWidth(this.MediaWidth)
-    console.log(this.MediaSizeStore.MediaWidth)
   }
   
   

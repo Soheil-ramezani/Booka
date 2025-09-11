@@ -7,7 +7,7 @@
     class="mySwiper container my-10"
   >
     <!-- query: {id:item.title,movie: JSON.stringify(item) } -->
-    <swiper-slide v-for="book in this.books" :key="book.id">
+    <swiper-slide v-for="book in newBooksList" :key="book.id">
       <RouterLink
         :to="{
           name: 'BookPage',
@@ -37,7 +37,7 @@
     :modules="modules"
     class="mySwiper container my-10"
   >
-    <swiper-slide v-for="book in this.books" :key="book.id">
+    <swiper-slide v-for="book in newBooksList" :key="book.id">
       <RouterLink
         :to="{
           name: 'BookPage',
@@ -66,7 +66,7 @@
     :modules="modules"
     class="mySwiper container my-10"
   >
-    <swiper-slide v-for="book in this.books" :key="book.id">
+    <swiper-slide v-for="book in newBooksList" :key="book.id">
       <RouterLink
         :to="{
           name: 'BookPage',
@@ -96,7 +96,7 @@
     :modules="modules"
     class="mySwiper container my-10"
   >
-    <swiper-slide v-for="book in this.books" :key="book.id">
+    <swiper-slide v-for="book in newBooksList" :key="book.id">
       <RouterLink
         :to="{
           name: 'BookPage',
@@ -129,7 +129,9 @@ import "swiper/css";
 import "swiper/css/pagination";
 // import required modules
 import { Pagination } from "swiper/modules";
-
+// pinia store
+import { mapStores } from "pinia";
+import { useBookStore } from "@/stores/books";
 export default {
   name: "DragScroll",
   components: {
@@ -138,125 +140,27 @@ export default {
   },
   data() {
     return {
-      // All Books Array
-      books: [
-        {
-          id: 1,
-          name: "The Silent Patient",
-          author: "Alex Michaelides",
-          imageUrl:
-            "https://m.media-amazon.com/images/I/91BbLCJOruL._AC_UY327_FMwebp_QL65_.jpg",
-          summary:
-            "A psychological thriller about a woman who shoots her husband and then stops speaking.",
-          price: 32,
-        },
-        {
-          id: 2,
-          name: "Where the Crawdads Sing",
-          author: "Delia Owens",
-          imageUrl:
-            "https://m.media-amazon.com/images/I/81O1oy0y9eL._AC_UF1000,1000_QL80_.jpg",
-          summary:
-            "A murder mystery and coming-of-age story set in the marshes of North Carolina.",
-          price: 56,
-        },
-        {
-          id: 3,
-          name: "Atomic Habits",
-          author: "James Clear",
-          imageUrl:
-            "https://m.media-amazon.com/images/I/91bYsX41DVL._AC_UF1000,1000_QL80_.jpg",
-          summary:
-            "A guide to building good habits and breaking bad ones through tiny changes.",
-          price: 24,
-        },
-        {
-          id: 4,
-          name: "The Midnight Library",
-          author: "Matt Haig",
-          imageUrl:
-            "https://m.media-amazon.com/images/I/81YzHKeWq7L._AC_UF1000,1000_QL80_.jpg",
-          summary:
-            "A novel about a library between life and death where each book represents a different life path.",
-          price: 34,
-        },
-        {
-          id: 5,
-          name: "Educated",
-          author: "Tara Westover",
-          imageUrl:
-            "https://m.media-amazon.com/images/I/61xta2jWBBL._AC_UY327_FMwebp_QL65_.jpg",
-          summary:
-            "A memoir about a woman who leaves her survivalist family and goes on to earn a PhD.",
-          price: 60,
-        },
-        {
-          id: 6,
-          name: "Project Hail Mary",
-          author: "Andy Weir",
-          imageUrl:
-            "https://m.media-amazon.com/images/I/91O-uZgXpyL._AC_UY327_FMwebp_QL65_.jpg",
-          summary:
-            "A sci-fi novel about a lone astronaut who must save the earth from an alien threat.",
-          price: 71,
-        },
-        {
-          id: 7,
-          name: "The Four Winds",
-          author: "Kristin Hannah",
-          imageUrl:
-            "https://m.media-amazon.com/images/I/71b86Ngu0KL._AC_UY327_FMwebp_QL65_.jpg",
-          summary:
-            "A historical novel set during the Great Depression about a woman's struggle to survive.",
-          price: 24,
-        },
-        {
-          id: 8,
-          name: "The Vanishing Half",
-          author: "Brit Bennett",
-          imageUrl:
-            "https://m.media-amazon.com/images/I/61wvPTKenCL._AC_UY327_FMwebp_QL65_.jpg",
-          summary:
-            "A story about twin sisters who choose to live in very different worlds - one black, one passing as white.",
-          price: 54,
-        },
-        {
-          id: 9,
-          name: "Dune",
-          author: "Frank Herbert",
-          imageUrl:
-            "https://m.media-amazon.com/images/I/71-1WBgjGoL._AC_UY327_FMwebp_QL65_.jpg",
-          summary:
-            "A science fiction classic about politics, religion, and power on a desert planet.",
-          price: 31,
-        },
-        {
-          id: 10,
-          name: "The Song of Achilles",
-          author: "Madeline Miller",
-          imageUrl:
-            "https://m.media-amazon.com/images/I/51iDejsms3L._AC_UY327_FMwebp_QL65_.jpg",
-          summary:
-            "A retelling of the Iliad focusing on the romantic relationship between Achilles and Patroclus.",
-          price: 29,
-        },
-        // ... (continuing with IDs 11-30)
-
-        // Example of how to continue (just showing the pattern for the next few)
-        /*
-  {
-    id: 11,
-    name: "Book Name",
-    author: "Author Name",
-    imageUrl: "Amazon image URL",
-    summary: "Book summary"
-  },
-  ...
-*/
-      ],
-      // media screen width
+      newBooksList: [],
       MediaWidth: window.innerWidth,
     };
+  },
+  computed: {
+    ...mapStores(useBookStore),
+  },
+  beforeMount() {
+     this.newBooksList=[]
+            let chosenBooksId=[]
+            for(let i =0;i<10;i++){
+                let randomNum =Math.floor(Math.random() * 15);
+                let chosenBook= this.BooksListStore.Books[randomNum]
+                if(chosenBooksId.includes(chosenBook.id)){
+                    i--
+                }else{
+                    chosenBooksId.push(chosenBook.id)
+                    this.newBooksList.push(chosenBook)
+                }
+               
+            }
   },
   setup() {
     return {
