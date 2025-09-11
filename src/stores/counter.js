@@ -1,12 +1,10 @@
 import { defineStore } from 'pinia'
 export const useMediaStore = defineStore('MediaSize', {
   state: () => ({ 
-    MediaWidth: '' 
+    MediaWidth:window.innerWidth 
   }),
    actions: {
-    setNewMediaWidth(Width) {
-      this.MediaWidth = Width;
-    }}
+   }
 
 })
 

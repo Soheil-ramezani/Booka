@@ -73,9 +73,6 @@ export default {
   computed:{
     ...mapStores(useMediaStore)
   },
-  mounted(){
-    this.MediaSizeStore.setNewMediaWidth(this.MediaWidth)
-  }
   
   
 }
