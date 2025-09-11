@@ -2,7 +2,6 @@
 // MediaStore From Pinia
 import { useMediaStore } from "@/stores/counter";
 const MediaSize = useMediaStore();
-console.log(MediaSize)
 </script>
 <template>
   <main class="LoginPage flex flex-row items-center justify-center">
