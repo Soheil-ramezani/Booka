@@ -338,11 +338,15 @@ export default {
     const BookObject = JSON.parse(this.$route.query.Book);
     this.BookInfos = BookObject; // Now you can use the movie object//for parsing queries
   },
+  mounted(){
+     window.scrollTo({ top: 0, behavior: 'smooth' }) //to go top page
+  },
   watch: {
     "$route.query": {
       handler() {
         const BookInfo = JSON.parse(this.$route.query.Book);
         this.BookInfos = BookInfo; // Now you can use the movie object//for parsing queries
+         window.scrollTo({ top: 0, behavior: 'smooth' })//to go top page
       },
       immediate: true,
     },
