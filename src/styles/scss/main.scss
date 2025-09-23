@@ -91,6 +91,8 @@ main {
 @import "./../../components/userPanelParts/dashboard/dashboard";
 // user panel order History
 @import"./../../components/userPanelParts/orderHistory/orderHistory";
+// ManagementPanel
+@import "./../../views/managerPanel/mangePanel";
 // 320px — 480px: Mobile devices
 // 481px — 768px: iPads, Tablets
 // 769px — 1024px: Small screens, laptops

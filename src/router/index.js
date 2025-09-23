@@ -59,6 +59,12 @@ const router = createRouter({
           component:()=> import('@/components/userPanelParts/orderHistory/orderHistory.vue')
         }
       ]
+    },
+    // managerPanel
+    {
+      path:'/managerPanel',
+      name:'managerPanel',
+      component:()=>import('@/views/managerPanel/managerPanel.vue')
     }
     // {
     //   path: '/about',

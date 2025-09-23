@@ -618,3 +618,18 @@ nav .Right-side .overlay .closebtn {
   height: 100px;
   border-radius: 15px;
 }
+
+.managerPanel .mangerPanel-sidebar {
+  background-color: var(--light-cream);
+}
+.managerPanel .mangerPanel-sidebar .managerPanel-sidebar-list .managerPanel-sidebar-li {
+  border-radius: 20px;
+}
+.managerPanel .mangerPanel-sidebar .managerPanel-sidebar-list .managerPanel-sidebar-li:hover {
+  background-color: var(--second-cream);
+  border-bottom: 1px solid black;
+  transition: 0.5s ease-in-out;
+}
+.managerPanel .mangerPanel-sidebar .managerPanel-sidebar-list .managerPanel-sidebar-li a p {
+  font-size: 1.8rem;
+}

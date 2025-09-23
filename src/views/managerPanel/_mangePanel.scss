@@ -1,0 +1,29 @@
+.managerPanel {
+    .mangerPanel-sidebar {
+        background-color: var(--light-cream);
+
+        .managerPanel-sidebar-list {
+            .managerPanel-sidebar-li {
+                border-radius: 20px;
+
+                &:hover {
+                    background-color: var(--second-cream);
+                    border-bottom: 1px solid black;
+                    transition: 0.5s ease-in-out;
+                }
+                a{
+
+
+                    p {
+                        font-size: 1.8rem;
+                    }
+
+
+                }
+
+
+
+            }
+        }
+    }
+}
