@@ -125,6 +125,8 @@ const MediaSize = useMediaStore();
           </li>
         </ol>
       </aside>
+      <!-- components shown  -->
+      <RouterView />
     </main>
     <FooterView />
   </div>

@@ -64,7 +64,14 @@ const router = createRouter({
     {
       path:'/managerPanel',
       name:'managerPanel',
-      component:()=>import('@/views/managerPanel/managerPanel.vue')
+      component:()=>import('@/views/managerPanel/managerPanel.vue'),
+      children:[
+        {
+          path:'',
+          name:'SalesFigures',
+          component:()=> import('@/components/managerParts/SalesFigures/SalesFigures.vue')
+        }
+      ]
     }
     // {
     //   path: '/about',

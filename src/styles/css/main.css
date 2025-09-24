@@ -633,3 +633,15 @@ nav .Right-side .overlay .closebtn {
 .managerPanel .mangerPanel-sidebar .managerPanel-sidebar-list .managerPanel-sidebar-li a p {
   font-size: 1.8rem;
 }
+
+.salesFigures .chart-container {
+  width: 100%;
+  height: 200px;
+}
+.salesFigures canvas {
+  width: 80% !important;
+  height: 400px !important;
+}
+.salesFigures table, .salesFigures th, .salesFigures td {
+  border: 1px solid black;
+}
