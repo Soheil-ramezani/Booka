@@ -70,6 +70,11 @@ const router = createRouter({
           path:'',
           name:'SalesFigures',
           component:()=> import('@/components/managerParts/SalesFigures/SalesFigures.vue')
+        },
+        {
+          path:'UsersList',
+          name:'UsersList',
+          component:()=>import('@/components/managerParts/usersList/usersList.vue')
         }
       ]
     }
