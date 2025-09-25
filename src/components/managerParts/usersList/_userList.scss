@@ -1,0 +1,30 @@
+.usersList{
+    .usersList-table{
+        border:1px solid black ;
+        .table-header{
+            .table-header__tr{
+                border-bottom: 1px solid black;
+                .table-header__th{
+                    border-right:1px solid black ;
+                }
+            }
+        }
+        .table-body{
+            .table-body__tr{
+                border-bottom: 1px solid black;
+                .table-body__th{
+                    border-right: 1px solid black ;
+                    .deleteUser__btn{
+                        color: #991b1b ;
+                        transition: 1s ease;
+                    }
+                    .deleteUser__btn:hover{
+                        color: #ffff ;
+                        background-color: #991b1b;
+                        border-radius: 5px;
+                    }
+                }
+            }
+        }
+    }
+}

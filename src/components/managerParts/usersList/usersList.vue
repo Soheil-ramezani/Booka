@@ -1,0 +1,53 @@
+<template>
+  <section class="usersList w-full flex justify-center">
+    <table class="usersList-table w-[90%] table-auto my-10">
+      <thead class="table-header">
+        <tr class="table-header__tr">
+          <th class="table-header__th" v-for="header in Headers" :key="header">{{header}}</th>
+        </tr>
+      </thead>
+      <tbody class="table-body">
+        <tr class="table-body__tr" v-for="user in users" :key="user.id">
+            <th class="table-body__th">{{ user.id}}</th>
+            <th class="table-body__th">{{ user.firstName+user.lastName}}</th>
+            <th class="table-body__th">{{ user.username+user.age}}</th>
+            <th class="table-body__th">{{ user.phone}}</th>
+            <th class="table-body__th">{{ user.email}}</th>
+            <th class="table-body__th">{{ user.address.address+','+user.address.city}}</th>
+            <th class="table-body__th">{{ user.address.postalCode}}</th>
+            <th class="table-body__th"><button @click="deleteUser(user)" class="deleteUser__btn px-4">delete</button></th>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</template>
+
+<script>
+export default {
+  name: "usersList",
+  data() {
+    return {
+        Headers:['num','name','username','phone','email','address','postal code','delete user'],
+      users: null,
+    };
+  },
+  beforeMount() {
+    fetch("https://dummyjson.com/users")
+      .then((res) => res.json())
+      .then((data) => {
+        this.users=data.users;
+      })
+      .catch((error) => console.error("Error fetching users:", error));
+  },
+  methods:{
+    deleteUser(user){
+        const userIdx=this.users.indexOf(user)
+        this.users.splice(userIdx, 1);
+        console.log(this.users)
+    }
+  }
+};
+</script>
+
+<style>
+</style>

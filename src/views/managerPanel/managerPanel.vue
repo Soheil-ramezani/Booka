@@ -36,6 +36,7 @@ const MediaSize = useMediaStore();
           <!-- Sales figures -->
           <li class="managerPanel-sidebar-li px-2 w-[80%] text-nowrap">
             <RouterLink
+            to="/managerPanel"
               class="px-[5%] flex flex-row items-center justify-center w-fit gap-5 active-rou"
             >
               <lord-icon
@@ -54,6 +55,7 @@ const MediaSize = useMediaStore();
           <!-- users -->
           <li class="managerPanel-sidebar-li px-2 w-[80%] text-nowrap">
             <RouterLink
+            :to="{name:'UsersList'}"
               class="px-[5%] flex flex-row items-center justify-center w-fit gap-5 active-rou"
             >
               <lord-icon

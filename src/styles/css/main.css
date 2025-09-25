@@ -645,3 +645,28 @@ nav .Right-side .overlay .closebtn {
 .salesFigures table, .salesFigures th, .salesFigures td {
   border: 1px solid black;
 }
+
+.usersList .usersList-table {
+  border: 1px solid black;
+}
+.usersList .usersList-table .table-header .table-header__tr {
+  border-bottom: 1px solid black;
+}
+.usersList .usersList-table .table-header .table-header__tr .table-header__th {
+  border-right: 1px solid black;
+}
+.usersList .usersList-table .table-body .table-body__tr {
+  border-bottom: 1px solid black;
+}
+.usersList .usersList-table .table-body .table-body__tr .table-body__th {
+  border-right: 1px solid black;
+}
+.usersList .usersList-table .table-body .table-body__tr .table-body__th .deleteUser__btn {
+  color: #991b1b;
+  transition: 1s ease;
+}
+.usersList .usersList-table .table-body .table-body__tr .table-body__th .deleteUser__btn:hover {
+  color: white;
+  background-color: #991b1b;
+  border-radius: 5px;
+}
