@@ -119,27 +119,27 @@ export const useBookStore = defineStore('BooksList', {
                 price: 18
             },
             {
-                id:13,
-                name:"Lions of the West: Heroes and Villains of the Westward Expansion",
-                author:"Robert Morgan",
-                imageUrl:"https://m.media-amazon.com/images/I/81pkl39IQQL._SY466_.jpg",
-                summary:'From the New York Times–bestselling author who "should be declared a national treasure . . . a classic in the study of American westward expansion" (The Charlotte Observer).\n\nFrom Thomas Jefferson\'s birth in 1743 to the California Gold Rush in 1849, America\'s westward expansion comes to life in the hands of a writer fascinated by the way individual lives link up, illuminate one another, and collectively impact history.\n\nJefferson, a naturalist and visionary, dreamed that the United States would stretch across the North American continent, from ocean to ocean. The account of how that dream became reality unfolds in the stories of Jefferson and nine other Americans whose adventurous spirits and lust for land pushed the westward boundaries: Andrew Jackson, John "Johnny Appleseed" Chapman, David Crockett, Sam Houston, James K. Polk, Winfield Scott, Kit Carson, Nicholas Trist, and John Quincy Adams...',
-                price:12
+                id: 13,
+                name: "Lions of the West: Heroes and Villains of the Westward Expansion",
+                author: "Robert Morgan",
+                imageUrl: "https://m.media-amazon.com/images/I/81pkl39IQQL._SY466_.jpg",
+                summary: 'From the New York Times–bestselling author who "should be declared a national treasure . . . a classic in the study of American westward expansion" (The Charlotte Observer).\n\nFrom Thomas Jefferson\'s birth in 1743 to the California Gold Rush in 1849, America\'s westward expansion comes to life in the hands of a writer fascinated by the way individual lives link up, illuminate one another, and collectively impact history.\n\nJefferson, a naturalist and visionary, dreamed that the United States would stretch across the North American continent, from ocean to ocean. The account of how that dream became reality unfolds in the stories of Jefferson and nine other Americans whose adventurous spirits and lust for land pushed the westward boundaries: Andrew Jackson, John "Johnny Appleseed" Chapman, David Crockett, Sam Houston, James K. Polk, Winfield Scott, Kit Carson, Nicholas Trist, and John Quincy Adams...',
+                price: 12
             },
             {
-                id:14,
-                name:"The 7 Habits of Highly Effective People: The Infographics Edition",
-                author:"Stephen R Covey",
-                imageUrl:"https://m.media-amazon.com/images/I/710e2r4iKML._SY466_.jpg",
-                summary:"The infographics edition of this classic success guide presents Dr. Covey's timeless wisdom in visually powerful, highly readable graphics.\n\nDr. Stephen R. Covey's The 7 Habits of Highly Effective People is one of the most inspiring and impactful books ever written. Since it was first published in 1989, it has helped tens of millions of people transform their lives for the better.Now you can learn critical lessons about the habits of successful people in an infographics format that makes it easy for you to apply Dr. Covey's 7 Habits...",
-                price:15
+                id: 14,
+                name: "The 7 Habits of Highly Effective People: The Infographics Edition",
+                author: "Stephen R Covey",
+                imageUrl: "https://m.media-amazon.com/images/I/710e2r4iKML._SY466_.jpg",
+                summary: "The infographics edition of this classic success guide presents Dr. Covey's timeless wisdom in visually powerful, highly readable graphics.\n\nDr. Stephen R. Covey's The 7 Habits of Highly Effective People is one of the most inspiring and impactful books ever written. Since it was first published in 1989, it has helped tens of millions of people transform their lives for the better.Now you can learn critical lessons about the habits of successful people in an infographics format that makes it easy for you to apply Dr. Covey's 7 Habits...",
+                price: 15
             },
             {
-                id:15,
-                name:"The Sweaty Startup: How to Get Rich Doing Boring Things",
-                author:"Nick Huber",
-                imageUrl:"https://m.media-amazon.com/images/I/815CW6t0mKL._SY466_.jpg",
-                summary:"Filled with common sense and practical, actionable, advice, Nick Huber’s book reveals that you don’t have to be a genius with a world-changing idea to build a business empire and become a multi-millionaire.\n\nBusiness media, television and movies, and top college courses all tell entrepreneurs the same thing: To succeed in business, you need to have a revolutionary idea. To them, success is about changing the world through constant innovation. But the truth is, 99.999 percent of businesses that pursue this strategy will fail..."
+                id: 15,
+                name: "The Sweaty Startup: How to Get Rich Doing Boring Things",
+                author: "Nick Huber",
+                imageUrl: "https://m.media-amazon.com/images/I/815CW6t0mKL._SY466_.jpg",
+                summary: "Filled with common sense and practical, actionable, advice, Nick Huber’s book reveals that you don’t have to be a genius with a world-changing idea to build a business empire and become a multi-millionaire.\n\nBusiness media, television and movies, and top college courses all tell entrepreneurs the same thing: To succeed in business, you need to have a revolutionary idea. To them, success is about changing the world through constant innovation. But the truth is, 99.999 percent of businesses that pursue this strategy will fail..."
             }
             // ... (continuing with IDs 11-30)
 
@@ -157,23 +157,8 @@ export const useBookStore = defineStore('BooksList', {
         ],
     }),
     actions: {
-        createNewBookList() {
-            this.newBooksList=[]
-            // let secondBooksList=this.Books.slice()
-            let chosenBooksId=[]
-            for(let i =0;i<10;i++){
-                let randomNum =Math.floor(Math.random() * 15);
-                let chosenBook= this.Books[randomNum]
-                if(chosenBooksId.includes(chosenBook.id)){
-                    i--
-                }else{
-                    chosenBooksId.push(chosenBook.id)
-                    this.newBooksList.push(chosenBook)
-                }
-               
-            }
-             console.log(this.newBooksList)
-        }
+        
+    
     }
 
 })
