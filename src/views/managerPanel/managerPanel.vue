@@ -18,7 +18,7 @@ const MediaSize = useMediaStore();
       }"
     >
       <aside
-        class="mangerPanel-sidebar min-w-[230px]"
+        class="mangerPanel-sidebar inline-flex min-w-[230px]"
         :class="{
           'w-1/6': MediaSize.MediaWidth >= 660,
           'w-full': MediaSize.MediaWidth <= 660,
@@ -74,6 +74,7 @@ const MediaSize = useMediaStore();
           <!-- orders-->
           <li class="managerPanel-sidebar-li px-2 w-[80%] text-nowrap">
             <RouterLink
+            :to="{name:'OrderList'}"
               class="px-[5%] flex flex-row items-center justify-center w-fit gap-5 active-rou"
             >
               <lord-icon

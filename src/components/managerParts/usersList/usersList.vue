@@ -1,5 +1,5 @@
 <template>
-  <section class="usersList w-full flex justify-center">
+  <section class="usersList w-5/6  flex justify-center overflow-scroll">
     <table class="usersList-table w-[90%] table-auto my-10">
       <thead class="table-header">
         <tr class="table-header__tr">

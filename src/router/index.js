@@ -75,6 +75,11 @@ const router = createRouter({
           path:'UsersList',
           name:'UsersList',
           component:()=>import('@/components/managerParts/usersList/usersList.vue')
+        },
+        {
+          path:'ordersList',
+          name:'OrderList',
+          component:()=>import('@/components/managerParts/ordersList/ordersList.vue')
         }
       ]
     }
