@@ -670,3 +670,24 @@ nav .Right-side .overlay .closebtn {
   background-color: #991b1b;
   border-radius: 5px;
 }
+
+.ordersList .orders-table {
+  border: 1px solid black;
+}
+.ordersList .orders-table .table-header {
+  border: 1px solid black;
+}
+.ordersList .orders-table .table-header .table-header__tr .table-header__th {
+  border-right: 1px solid black;
+}
+.ordersList .orders-table .table-body .table-body__tr {
+  border-bottom: 2px solid black;
+}
+.ordersList .orders-table .table-body .table-body__tr .table-body__th {
+  border-right: 1px solid black;
+}
+.ordersList .orders-table .table-body .table-body__tr .table-body__th .book img {
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
+}
