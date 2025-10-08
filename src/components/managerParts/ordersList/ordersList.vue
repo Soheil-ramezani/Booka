@@ -1,7 +1,7 @@
 <template>
   <section class="ordersList w-full flex flex-col items-center">
     <!-- order -->
-    <table class="orders-table w-[90%]">
+    <table class="orders-table w-[90%] my-10">
       <thead class="table-header">
         <tr class="table-header__tr">
           <th
