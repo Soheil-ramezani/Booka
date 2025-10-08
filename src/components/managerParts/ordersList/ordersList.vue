@@ -16,21 +16,18 @@
       <tbody class="table-body">
         <!-- each order row -->
         <tr
-          class="table-body__tr "
+          class="table-body__tr"
           v-for="(order, idx) in OrdersList"
           :key="idx"
         >
           <!-- books -->
           <th class="table-body__th">
             <div
-              class="book p-5 flex flex-row gap-3 "
+              class="book p-5 flex flex-row gap-3"
               v-for="(book, idx) in order"
               :key="idx"
             >
-              <img
-                :src="book.imageUrl"
-                :alt="book.name"
-              />
+              <img :src="book.imageUrl" :alt="book.name" />
               <div class="flex flex-col items-start justify-center">
                 <p class="bookName">{{ book.name }}</p>
                 <p class="author">{{ book.author }}</p>
@@ -39,11 +36,9 @@
             </div>
           </th>
           <!-- user's infos -->
-          <th class="table-body__th user">
-            <p>user's name</p>
-            <p>user' address</p>
-            <p>user's postal code</p>
-            <p>user's phone</p>
+          <th class="table-body__th user text-left pl-[10%]">
+            <p>{{this.users[OrdersList.indexOf(order)]}}</p>
+           
           </th>
         </tr>
       </tbody>
@@ -62,6 +57,7 @@ export default {
       OrdersList: [],
       order: [],
       Headers: ["books", "user"],
+      users: [],
     };
   },
   computed: {
@@ -76,20 +72,30 @@ export default {
       // for each order
       for (let a = 0; a < Math.floor(Math.random() * 7) + 1; a++) {
         let randomNum2 = Math.floor(Math.random() * 15);
-        // choosing user
-        // let chosenUser=this.users[randomNum2]
-        // this.order.push(chosenUser);
-        // choosing books
         let chosenBook2 = this.BooksListStore.Books[randomNum2];
         if (this.order.includes(chosenBook2)) {
           a - 1;
         } else {
           this.order.push(chosenBook2);
-        }
+        } 
       }
       this.OrdersList.push(this.order);
     }
-    console.log(this.OrdersList);
+     // fetching users data
+    fetch("https://dummyjson.com/users")
+      .then((res) => res.json())
+      .then((data) => {
+        
+         data.users.forEach(item=>{
+        let user={}
+        user.firstName=item.firstName
+        user.lastName=item.lastName
+        user.phone=item.phone
+        user.address=item.address.city+','+item.address.address
+        this.users.push(user)
+         })
+      })
+      .catch((error) => console.error("Error fetching users:", error));
   },
 };
 </script>
