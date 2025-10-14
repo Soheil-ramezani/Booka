@@ -1,5 +1,11 @@
 <template>
-  <section class="ordersList w-full flex flex-col items-center">
+  <section
+    class="ordersList flex flex-col items-center"
+    :class="{
+      'w-5/6 ml-[16.666667%]': MediaSize.MediaWidth >= 660,
+      'w-full': MediaSize.MediaWidth < 660,
+    }"
+  >
     <!-- order -->
     <table class="orders-table w-[90%] my-10">
       <thead class="table-header">
@@ -37,7 +43,7 @@
           </th>
           <!-- user's infos -->
           <th class="table-body__th user text-left pl-[10%]">
-            <p>{{order.user}}</p>
+            <p>{{ order.user }}</p>
           </th>
         </tr>
       </tbody>
@@ -49,6 +55,7 @@
 // pinia store
 import { mapStores } from "pinia";
 import { useBookStore } from "@/stores/books";
+import { useMediaStore } from "@/stores/counter";
 export default {
   name: "ordersList",
   data() {
@@ -56,13 +63,13 @@ export default {
       OrdersList: [],
       order: [],
       Headers: ["books", "user"],
+      MediaSize: useMediaStore(),
     };
   },
   computed: {
     ...mapStores(useBookStore),
   },
   beforeMount() {
-   
     // Making ordersList
     this.ordersList = [];
     // for orders List
@@ -81,19 +88,21 @@ export default {
       this.OrdersList.push(this.order);
     }
     // fetching users data & adding them to orders
-     fetch("https://dummyjson.com/users")
+    fetch("https://dummyjson.com/users")
       .then((res) => res.json())
       .then((data) => {
-        
-         this.OrdersList.forEach(order=>{
-          let userNum=this.OrdersList.indexOf(order)
-          order.user={}
-          order.user.firstName=data.users[userNum].firstName
-          order.user.lastName=data.users[userNum].lastName
-          order.user.phone=data.users[userNum].phone
-          order.user.address=data.users[userNum].address.city+','+data.users[userNum].address.address
-          order.user.postalCode=data.users[userNum].address.postalCode
-        })
+        this.OrdersList.forEach((order) => {
+          let userNum = this.OrdersList.indexOf(order);
+          order.user = {};
+          order.user.firstName = data.users[userNum].firstName + "\n";
+          order.user.lastName = data.users[userNum].lastName;
+          order.user.phone = data.users[userNum].phone;
+          order.user.address =
+            data.users[userNum].address.city +
+            "," +
+            data.users[userNum].address.address;
+          order.user.postalCode = data.users[userNum].address.postalCode;
+        });
       })
       .catch((error) => console.error("Error fetching users:", error));
   },

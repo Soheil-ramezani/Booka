@@ -1,24 +1,41 @@
 <template>
-  <section class="salesFigures w-full flex flex-col justify-center items-center gap-5">
+  <section
+    class="salesFigures flex flex-col justify-center items-center gap-5"
+    :class="{
+      'w-5/6 ml-[16.666667%]': MediaSize.MediaWidth >= 660,
+      'w-full': MediaSize.MediaWidth < 660,
+    }"
+  >
+    >
     <canvas ref="chartCanvas"></canvas>
     <table class="table-auto w-[80%]">
-  <thead>
-    <tr>
-      <th v-for="month in dataLabels" :key="month" class="text-center">{{ month }}</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td v-for="(num, idx) in dataValues" :key="idx" class="text-center">{{ num }}</td>
-    </tr>
-  </tbody>
-</table>
+      <thead>
+        <tr>
+          <th v-for="month in dataLabels" :key="month" class="text-center">
+            {{ month }}
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td v-for="(num, idx) in dataValues" :key="idx" class="text-center">
+            {{ num }}
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </section>
 </template>
 
 <script>
+import { useMediaStore } from "@/stores/counter";
 export default {
   name: "salesFigures",
+  data(){
+    return{
+      MediaSize: useMediaStore(),
+    }
+  }
 };
 </script>
 <script setup>

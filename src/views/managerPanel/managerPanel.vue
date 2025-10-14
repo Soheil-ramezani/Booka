@@ -1,5 +1,4 @@
 <script setup>
-import FooterView from "@/components/Footer/FooterView.vue";
 import Navbar from "@/components/Navbar/Navbar.vue";
 // MediaStore From Pinia
 import { useMediaStore } from "@/stores/counter";
@@ -18,14 +17,14 @@ const MediaSize = useMediaStore();
       }"
     >
       <aside
-        class="mangerPanel-sidebar inline-flex min-w-[230px]"
+        class="mangerPanel-sidebar flex min-w-[230px]"
         :class="{
-          'w-1/6': MediaSize.MediaWidth >= 660,
-          'w-full': MediaSize.MediaWidth <= 660,
+          'w-1/6 flex-col fixed top-[62.5px] h-full pt-10': MediaSize.MediaWidth >= 660,
+          'w-full flex-row flex-wrap ': MediaSize.MediaWidth <= 660,
         }"
       >
         <ol
-          class="managerPanel-sidebar-list w-full flex gap-7"
+          class="managerPanel-sidebar-list  w-full flex gap-7"
           :class="{
             'flex-col justify-start items-start pl-[10%]':
               MediaSize.MediaWidth >= 660,
@@ -131,7 +130,7 @@ const MediaSize = useMediaStore();
       <!-- components shown  -->
       <RouterView />
     </main>
-    <FooterView />
+    
   </div>
 </template>
 
