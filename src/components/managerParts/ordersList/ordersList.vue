@@ -37,8 +37,7 @@
           </th>
           <!-- user's infos -->
           <th class="table-body__th user text-left pl-[10%]">
-            <p>{{this.users[OrdersList.indexOf(order)]}}</p>
-           
+            <p>{{order.user}}</p>
           </th>
         </tr>
       </tbody>
@@ -57,13 +56,13 @@ export default {
       OrdersList: [],
       order: [],
       Headers: ["books", "user"],
-      users: [],
     };
   },
   computed: {
     ...mapStores(useBookStore),
   },
   beforeMount() {
+   
     // Making ordersList
     this.ordersList = [];
     // for orders List
@@ -77,23 +76,24 @@ export default {
           a - 1;
         } else {
           this.order.push(chosenBook2);
-        } 
+        }
       }
       this.OrdersList.push(this.order);
     }
-     // fetching users data
-    fetch("https://dummyjson.com/users")
+    // fetching users data & adding them to orders
+     fetch("https://dummyjson.com/users")
       .then((res) => res.json())
       .then((data) => {
         
-         data.users.forEach(item=>{
-        let user={}
-        user.firstName=item.firstName
-        user.lastName=item.lastName
-        user.phone=item.phone
-        user.address=item.address.city+','+item.address.address
-        this.users.push(user)
-         })
+         this.OrdersList.forEach(order=>{
+          let userNum=this.OrdersList.indexOf(order)
+          order.user={}
+          order.user.firstName=data.users[userNum].firstName
+          order.user.lastName=data.users[userNum].lastName
+          order.user.phone=data.users[userNum].phone
+          order.user.address=data.users[userNum].address.city+','+data.users[userNum].address.address
+          order.user.postalCode=data.users[userNum].address.postalCode
+        })
       })
       .catch((error) => console.error("Error fetching users:", error));
   },
