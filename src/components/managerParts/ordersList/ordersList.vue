@@ -51,6 +51,8 @@
             <p class="pl-10">{{order.userAddress }}</p>
             <p>Postal code:</p>
             <p class="pl-10">{{ order.userPostalCode }}</p>
+            <p>Total Price:</p>
+            <p class="pl-10">{{ order.totalPrice }}$</p>
           </th>
         </tr>
       </tbody>
@@ -82,6 +84,7 @@ export default {
     // for orders List
     for (let i = 0; i < Math.floor(Math.random() * 11) + 10; i++) {
       this.order = [];
+      let orderTotalPrice=0;
       // for each order
       for (let a = 0; a < Math.floor(Math.random() * 7) + 1; a++) {
         let randomNum2 = Math.floor(Math.random() * 15);
@@ -89,9 +92,11 @@ export default {
         if (this.order.includes(chosenBook2)) {
           a - 1;
         } else {
+          orderTotalPrice=orderTotalPrice+chosenBook2.price
           this.order.push(chosenBook2);
         }
       }
+      this.order.totalPrice=orderTotalPrice
       this.OrdersList.push(this.order);
     }
     // fetching users data & adding them to orders
@@ -111,6 +116,7 @@ export default {
         });
       })
       .catch((error) => console.error("Error fetching users:", error));
+
   },
 };
 </script>
