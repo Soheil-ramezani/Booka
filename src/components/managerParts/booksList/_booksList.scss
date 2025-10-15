@@ -1,0 +1,33 @@
+.BooksList {
+    .BooksList-table {
+        border: 1px solid black;
+
+        .table-header {
+            border: 1px solid black;
+
+            .table-header__tr {
+                .table-header__th {
+                    border-right: 1px solid black;
+                }
+            }
+        }
+
+        .table-body {
+            .table-body__tr {
+                border-bottom: 2px solid black;
+
+                .table-body__th {
+                    border-right: 1px solid black;
+
+                    .book {
+                        img {
+                            width: 100px;
+                            height: 100px;
+                            border-radius: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
