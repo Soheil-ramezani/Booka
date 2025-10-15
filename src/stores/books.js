@@ -139,7 +139,8 @@ export const useBookStore = defineStore('BooksList', {
                 name: "The Sweaty Startup: How to Get Rich Doing Boring Things",
                 author: "Nick Huber",
                 imageUrl: "https://m.media-amazon.com/images/I/815CW6t0mKL._SY466_.jpg",
-                summary: "Filled with common sense and practical, actionable, advice, Nick Huber’s book reveals that you don’t have to be a genius with a world-changing idea to build a business empire and become a multi-millionaire.\n\nBusiness media, television and movies, and top college courses all tell entrepreneurs the same thing: To succeed in business, you need to have a revolutionary idea. To them, success is about changing the world through constant innovation. But the truth is, 99.999 percent of businesses that pursue this strategy will fail..."
+                summary: "Filled with common sense and practical, actionable, advice, Nick Huber’s book reveals that you don’t have to be a genius with a world-changing idea to build a business empire and become a multi-millionaire.\n\nBusiness media, television and movies, and top college courses all tell entrepreneurs the same thing: To succeed in business, you need to have a revolutionary idea. To them, success is about changing the world through constant innovation. But the truth is, 99.999 percent of businesses that pursue this strategy will fail...",
+                price:20
             }
             // ... (continuing with IDs 11-30)
 
