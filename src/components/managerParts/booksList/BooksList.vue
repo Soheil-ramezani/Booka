@@ -24,8 +24,9 @@
             <th class="table-body__th">{{ book.id }}</th>
             <th class="table-body__th text-left pl-5">{{ book.name }}</th>
             <th class="table-body__th">{{ book.author }}</th>
-            <th class="table-body__th">{{ book.price }}</th>
-            <th class="table-body__th">{{ book.stock }}</th>
+            <th class="table-body__th">{{ book.price }}$</th>
+            <th class="table-body__th">{{ Math.floor(Math.random()*50)+1}}</th>
+            <th class="table-body__th">{{Math.floor(Math.random()*50)+1 }}</th>
         </tr>
       </tbody>
     </table>
@@ -42,11 +43,14 @@ export default {
   data() {
     return {
       MediaSize: useMediaStore(),
-      Headers:['id','name','author','price','stock'],
+      Headers:['id','name','author','price','stock','Sold'],
     };
   },
   computed: {
     ...mapStores(useBookStore),
   },
+  beforeMount(){
+    
+  }
 };
 </script>
