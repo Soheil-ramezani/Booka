@@ -80,6 +80,11 @@ const router = createRouter({
           path:'ordersList',
           name:'OrderList',
           component:()=>import('@/components/managerParts/ordersList/ordersList.vue')
+        },
+        {
+          path:'BooksList',
+          name:'ManagerBooksList',
+          component:()=>import('@/components/managerParts/booksList/BooksList.vue')
         }
       ]
     }
