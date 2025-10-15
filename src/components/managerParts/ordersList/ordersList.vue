@@ -43,7 +43,14 @@
           </th>
           <!-- user's infos -->
           <th class="table-body__th user text-left pl-[10%]">
-            <p>{{ order.user }}</p>
+            <p>Name:</p>
+            <p class="pl-10">{{ order.userFirstName+'-'+order.userLastName }}</p>
+            <p>Phone:</p>
+            <p class="pl-10">{{ order.userPhone }}</p>
+            <p>Address:</p>
+            <p class="pl-10">{{order.userAddress }}</p>
+            <p>Postal code:</p>
+            <p class="pl-10">{{ order.userPostalCode }}</p>
           </th>
         </tr>
       </tbody>
@@ -93,15 +100,14 @@ export default {
       .then((data) => {
         this.OrdersList.forEach((order) => {
           let userNum = this.OrdersList.indexOf(order);
-          order.user = {};
-          order.user.firstName = data.users[userNum].firstName + "\n";
-          order.user.lastName = data.users[userNum].lastName;
-          order.user.phone = data.users[userNum].phone;
-          order.user.address =
+          order.userFirstName = data.users[userNum].firstName ;
+          order.userLastName = data.users[userNum].lastName;
+          order.userPhone = data.users[userNum].phone;
+          order.userAddress =
             data.users[userNum].address.city +
             "," +
             data.users[userNum].address.address;
-          order.user.postalCode = data.users[userNum].address.postalCode;
+          order.userPostalCode = data.users[userNum].address.postalCode;
         });
       })
       .catch((error) => console.error("Error fetching users:", error));
