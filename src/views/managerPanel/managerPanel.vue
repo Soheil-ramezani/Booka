@@ -93,6 +93,7 @@ const MediaSize = useMediaStore();
           <li class="managerPanel-sidebar-li px-2 w-[80%] text-nowrap">
             <RouterLink
               class="px-[5%] flex flex-row items-center justify-center w-fit gap-5 active-rou"
+              :to="{name:'ManagerBooksList'}"
             >
               <lord-icon
                 v-if="MediaSize.MediaWidth >= 560"
