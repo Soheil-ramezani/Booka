@@ -93,6 +93,7 @@
     <div
       class="Login-btns w-full flex flex-col items-center justify-center gap-5"
     >
+    <!-- for user panel -->
       <RouterLink 
         to="/userPanel"
         v-show="userName.length >= 7 && userPassword.length >= 5 && userName!=='manager'"
@@ -105,6 +106,7 @@
           Log in
         </button>
       </RouterLink>
+      <!-- for manger panel -->
        <RouterLink 
        v-show="userPassword.length >= 5 && userName=='manager'"
         to="/managerPanel"
@@ -117,6 +119,7 @@
           Log in
         </button>
       </RouterLink>
+      <!-- error btn -->
       <button
         v-show="userName.length < 7 || userPassword.length < 5"
         class="submit-btn w-[65%] py-5 text-nowrap min-w-[215px]"
@@ -124,11 +127,13 @@
       >
         Log in
       </button>
+      <!-- main or -->
       <div class="flex flex-row w-full items-center justify-center">
         <hr class="Login-btns__hr w-[20%] border-y-[1px] border-slate-400" />
         <p class="Login-btns__p mx-5 text-slate-500">OR</p>
         <hr class="Login-btns__hr w-[20%] border-y-[1px] border-slate-400" />
       </div>
+      <!-- continue with google -->
       <button
         class="google-btn bg-slate-200 w-[65%] py-5 flex items-center justify-center text-nowrap min-w-[215px]"
       >

@@ -10,17 +10,20 @@ const router = createRouter({
       component: HomeView,
       props: true, // Enable props
     },
+    // book page
     {
       path: '/BookPage',
       name: 'BookPage',
       component: () => import('@/views/bookPage/BookPage.vue'),
       props: true, // Enable props
     },
+    // user-orders
     {
       path: '/Orders',
       name: 'Orders',
       component: OrdersPage,
     },
+    // login
     {
       path: '/LogIn',
       name: 'LogIn',
@@ -43,6 +46,7 @@ const router = createRouter({
         }
       ]
     },
+    // user panel
     {
       path: '/userPanel',
       name: 'userPanel',
