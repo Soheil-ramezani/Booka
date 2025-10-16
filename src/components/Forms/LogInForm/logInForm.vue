@@ -30,7 +30,7 @@
           <label for="name" class="form__label">UserName</label>
         </div>
         <P v-show="ShowUsernameError" class="text-red-500"
-          >username must have at least 8 characters!</P
+          >username must have at least 7 characters!</P
         >
       </div>
       <!-- Password -->
@@ -93,19 +93,32 @@
     <div
       class="Login-btns w-full flex flex-col items-center justify-center gap-5"
     >
-      <RouterLink
+      <RouterLink 
         to="/userPanel"
+        v-show="userName.length >= 7 && userPassword.length >= 5 && userName!=='manager'"
         class="w-full flex items-center justify-center"
       >
         <button
-          v-show="userName.length >= 8 && userPassword.length >= 5"
+          
+          class="submit-btn w-[65%] py-5 text-nowrap min-w-[215px]"
+        >
+          Log in
+        </button>
+      </RouterLink>
+       <RouterLink 
+       v-show="userPassword.length >= 5 && userName=='manager'"
+        to="/managerPanel"
+        class="w-full flex items-center justify-center"
+        @click="validationForm()"
+      >
+        <button
           class="submit-btn w-[65%] py-5 text-nowrap min-w-[215px]"
         >
           Log in
         </button>
       </RouterLink>
       <button
-        v-show="userName.length < 8 || userPassword.length < 5"
+        v-show="userName.length < 7 || userPassword.length < 5"
         class="submit-btn w-[65%] py-5 text-nowrap min-w-[215px]"
         @click="validationForm()"
       >
@@ -168,13 +181,13 @@ export default {
       }
     },
     validationForm() {
-      if (this.userName.length < 8 && this.userPassword.length < 5) {
+      if (this.userName.length < 7 && this.userPassword.length < 5) {
         this.ShowUsernameError = true;
         this.ShowPasswordError = true;
-      } else if (this.userName.length < 8 && this.userPassword.length > 5) {
+      } else if (this.userName.length < 7 && this.userPassword.length >= 5) {
         this.ShowUsernameError = true;
         this.ShowPasswordError = false;
-      } else if (this.userName.length > 8 && this.userPassword.length < 5) {
+      } else if (this.userName.length >= 7 && this.userPassword.length < 5) {
         this.ShowUsernameError = false;
         this.ShowPasswordError = true;
       }
