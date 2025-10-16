@@ -29,7 +29,11 @@
           <!-- books -->
           <th class="table-body__th">
             <div
-              class="book p-5 flex flex-row gap-3"
+              class="book p-5 flex gap-3"
+              :class="{
+                'flex-row': MediaSize.MediaWidth >=580, 
+                'flex-col': MediaSize.MediaWidth <580, 
+              }"
               v-for="(book, idx) in order"
               :key="idx"
             >
