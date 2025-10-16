@@ -12,34 +12,42 @@ const MediaSize = useMediaStore();
     <main
       class="managerPanel flex mt-[62.5px]"
       :class="{
-        'flex-row': MediaSize.MediaWidth >= 660,
-        'flex-col': MediaSize.MediaWidth <= 660,
+        'flex-row': MediaSize.MediaWidth > 900,
+        'flex-col': MediaSize.MediaWidth <= 900,
       }"
     >
       <aside
-        class="mangerPanel-sidebar flex min-w-[230px]"
+        class="mangerPanel-sidebar flex"
         :class="{
-          'w-1/6 flex-col fixed top-[62.5px] h-full pt-10': MediaSize.MediaWidth >= 660,
-          'w-full flex-row flex-wrap ': MediaSize.MediaWidth <= 660,
+          'w-1/6 flex-col fixed top-[62.5px] h-full pt-10':
+            MediaSize.MediaWidth > 900,
+          'w-full flex-row ': MediaSize.MediaWidth <= 900,
         }"
       >
         <ol
-          class="managerPanel-sidebar-list  w-full flex gap-7"
+          class="managerPanel-sidebar-list w-full flex gap-7"
           :class="{
             'flex-col justify-start items-start pl-[10%]':
-              MediaSize.MediaWidth >= 660,
-            'flex-row items-center justify-around px-[5%]':
-              MediaSize.MediaWidth <= 660,
+              MediaSize.MediaWidth > 900,
+            'flex-row items-center justify-around flex-wrap px-[5%]':
+              MediaSize.MediaWidth <= 900,
           }"
         >
           <!-- Sales figures -->
-          <li class="managerPanel-sidebar-li px-2 w-[80%] text-nowrap">
+          <li
+            class="managerPanel-sidebar-li px-2 text-nowrap"
+            :class="{
+              'w-[80%]': MediaSize.MediaWidth > 1330,
+              'w-[90%]':660<MediaSize.MediaWidth < 1330,
+              'w-fit': MediaSize.MediaWidth <= 900,
+            }"
+          >
             <RouterLink
-            to="/managerPanel"
+              to="/managerPanel"
               class="px-[5%] flex flex-row items-center justify-center w-fit gap-5 active-rou"
             >
               <lord-icon
-                v-if="MediaSize.MediaWidth >= 560"
+                v-if="MediaSize.MediaWidth >= 1330"
                 src="https://cdn.lordicon.com/lbcxnxti.json"
                 trigger="in"
                 delay="1500"
@@ -52,13 +60,20 @@ const MediaSize = useMediaStore();
             </RouterLink>
           </li>
           <!-- users -->
-          <li class="managerPanel-sidebar-li px-2 w-[80%] text-nowrap">
+          <li
+            class="managerPanel-sidebar-li px-2 text-nowrap"
+            :class="{
+              'w-[80%]': MediaSize.MediaWidth > 1330,
+              'w-[90%]':660<MediaSize.MediaWidth < 1330,
+              'w-fit': MediaSize.MediaWidth <= 900,
+            }"
+          >
             <RouterLink
-            :to="{name:'UsersList'}"
+              :to="{ name: 'UsersList' }"
               class="px-[5%] flex flex-row items-center justify-center w-fit gap-5 active-rou"
             >
               <lord-icon
-                v-if="MediaSize.MediaWidth >= 560"
+               v-if="MediaSize.MediaWidth >= 1330"
                 src="https://cdn.lordicon.com/kdduutaw.json"
                 trigger="in"
                 delay="1500"
@@ -71,13 +86,20 @@ const MediaSize = useMediaStore();
             </RouterLink>
           </li>
           <!-- orders-->
-          <li class="managerPanel-sidebar-li px-2 w-[80%] text-nowrap">
+          <li
+            class="managerPanel-sidebar-li px-2 text-nowrap"
+            :class="{
+              'w-[80%]': MediaSize.MediaWidth > 1330,
+              'w-[90%]':660<MediaSize.MediaWidth < 1330,
+              'w-fit': MediaSize.MediaWidth <= 900,
+            }"
+          >
             <RouterLink
-            :to="{name:'OrderList'}"
+              :to="{ name: 'OrderList' }"
               class="px-[5%] flex flex-row items-center justify-center w-fit gap-5 active-rou"
             >
               <lord-icon
-                v-if="MediaSize.MediaWidth >= 560"
+               v-if="MediaSize.MediaWidth >= 1330"
                 src="https://cdn.lordicon.com/hmpomorl.json"
                 trigger="in"
                 delay="1500"
@@ -90,13 +112,20 @@ const MediaSize = useMediaStore();
             </RouterLink>
           </li>
           <!-- books -->
-          <li class="managerPanel-sidebar-li px-2 w-[80%] text-nowrap">
+          <li
+            class="managerPanel-sidebar-li px-2 text-nowrap"
+            :class="{
+              'w-[80%]': MediaSize.MediaWidth > 1330,
+              'w-[90%]':660<MediaSize.MediaWidth < 1330,
+              'w-fit': MediaSize.MediaWidth <= 900,
+            }"
+          >
             <RouterLink
               class="px-[5%] flex flex-row items-center justify-center w-fit gap-5 active-rou"
-              :to="{name:'ManagerBooksList'}"
+              :to="{ name: 'ManagerBooksList' }"
             >
               <lord-icon
-                v-if="MediaSize.MediaWidth >= 560"
+               v-if="MediaSize.MediaWidth >= 1330"
                 src="https://cdn.lordicon.com/rrbmabsx.json"
                 trigger="in"
                 delay="1500"
@@ -109,12 +138,19 @@ const MediaSize = useMediaStore();
             </RouterLink>
           </li>
           <!-- add new book -->
-          <li class="managerPanel-sidebar-li px-2 w-[80%] text-nowrap">
+          <li
+            class="managerPanel-sidebar-li px-2 text-nowrap"
+            :class="{
+              'w-[80%]': MediaSize.MediaWidth > 1330,
+              'w-[90%]':660<MediaSize.MediaWidth < 1330,
+              'w-fit': MediaSize.MediaWidth <= 900,
+            }"
+          >
             <RouterLink
               class="px-[5%] flex flex-row items-center justify-center w-fit gap-5 active-rou"
             >
               <lord-icon
-                v-if="MediaSize.MediaWidth >= 560"
+               v-if="MediaSize.MediaWidth >= 1330"
                 src="https://cdn.lordicon.com/vjgknpfx.json"
                 trigger="in"
                 delay="1500"
@@ -131,7 +167,6 @@ const MediaSize = useMediaStore();
       <!-- components shown  -->
       <RouterView />
     </main>
-    
   </div>
 </template>
 
