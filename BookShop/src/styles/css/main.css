@@ -1,0 +1,717 @@
+:root {
+  --primary-white: #ffffff;
+  --secondary-white: #FAFAFA;
+  --light-cream: #faf8f6;
+  --second-cream: #F5ECE0;
+  --dark-blue: #27445D;
+  --Sky-Blue: #3674B5;
+  --Light-Sky-Blue: #A1E3F9;
+  --Steel-Blue: #578FCA;
+  --color-brand: #57bd84;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  margin: 0 auto;
+  font-family: serif;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+
+h1,
+.h1Style {
+  font-size: 4rem;
+}
+
+h2,
+.h2Style {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1.4rem;
+}
+
+main {
+  background-color: var(--primary-white);
+  color: var(--dark-blue);
+}
+
+.main-minHeight {
+  min-height: 49vh;
+}
+
+.link {
+  color: blue;
+  -webkit-text-decoration: dashed;
+          text-decoration: dashed;
+}
+
+.partTitle .partTitle__h1 {
+  font-size: 4rem;
+}
+.partTitle .partTitle__span {
+  font-size: 2.5rem;
+}
+
+.pacifico-regular {
+  font-family: "Pacifico", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.charm-regular {
+  font-family: "Charm", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.charm-bold {
+  font-family: "Charm", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  font-family: serif;
+}
+
+Header {
+  background-color: var(--light-cream);
+}
+Header .header-middle .header-Left .header-title__p1 {
+  font-size: 10rem;
+}
+Header .header-middle .header-Left .header-title__p2 {
+  font-size: 7rem;
+}
+Header .header-middle .header-Left .header-left__btn {
+  background-color: var(--dark-blue);
+  color: var(--primary-white);
+  font-size: 1.5rem;
+}
+Header .header-middle .header-right .header-books {
+  grid-template-columns: repeat(auto-fit, minmax(190px, 200px));
+}
+Header .header-middle .header-right .header-books .header-book--sides .header-book__img {
+  width: 190px;
+  height: 350px;
+  border-radius: 100% 100% 0% 0%/63% 63% 0% 0%;
+}
+Header .header-middle .header-right .header-books .header-book--sides .header-book__h2 {
+  font-size: 1.2rem;
+}
+Header .header-middle .header-right .header-books .header-book--middle .header-book__img {
+  width: 190px;
+  height: 350px;
+  border-radius: 0% 0% 100% 100%/0% 0% 63% 63%;
+}
+Header .header-middle .header-right .header-books .header-book--middle .header-book__h2 {
+  font-size: 1.2rem;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--light-cream);
+  /* Additional styles can be added here as needed */
+}
+nav .Left-side .Nav-Logo .Nav-Logo__h1 {
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+nav .Left-side .Nav-menu .Nav-menu__ul .Nav-menu__li {
+  transition: 1s ease-in;
+}
+nav .Left-side .Nav-menu .Nav-menu__ul .Nav-menu__li:hover {
+  color: var(--dark-blue);
+  border-bottom: 1px solid var(--dark-blue);
+}
+nav .Right-side {
+  /* The Overlay (background) */
+  /* Position the content inside the overlay */
+  /* The navigation links inside the overlay */
+  /* When you mouse over the navigation links, change their color */
+  /* Position the close button (top right corner) */
+  /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+}
+nav .Right-side .Nav-searchbar form {
+  position: relative;
+  width: 30rem;
+  background: var(--color-brand);
+  border-radius: 0.7rem;
+}
+nav .Right-side .Nav-searchbar input,
+nav .Right-side .Nav-searchbar button {
+  height: 3rem;
+  font-family: "Pacifico", serif;
+  border: 0;
+  color: var(--dark-blue);
+  font-size: 1.8rem;
+}
+nav .Right-side .Nav-searchbar input[type=search] {
+  outline: 0;
+  width: 100%;
+  background: var(--light-cream);
+  padding: 0 1.6rem;
+  border-bottom: 1px solid var(--dark-blue);
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  transition: all 0.3s cubic-bezier(0, 0, 0.43, 1.49);
+  transition-property: width;
+  z-index: 1;
+  position: relative;
+}
+nav .Right-side .Nav-searchbar button {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 6rem;
+  font-weight: bold;
+  background: var(--color-brand);
+  border-radius: 0 0.7rem 0.7rem 0;
+}
+nav .Right-side .Nav-searchbar input:not(:-moz-placeholder) {
+  border-radius: 0.7rem 0 0 0.7rem;
+  width: calc(100% - var(--btn-width));
+}
+nav .Right-side .Nav-searchbar input:not(:placeholder-shown) {
+  border-radius: 0.7rem 0 0 0.7rem;
+  width: calc(100% - var(--btn-width));
+}
+nav .Right-side .Nav-searchbar input:not(:-moz-placeholder) + button {
+  display: block;
+}
+nav .Right-side .Nav-searchbar input:not(:placeholder-shown) + button {
+  display: block;
+}
+nav .Right-side .Nav-searchbar label {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+nav .Right-side .Nav_Right__btns .logIn-btn {
+  border-left: 1px solid var(--dark-blue);
+}
+nav .Right-side .overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */
+  height: 100%;
+  width: 0;
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color: rgb(0, 0, 0);
+  /* Black fallback color */
+  background-color: rgba(0, 0, 0, 0.9);
+  /* Black w/opacity */
+  overflow-x: hidden;
+  /* Disable horizontal scroll */
+  transition: 0.5s;
+  /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+nav .Right-side .overlay-content {
+  position: relative;
+  top: 25%;
+  /* 25% from the top */
+  width: 100%;
+  /* 100% width */
+  text-align: center;
+  /* Centered text/links */
+  margin-top: 30px;
+  /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+nav .Right-side .overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  /* Display block instead of inline */
+  transition: 0.3s;
+  /* Transition effects on hover (color) */
+}
+nav .Right-side .overlay a:hover,
+nav .Right-side .overlay a:focus {
+  color: #f1f1f1;
+}
+nav .Right-side .overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+.onlineBooks {
+  background-color: var(--dark-blue);
+}
+.onlineBooks .onlineBooks-LeftSide img {
+  width: 100%;
+  height: 600px;
+}
+.onlineBooks .onlineBooks-RightSide {
+  color: var(--primary-white);
+}
+.onlineBooks .onlineBooks-RightSide h2 {
+  font-size: 5.5rem;
+}
+.onlineBooks .onlineBooks-RightSide p {
+  font-size: 1.8rem;
+  max-width: 400px;
+}
+.onlineBooks .onlineBooks-RightSide button {
+  border: 1px solid var(--light-cream);
+}
+
+.offers .offers-ranges .range1 img,
+.offers .offers-ranges .range3 img {
+  width: 300px;
+  height: 250px;
+  border-radius: 5px 5px 300px 300px/5px 5px 250px 250px;
+}
+.offers .offers-ranges .range2 img {
+  width: 300px;
+  height: 250px;
+  border-radius: 300px 300px 5px 5px/250px 250px 5px 5px;
+}
+.offers .offers-ranges .range1 h5,
+.offers .offers-ranges .range2 h5,
+.offers .offers-ranges .range3 h5 {
+  font-size: 2rem;
+}
+.offers button {
+  border: 1px solid var(--dark-blue);
+  color: var(--dark-blue);
+}
+
+.footer {
+  background-color: var(--light-cream);
+}
+.footer .footer-links .footerLink .footerLinks__ul .footerLinks__li {
+  margin: 8px 0;
+  font-size: 1.5rem;
+}
+.footer .footerContact .footerContact__input {
+  border: 3px solid #EFEFEF;
+  color: var(--dark-blue);
+  outline: none;
+}
+.footer .footerContact .footerContact__btn {
+  color: var(--light-cream);
+  background-color: var(--dark-blue);
+}
+
+.swiper {
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.swiper .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.swiper .swiper-slide .slides {
+  width: 200px;
+  height: 300px;
+}
+
+.mySwiper .swiperItem {
+  min-width: 170px;
+}
+.mySwiper .swiperItem .swiperItem__img {
+  width: 90%;
+  height: 180px;
+  border-radius: 1rem;
+}
+.mySwiper .swiperItem .swiperItem__title {
+  font-size: 1.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.BookInfo .leftCol .bookImg .bookImg__img {
+  width: 90%;
+  height: 500px;
+  border-radius: 10px;
+}
+.BookInfo .leftCol .bookImg .bookImg__img2 {
+  width: 300px;
+  height: 250px;
+  border-radius: 10px;
+}
+.BookInfo .leftCol .leftCol_btns .leftCol__btn {
+  border: 1px solid var(--dark-blue);
+  border-radius: 5px;
+}
+.BookInfo .centerCol .bookDetails .bookDetails__p {
+  font-size: 1.7rem;
+}
+.BookInfo .rightCol .bookPrice {
+  border: 3px solid var(--dark-blue);
+  border-radius: 10px;
+  line-height: 1.2;
+}
+.BookInfo .rightCol .bookPrice .prices {
+  grid-template-columns: repeat(auto-fit, minmax(35%, 1fr));
+}
+.BookInfo .rightCol .bookPrice .prices .TypesPrice {
+  border: 3px solid var(--dark-blue);
+  border-radius: 5px;
+}
+.BookInfo .rightCol .bookPrice .prices .TypesPrice--active {
+  border: 3px solid var(--Sky-Blue);
+  background-color: var(--Light-Sky-Blue);
+}
+.BookInfo .rightCol .bookPrice .TypesPrice--active {
+  border: 3px solid var(--Sky-Blue);
+  background-color: var(--Light-Sky-Blue);
+}
+.BookInfo .rightCol .bookPrice__btn {
+  background-color: var(--Light-Sky-Blue);
+  color: var(--dark-blue);
+  border: 2px solid var(--dark-blue);
+  border-radius: 5px;
+}
+.BookInfo .rightCol .bookPrice__span {
+  font-size: 1.4rem;
+}
+.BookInfo .rightCol .bookPrice__a {
+  color: blue;
+  -webkit-text-decoration: dashed;
+          text-decoration: dashed;
+}
+.BookInfo .rightCol .bookPrice__img {
+  width: 300px;
+  height: 20px;
+}
+
+.bookPrice-row {
+  border: 3px solid var(--dark-blue);
+  border-radius: 10px;
+  line-height: 1.2;
+}
+.bookPrice-row .prices2 {
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+.bookPrice-row .prices2 .TypesPrice {
+  border: 3px solid var(--dark-blue);
+  border-radius: 5px;
+  height: 70px;
+}
+.bookPrice-row .prices2 .TypesPrice--active {
+  border: 3px solid var(--Sky-Blue);
+  background-color: var(--Light-Sky-Blue);
+}
+.bookPrice-row .bookPrice__btn {
+  background-color: var(--Light-Sky-Blue);
+  color: var(--dark-blue);
+  border: 2px solid var(--dark-blue);
+  border-radius: 5px;
+}
+.bookPrice-row .bookPrice__span {
+  font-size: 1.4rem;
+}
+.bookPrice-row .bookPrice__a {
+  color: blue;
+  -webkit-text-decoration: dashed;
+          text-decoration: dashed;
+}
+.bookPrice-row .bookPrice__img {
+  width: 300px;
+  height: 20px;
+}
+
+@media screen and (min-width: 1160px) {
+  .BookInfo {
+    grid-template-columns: 1.5fr 2.5fr 1.1fr;
+  }
+}
+.OrderPage .order-header .OrderTotalPrice {
+  background-color: var(--light-cream);
+}
+.OrderPage .order-header .OrderTotalPrice .TotalPrice__div .TotalPrice__btn {
+  border-radius: 5px;
+  background-color: var(--dark-blue);
+  color: var(--light-cream);
+}
+.OrderPage .Order-main .order__ul .order__li {
+  background-color: var(--light-cream);
+  border-radius: 10px;
+}
+.OrderPage .Order-main .order__ul .order__li .order-img img {
+  width: 200px;
+  height: 250px;
+  border-radius: 10px;
+}
+.OrderPage .Order-main .order__ul .order__li .orderNum .orderNum__div {
+  background-color: var(--dark-blue);
+  color: white;
+  border-radius: 5px;
+}
+.OrderPage .Order-main .order__div .orderList__Btn {
+  background-color: var(--Light-Sky-Blue);
+  border-radius: 50px;
+}
+
+.LoginPage .ImgSide .ImgSide__img {
+  width: 100%;
+  height: 100vh;
+}
+.LoginPage .right-section {
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--primary-white);
+  background-size: cover;
+}
+.LoginPage .right-section .Login-title__p {
+  color: var(--dark-blue);
+}
+.LoginPage .right-section .Login__form {
+  background: rgba(255, 255, 255, 0.28);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.9px);
+  -webkit-backdrop-filter: blur(7.9px);
+  border: 1px solid rgba(255, 255, 255, 0.46);
+  gap: 25px;
+}
+.LoginPage .right-section .Login__form .form-login {
+  /* reset input */
+}
+.LoginPage .right-section .Login__form .form-login .form__group {
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 10px;
+}
+.LoginPage .right-section .Login__form .form-login .form__field {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid var(--Steel-Blue);
+  outline: 0;
+  font-size: 1.3rem;
+  color: black;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+.LoginPage .right-section .Login__form .form-login .form__field::-moz-placeholder {
+  color: transparent;
+}
+.LoginPage .right-section .Login__form .form-login .form__field::placeholder {
+  color: transparent;
+}
+.LoginPage .right-section .Login__form .form-login .form__field:-moz-placeholder ~ .form__label {
+  font-size: 1.3rem;
+  cursor: text;
+  top: 20px;
+}
+.LoginPage .right-section .Login__form .form-login .form__field:placeholder-shown ~ .form__label {
+  font-size: 1.3rem;
+  cursor: text;
+  top: 20px;
+}
+.LoginPage .right-section .Login__form .form-login .form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: var(--Steel-Blue);
+}
+.LoginPage .right-section .Login__form .form-login .form__field:focus {
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  -o-border-image: linear-gradient(to right, #11998e, #38ef7d);
+     border-image: linear-gradient(to right, #11998e, #38ef7d);
+  border-image-slice: 1;
+}
+.LoginPage .right-section .Login__form .form-login .form__field:focus ~ .form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: #11998e;
+  font-weight: 700;
+}
+.LoginPage .right-section .Login__form .form-login .form__field:required,
+.LoginPage .right-section .Login__form .form-login .form__field:invalid {
+  box-shadow: none;
+}
+.LoginPage .right-section .Login-btns .submit-btn {
+  background-color: var(--Steel-Blue);
+  color: var(--primary-white);
+  border-radius: 40px;
+}
+.LoginPage .right-section .Login-btns .google-btn {
+  font-weight: 600;
+  border-radius: 40px;
+}
+.LoginPage .right-section .createAccount .createAccount__a {
+  font-weight: 600;
+  color: var(--Steel-Blue);
+}
+
+.userPanel-main .userPanel-sidebar {
+  background-color: var(--light-cream);
+}
+.userPanel-main .userPanel-sidebar .userPanel-sidebar-list .userPanel-sidebar-li a {
+  border-radius: 20px;
+}
+.userPanel-main .userPanel-sidebar .userPanel-sidebar-list .userPanel-sidebar-li a p {
+  font-size: 1.8rem;
+}
+.userPanel-main .userPanel-sidebar .userPanel-sidebar-list .userPanel-sidebar-li a:hover {
+  background-color: var(--second-cream);
+  border-bottom: 1px solid black;
+  transition: 0.5s ease-in-out;
+}
+.userPanel-main .userPanel-sidebar .userPanel-sidebar-list .userPanel-sidebar-li .active-route {
+  background-color: var(--second-cream);
+  border-bottom: 1px solid black;
+}
+.userPanel-main .userPanel-sidebar .userPanel-sidebar-list .username {
+  background-color: var(--second-cream);
+  border-radius: 20px;
+}
+
+.user-Dashboard {
+  background-color: var(--primary-white);
+}
+.user-Dashboard .Dashboard-list .List-rows .List__input {
+  background-color: var(--primary-white);
+}
+.user-Dashboard .Dashboard-list .List-rows .List__button {
+  background-color: var(--Light-Sky-Blue);
+  border-radius: 10px;
+}
+
+.orderHistory .orderList .orderList-row {
+  background-color: var(--second-cream);
+  border-radius: 20px;
+}
+.orderHistory .orderList .orderList-row .orderList-books .orderLis-item .orderLis-item__img {
+  width: 150px;
+  height: 100px;
+  border-radius: 15px;
+}
+
+.managerPanel .mangerPanel-sidebar {
+  background-color: var(--light-cream);
+}
+.managerPanel .mangerPanel-sidebar .managerPanel-sidebar-list .managerPanel-sidebar-li {
+  border-radius: 20px;
+}
+.managerPanel .mangerPanel-sidebar .managerPanel-sidebar-list .managerPanel-sidebar-li:hover {
+  background-color: var(--second-cream);
+  border-bottom: 1px solid black;
+  transition: 0.5s ease-in-out;
+}
+.managerPanel .mangerPanel-sidebar .managerPanel-sidebar-list .managerPanel-sidebar-li a p {
+  font-size: 1.8rem;
+}
+
+.salesFigures .chart-container {
+  width: 100%;
+  height: 200px;
+}
+.salesFigures canvas {
+  width: 80% !important;
+  height: 400px !important;
+}
+.salesFigures table, .salesFigures th, .salesFigures td {
+  border: 1px solid black;
+}
+
+.usersList .usersList-table {
+  border: 1px solid black;
+}
+.usersList .usersList-table .table-header .table-header__tr {
+  border-bottom: 1px solid black;
+}
+.usersList .usersList-table .table-header .table-header__tr .table-header__th {
+  border-right: 1px solid black;
+}
+.usersList .usersList-table .table-body .table-body__tr {
+  border-bottom: 1px solid black;
+}
+.usersList .usersList-table .table-body .table-body__tr .table-body__th {
+  border-right: 1px solid black;
+}
+.usersList .usersList-table .table-body .table-body__tr .table-body__th .deleteUser__btn {
+  color: #991b1b;
+  transition: 1s ease;
+}
+.usersList .usersList-table .table-body .table-body__tr .table-body__th .deleteUser__btn:hover {
+  color: white;
+  background-color: #991b1b;
+  border-radius: 5px;
+}
+
+.ordersList .orders-table {
+  border: 1px solid black;
+}
+.ordersList .orders-table .table-header {
+  border: 1px solid black;
+}
+.ordersList .orders-table .table-header .table-header__tr .table-header__th {
+  border-right: 1px solid black;
+}
+.ordersList .orders-table .table-body .table-body__tr {
+  border-bottom: 2px solid black;
+}
+.ordersList .orders-table .table-body .table-body__tr .table-body__th {
+  border-right: 1px solid black;
+}
+.ordersList .orders-table .table-body .table-body__tr .table-body__th .book img {
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
+}
+
+.BooksList .BooksList-table {
+  border: 1px solid black;
+}
+.BooksList .BooksList-table .table-header {
+  border: 1px solid black;
+}
+.BooksList .BooksList-table .table-header .table-header__tr .table-header__th {
+  border-right: 1px solid black;
+}
+.BooksList .BooksList-table .table-body .table-body__tr {
+  border-bottom: 2px solid black;
+}
+.BooksList .BooksList-table .table-body .table-body__tr .table-body__th {
+  border-right: 1px solid black;
+}
+.BooksList .BooksList-table .table-body .table-body__tr .table-body__th .book img {
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
+}

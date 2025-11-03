@@ -38,6 +38,7 @@ import OffersView from "@/components/mainParts/OffersView/OffersView.vue";
     <!-- Offers -->
      <!-- Title -->
       <div
+      v-if="MediaWidth>=650"
         class="partTitle px-[5%] mt-10 flex w-full items-center justify-between"
       >
         <h1 class="partTitle__h1 charm-regular">Offers</h1>
