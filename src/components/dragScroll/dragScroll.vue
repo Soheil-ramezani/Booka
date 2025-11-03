@@ -32,7 +32,7 @@
   </swiper>
   <swiper
     v-else-if="this.MediaWidth > 1050"
-    :slidesPerView="6.5"
+    :slidesPerView="5.5"
     :spaceBetween="10"
     :modules="modules"
     class="mySwiper container my-10"
@@ -61,7 +61,7 @@
   </swiper>
   <swiper
     v-else-if="this.MediaWidth > 780"
-    :slidesPerView="4.5"
+    :slidesPerView="3.5"
     :spaceBetween="10"
     :modules="modules"
     class="mySwiper container my-10"
@@ -91,7 +91,7 @@
   </swiper>
   <swiper
     v-else
-    :slidesPerView="2.5"
+    :slidesPerView="1.5"
     :spaceBetween="10"
     :modules="modules"
     class="mySwiper container my-10"
