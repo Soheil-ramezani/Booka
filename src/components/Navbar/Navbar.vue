@@ -96,9 +96,9 @@
 
         <!-- Overlay content -->
         <div class="overlay-content">
+          <RouterLink to="/LogIn">Log in</RouterLink>
           <RouterLink :to="{name:'home'}" >Home</RouterLink>
           <RouterLink :to="{name:'Orders'}" href="#">cart</RouterLink>
-          <a href="#">Sing in</a>
           <a href="#">Categories</a>
           <a href="#">About Us</a>
         </div>
